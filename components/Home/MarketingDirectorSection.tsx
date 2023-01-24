@@ -1,38 +1,39 @@
 import Image from "next/image";
 import React from "react";
 
-export const WeKnowSection = () => {
+export const MarketingDirectorSection = () => {
   return (
-    <div className="py-[30px]">
+    <div className="py-[30px] relative">
+      <div className="absolute right-0">
+        <img src="/assets/images/marketing-shadow.svg" alt="" />
+      </div>
       <div className="flex gap-4 container m-auto justify-between items-center">
         <div className="flex-1">
           <h2 className="heading text-white mb-[50px]">
-            We Know{" "}
+            As A Marketing Director,{" "}
             <span className="weKnowGradent">
-              Multi-Media <br />
-              Marketing
+              You Might Not Want To Face It... <br />
             </span>{" "}
-            Out Right Cold’
-            <br /> Because That’s What We Do.
           </h2>
 
           <div className="relative">
-            <h2 className="text-[37px] font-bold text-white">How?</h2>
             <div>
-              <p className=" text-[25px] text-white font-[400]">
-                Shhh.. It’s A Secret, Otherwise We Would Be Reaching Out To You!{" "}
-                <br />
-                <span className="font-bold">Numbers Don’t Lie.</span> <br />
-                See Some Of The Staggering Results We Managed Off For Our Lovely
-                Clients:
+              <p className=" text-[25px] text-white font-bold mb-[45px]">
+                You’re given a budget for marketing that you can spend <br />
+                (or must spend I shall say),
               </p>
-              <div className="">
-                <img
-                  src="/assets/images/we-know-arrow.svg"
-                  alt=""
-                  className="-mt-14 ml-[150px]"
-                />
-              </div>
+
+              <p className=" text-[25px] text-white font-normal mb-[45px]">
+                Billboards and citybus ads are noise, but similar to crying
+                babies at a daycare.. Google Ads are great,
+              </p>
+
+              <p className=" text-[30px] text-white font-normal mb-[45px]">
+                <span className="font-bold">But here is the punchline.</span>{" "}
+                <br />
+                Most awareness will come from your social media presence. Dude
+                we are in 20 freeken 23,
+              </p>
             </div>
           </div>
         </div>
@@ -40,16 +41,16 @@ export const WeKnowSection = () => {
           <div className="">
             <img src="/assets/images/know-box-shadow.png" alt="" />
           </div>
-          <div className="absolute top-[150px] right-[165px] rounded-[20px]">
+          <div className="absolute top-[150px] right-[150px] rounded-[20px]">
             <Image
-              src={"/assets/images/we-know-image.svg"}
+              src={"/assets/images/marketing-director.jpg"}
               width={537}
               height={780}
               alt="We Know Image"
               className="rounded-[20px]"
             />
           </div>
-          <div className="w-[220px] h-[125px] bg-white rounded-[8px] px-[26px] py-[17px] absolute top-[200px]">
+          {/* <div className="w-[220px] h-[125px] bg-white rounded-[8px] px-[26px] py-[17px] absolute top-[200px]">
             <div className="flex gap-3 mb-2">
               <Image
                 src={"/assets/images/user.svg"}
@@ -78,7 +79,7 @@ export const WeKnowSection = () => {
                 vs last week
               </p>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
