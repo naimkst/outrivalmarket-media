@@ -74,6 +74,9 @@ body {
   .heading {
     @apply text-[37px] leading-[48px] font-extrabold font-['MonumentBold'];
   }
+  .text25 {
+    @apply text-[25px] font-normal;
+  }
   .gradientText {
     background: linear-gradient(236.96deg, #f55f29 13.69%, #fdc221 99.79%);
     -webkit-background-clip: text;
@@ -159,6 +162,69 @@ span.swiper-pagination-bullet {
   border-width: 1px;
   border-style: solid;
   border-image: linear-gradient(to right, #f55f29, #fdc221) 1;
+}
+.aboutBackground {
+  background: linear-gradient(
+    236.96deg,
+    #fdc221 13.69%,
+    #f55f29 23.24%,
+    #a916eb 48.27%,
+    #590ffe 75.44%,
+    #1dc6e8 101.05%
+  );
+  border-radius: 20px;
+  height: 900px;
+}
+.aboutBackground::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  transform: rotate(4.63deg);
+  z-index: -1;
+  border-width: 2px;
+  border-style: solid;
+  inset: 0;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  background: linear-gradient(45deg, #f55f29, #fdc221);
+  border-image: linear-gradient(to right, #f55f29, #fdc221) 1;
+}
+.buttonGredean {
+  background: linear-gradient(
+    106.38deg,
+    #ff9127 18.11%,
+    #f45356 52.23%,
+    #090d48 104.85%
+  );
+  border: 2px solid #000000;
+  border-radius: 7px;
+}
+.CTAtextGradean {
+  background: linear-gradient(236.96deg, #f55f29 13.69%, #fdc221 99.79%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.togetherToday {
+  background: linear-gradient(
+    236.96deg,
+    #fdc221 13.69%,
+    #f55f29 23.24%,
+    #a916eb 48.27%,
+    #590ffe 75.44%,
+    #1dc6e8 101.05%
+  );
+  border-radius: 20px;
+}
+.footerBg {
+  background: linear-gradient(236.96deg, #f55f29 13.69%, #fdc221 99.79%);
 }
 .container {
   @apply max-w-[1736px] mx-auto px-5 desktop1680:px-[50px];

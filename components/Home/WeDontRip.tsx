@@ -3,7 +3,7 @@ import React from "react";
 
 export const WeDontRip = () => {
   return (
-    <div className="py-[30px]">
+    <div className="py-[30px] overflow-hidden">
       <div className="flex gap-4 container m-auto justify-between items-center">
         <div className="relative flex-1">
           <div className="">

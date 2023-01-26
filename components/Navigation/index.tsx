@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 export const Navigation = () => {
@@ -17,7 +18,7 @@ export const Navigation = () => {
           <div>
             <ul className="flex gap-[60px] items-center">
               <li className="text-white text-[20px] hover:hoverGradient">
-                <a href="">About</a>
+                <Link href={"/about"}>About</Link>
               </li>
               <li className="text-white text-[20px] hover:hoverGradient">
                 <a href="">Services</a>
