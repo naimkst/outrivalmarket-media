@@ -10,7 +10,7 @@ export const BookCoverSection = () => {
             7 Outstanding Ways To Overcome Competitor FOMO On Social Media!{" "}
             <br /> For 2023
           </h2>
-          <button className="text-[24px] font-semibold text-center py-[20px] px-[45px] buttonGredean text-white mt-[50px]">
+          <button className="text-[24px] font-semibold text-center h-[70px] px-[45px] buttonGredean text-white mt-[50px]">
             Download Your Free Copy
           </button>
         </div>

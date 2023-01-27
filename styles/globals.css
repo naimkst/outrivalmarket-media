@@ -67,6 +67,12 @@ body {
   .shadowBorder {
     font-family: MonumentBold;
   }
+  .faqGrediant {
+    background: linear-gradient(236.96deg, #f55f29 13.69%, #fdc221 99.79%);
+    border-radius: 50%;
+    height: 39px;
+    width: 39px;
+  }
 
   .bigHeader {
     @apply text-[96.29px] leading-[122.5%] font-black text-white;
@@ -223,9 +229,34 @@ span.swiper-pagination-bullet {
   );
   border-radius: 20px;
 }
+.chainDockSection {
+  position: relative;
+  z-index: 1;
+}
+.chainDockSection:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    236.96deg,
+    #fdc221 13.69%,
+    #f55f29 23.24%,
+    #a916eb 48.27%,
+    #590ffe 75.44%,
+    #1dc6e8 101.05%
+  );
+  opacity: 0.1;
+  border-radius: 20px;
+  position: absolute;
+  background-size: cover;
+  z-index: -1;
+}
 .footerBg {
   background: linear-gradient(236.96deg, #f55f29 13.69%, #fdc221 99.79%);
 }
 .container {
   @apply max-w-[1736px] mx-auto px-5 desktop1680:px-[50px];
+}
+.containerSmall {
+  @apply max-w-[1615px] mx-auto px-5 desktop1680:px-[50px];
 }
