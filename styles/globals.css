@@ -80,6 +80,9 @@ body {
   .heading {
     @apply text-[37px] leading-[48px] font-extrabold font-['MonumentBold'];
   }
+  .text48 {
+    @apply text-[48px] leading-[67px] font-extrabold font-['MonumentBold'];
+  }
   .text25 {
     @apply text-[25px] font-normal;
   }
@@ -251,7 +254,23 @@ span.swiper-pagination-bullet {
   background-size: cover;
   z-index: -1;
 }
+.optionBG {
+  background: linear-gradient(
+    236.96deg,
+    #fdc221 13.69%,
+    #f55f29 23.24%,
+    #a916eb 48.27%,
+    #590ffe 75.44%,
+    #1dc6e8 101.05%
+  );
+}
 .footerBg {
+  background: linear-gradient(236.96deg, #f55f29 13.69%, #fdc221 99.79%);
+}
+.tabActiveBg {
+  background: linear-gradient(236.96deg, #f55f29 13.69%, #fdc221 99.79%);
+}
+.fireUpSectionBg {
   background: linear-gradient(236.96deg, #f55f29 13.69%, #fdc221 99.79%);
 }
 .container {
