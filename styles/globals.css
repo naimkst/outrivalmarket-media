@@ -22,6 +22,9 @@ body {
   color: #3b1408;
   background: #020c13;
 }
+button {
+  font-family: Poppins, sans-serif;
+}
 
 @layer utilities {
   .monument {
@@ -273,9 +276,13 @@ span.swiper-pagination-bullet {
 .fireUpSectionBg {
   background: linear-gradient(236.96deg, #f55f29 13.69%, #fdc221 99.79%);
 }
+
 .container {
   @apply max-w-[1736px] mx-auto px-5 desktop1680:px-[50px];
 }
 .containerSmall {
   @apply max-w-[1615px] mx-auto px-5 desktop1680:px-[50px];
+}
+.blogContainer {
+  @apply max-w-[1204px] mx-auto px-5 desktop1680:px-[50px];
 }
