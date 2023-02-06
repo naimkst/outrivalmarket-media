@@ -32,9 +32,11 @@ export const Navigation = () => {
                   <a href="">Portfolio</a>
                 </li>
               </Link>
-              <li className="text-white text-[20px] hover:hoverGradient">
-                <a href="">Blog</a>
-              </li>
+              <Link href={"/blog"}>
+                <li className="text-white text-[20px] hover:hoverGradient">
+                  <a href="">Blog</a>
+                </li>
+              </Link>
               <li className="text-white text-[20px] hover:hoverGradient">
                 <a href="">Contact</a>
               </li>
