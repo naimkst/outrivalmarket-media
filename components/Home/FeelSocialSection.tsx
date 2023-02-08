@@ -3,7 +3,7 @@ import React from "react";
 
 export const FeelSocialSection = () => {
   return (
-    <div className="relative container m-auto rounded-[20px] text-center z-50 ">
+    <div className="relative container m-auto rounded-[20px] text-center z-50  overflow-x-hidden">
       <div className="aboutBackground">
         <div className="py-[70px] max-w-[1214px] m-auto">
           <h2 className=" text-white text-[37px] font-extrabold font-['MonumentBold']">

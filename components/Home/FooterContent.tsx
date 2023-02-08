@@ -3,7 +3,7 @@ import React from "react";
 
 export const FooterContent = () => {
   return (
-    <div className="container m-auto text-center py-[50px]">
+    <div className="container m-auto text-center py-[50px]  overflow-x-hidden">
       <div>
         <Image
           src="/assets/images/footer-logo.svg"

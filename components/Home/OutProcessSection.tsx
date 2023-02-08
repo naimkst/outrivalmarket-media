@@ -3,7 +3,7 @@ import React from "react";
 
 export const OurProcessSection = () => {
   return (
-    <div className="relative h-auto pb-[350px]">
+    <div className="relative h-auto pb-[350px] overflow-x-hidden">
       <img
         src="/assets/images/hero-shape.svg"
         alt=""

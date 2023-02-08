@@ -2,7 +2,7 @@ import React from "react";
 
 export const HeroSection = () => {
   return (
-    <div className="pt-[157px] relative h-[1130px]">
+    <div className="pt-[157px] relative h-[1130px] overflow-x-hidden">
       <div className="relative container m-auto ">
         <h1 className="relative bigHeader text-center shadowBorder z-20">
           Approach <br /> Marketing From A <br />{" "}

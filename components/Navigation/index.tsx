@@ -1,8 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { RxCross2 } from "react-icons/rx";
 
 export const Navigation = () => {
+  const [isMobile, setIsMobile] = React.useState(false);
   return (
     <div>
       <div className="container m-auto mt-[50px]">
@@ -14,10 +16,11 @@ export const Navigation = () => {
                 alt="logo"
                 width={301}
                 height={66}
+                className="w-[301px] h-[66px] tablet:w-[220.4px] tablet:h-[48.17px]"
               />
             </Link>
           </div>
-          <div>
+          <div className="tablet:hidden">
             <ul className="flex gap-[60px] items-center">
               <li className="text-white text-[20px] hover:hoverGradient">
                 <Link href={"/about"}>About</Link>
@@ -45,7 +48,54 @@ export const Navigation = () => {
               </li>
             </ul>
           </div>
+          <div
+            onClick={() => {
+              setIsMobile(!isMobile);
+            }}
+          >
+            {isMobile ? (
+              <RxCross2 size={37} color="white" />
+            ) : (
+              <Image
+                src={"/assets/images/mobile-menu.svg"}
+                alt="mobile bar"
+                width={27}
+                height={22}
+              />
+            )}
+          </div>
         </div>
+
+        {isMobile && (
+          <div className="tablet:pt-10">
+            <ul className="flex gap-[60px] flex-col">
+              <li className="text-white text-[20px] hover:hoverGradient">
+                <Link href={"/about"}>About</Link>
+              </li>
+              <Link href={"/services"}>
+                <li className="text-white text-[20px] hover:hoverGradient">
+                  <a href="">Services</a>
+                </li>
+              </Link>
+              <Link href={"/portfolio"}>
+                <li className="text-white text-[20px] hover:hoverGradient">
+                  <a href="">Portfolio</a>
+                </li>
+              </Link>
+              <Link href={"/blog"}>
+                <li className="text-white text-[20px] hover:hoverGradient">
+                  <a href="">Blog</a>
+                </li>
+              </Link>
+              <li className="text-white text-[20px] hover:hoverGradient">
+                <a href="">Contact</a>
+              </li>
+              <li className="hoverGradient text-[20px] font-bold hover:hoverGradient border-[1px] py-[20px] px-[40px] rounded-[10px] text-center">
+                <a href="">Get Started</a>
+              </li>
+            </ul>
+          </div>
+        )}
       </div>
     </div>
   );

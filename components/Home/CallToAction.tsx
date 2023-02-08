@@ -2,7 +2,7 @@ import React from "react";
 
 export const CallToAction = () => {
   return (
-    <div className="container m-auto text-center py-[50px]">
+    <div className="container m-auto text-center py-[50px] overflow-x-hidden">
       <div>
         <h2 className="text-[37px] font-['MonumentBold'] text-white mb-[40px]">
           Ready To <span className="CTAtextGradean"> Outrival?!</span>

@@ -3,7 +3,7 @@ import React from "react";
 
 export const MarketingDirectorSection = () => {
   return (
-    <div className="py-[30px] relative">
+    <div className="py-[30px] relative  overflow-x-hidden">
       <div className="absolute right-0">
         <img src="/assets/images/marketing-shadow.svg" alt="" />
       </div>

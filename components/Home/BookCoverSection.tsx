@@ -3,7 +3,7 @@ import React from "react";
 
 export const BookCoverSection = () => {
   return (
-    <div className="py-[100px] container m-auto">
+    <div className="py-[100px] container m-auto overflow-x-hidden">
       <div className="grid grid-cols-2 items-center">
         <div className="text-center">
           <h2 className="text-[45.59px] leading-[59.1px] text-white font-['MonumentBold']">

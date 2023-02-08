@@ -2,7 +2,7 @@ import React from "react";
 
 export const TogetherToday = () => {
   return (
-    <div className="togetherToday containerSmall m-auto py-[53px] text-center my-[80px]">
+    <div className="togetherToday containerSmall m-auto py-[53px] text-center my-[80px]  overflow-x-hidden">
       <div>
         <h2 className="text-[37px] font-['MonumentBold'] text-white mb-[34px]">
           Lets Outrival This Together Today!

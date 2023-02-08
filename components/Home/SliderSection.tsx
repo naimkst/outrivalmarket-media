@@ -8,7 +8,7 @@ import Image from "next/image";
 
 export const SliderSection = () => {
   return (
-    <div className="py-[50px] container m-auto">
+    <div className="py-[50px] container m-auto overflow-x-hidden">
       <Swiper
         pagination={{
           clickable: true,
