@@ -6,7 +6,7 @@ import { RxEnvelopeClosed } from "react-icons/rx";
 export const Footer = () => {
   return (
     <>
-      <div className="container m-auto py-[50px] mt-[30px]">
+      <div className="container m-auto py-[50px] mt-[30px] overflow-x-hidden">
         <div className="grid grid-cols-6">
           <div className="col-span-2">
             <Image

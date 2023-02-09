@@ -35,10 +35,14 @@ export const TestimonialSection = () => {
             spaceBetween: 16,
           },
           768: {
+            slidesPerView: 1,
+            spaceBetween: 16,
+          },
+          1025: {
             slidesPerView: 2,
             spaceBetween: 16,
           },
-          1024: {
+          1278: {
             slidesPerView: 3,
             spaceBetween: 16,
           },
@@ -47,7 +51,7 @@ export const TestimonialSection = () => {
         slidesPerView={3}
       >
         <SwiperSlide className="">
-          <div className="relative py-[55px] px-[34px] testimonialBorder">
+          <div className="relative py-[55px] px-[34px] testimonialBorder tablet:px-[10px]">
             <Image
               src={"/assets/images/testimonial-shap.svg"}
               height={25.47}
@@ -55,14 +59,14 @@ export const TestimonialSection = () => {
               alt="Instagram"
               className="mb-[38px]"
             />
-            <p className="text-[26px] text-white font-normal">
+            <p className="text-[26px] text-white font-normal tablet:text-center">
               Quis pellentesque pulvinar fames massa sit neque scelerisque.
               Risus non amet at ac lobortis porttitor quis facilisis. Quis
               mollis diam.
             </p>
 
             <div className="mt-[60px] flex justify-between items-center">
-              <div className="flex gap-[25px] items-center">
+              <div className="flex gap-[25px] items-center tablet:gap-4 flex-1">
                 <Image
                   src={"/assets/images/RipImage.jpg"}
                   alt="testimonial image"
@@ -80,7 +84,7 @@ export const TestimonialSection = () => {
                   </p>
                 </div>
               </div>
-              <div className="flex gap-[5.63px]">
+              <div className="flex gap-[5.63px] flex-1">
                 <Image
                   src={"/assets/images/start.svg"}
                   width={23.21}
@@ -117,7 +121,7 @@ export const TestimonialSection = () => {
         </SwiperSlide>
 
         <SwiperSlide className="">
-          <div className="relative py-[55px] px-[34px] testimonialBorder">
+          <div className="relative py-[55px] px-[34px] testimonialBorder tablet:px-[10px]">
             <Image
               src={"/assets/images/testimonial-shap.svg"}
               height={25.47}
@@ -125,20 +129,20 @@ export const TestimonialSection = () => {
               alt="Instagram"
               className="mb-[38px]"
             />
-            <p className="text-[26px] text-white font-normal">
+            <p className="text-[26px] text-white font-normal tablet:text-center">
               Quis pellentesque pulvinar fames massa sit neque scelerisque.
               Risus non amet at ac lobortis porttitor quis facilisis. Quis
               mollis diam.
             </p>
 
             <div className="mt-[60px] flex justify-between items-center">
-              <div className="flex gap-[25px] items-center">
+              <div className="flex gap-[25px] items-center tablet:gap-4 flex-1">
                 <Image
                   src={"/assets/images/RipImage.jpg"}
                   alt="testimonial image"
                   width={63.9}
                   height={63.9}
-                  className="rounded-full width={63.9}
+                  className="rounded-full 
                   h-[63.9px] w-[63.9px] object-cover testimonialBorderGrediant"
                 />
                 <div>
@@ -150,7 +154,7 @@ export const TestimonialSection = () => {
                   </p>
                 </div>
               </div>
-              <div className="flex gap-[5.63px]">
+              <div className="flex gap-[5.63px] flex-1">
                 <Image
                   src={"/assets/images/start.svg"}
                   width={23.21}
@@ -187,7 +191,7 @@ export const TestimonialSection = () => {
         </SwiperSlide>
 
         <SwiperSlide className="">
-          <div className="relative py-[55px] px-[34px] testimonialBorder">
+          <div className="relative py-[55px] px-[34px] testimonialBorder tablet:px-[10px]">
             <Image
               src={"/assets/images/testimonial-shap.svg"}
               height={25.47}
@@ -195,14 +199,14 @@ export const TestimonialSection = () => {
               alt="Instagram"
               className="mb-[38px]"
             />
-            <p className="text-[26px] text-white font-normal">
+            <p className="text-[26px] text-white font-normal tablet:text-center">
               Quis pellentesque pulvinar fames massa sit neque scelerisque.
               Risus non amet at ac lobortis porttitor quis facilisis. Quis
               mollis diam.
             </p>
 
             <div className="mt-[60px] flex justify-between items-center">
-              <div className="flex gap-[25px] items-center">
+              <div className="flex gap-[25px] items-center tablet:gap-4 flex-1">
                 <Image
                   src={"/assets/images/RipImage.jpg"}
                   alt="testimonial image"
@@ -220,7 +224,7 @@ export const TestimonialSection = () => {
                   </p>
                 </div>
               </div>
-              <div className="flex gap-[5.63px]">
+              <div className="flex gap-[5.63px] flex-1">
                 <Image
                   src={"/assets/images/start.svg"}
                   width={23.21}
@@ -257,7 +261,7 @@ export const TestimonialSection = () => {
         </SwiperSlide>
 
         <SwiperSlide className="">
-          <div className="relative py-[55px] px-[34px] testimonialBorder">
+          <div className="relative py-[55px] px-[34px] testimonialBorder tablet:px-[10px]">
             <Image
               src={"/assets/images/testimonial-shap.svg"}
               height={25.47}
@@ -265,14 +269,14 @@ export const TestimonialSection = () => {
               alt="Instagram"
               className="mb-[38px]"
             />
-            <p className="text-[26px] text-white font-normal">
+            <p className="text-[26px] text-white font-normal tablet:text-center">
               Quis pellentesque pulvinar fames massa sit neque scelerisque.
               Risus non amet at ac lobortis porttitor quis facilisis. Quis
               mollis diam.
             </p>
 
             <div className="mt-[60px] flex justify-between items-center">
-              <div className="flex gap-[25px] items-center">
+              <div className="flex gap-[25px] items-center tablet:gap-4 flex-1">
                 <Image
                   src={"/assets/images/RipImage.jpg"}
                   alt="testimonial image"
@@ -290,7 +294,7 @@ export const TestimonialSection = () => {
                   </p>
                 </div>
               </div>
-              <div className="flex gap-[5.63px]">
+              <div className="flex gap-[5.63px] flex-1">
                 <Image
                   src={"/assets/images/start.svg"}
                   width={23.21}
@@ -327,7 +331,7 @@ export const TestimonialSection = () => {
         </SwiperSlide>
 
         <SwiperSlide className="">
-          <div className="relative py-[55px] px-[34px] testimonialBorder">
+          <div className="relative py-[55px] px-[34px] testimonialBorder tablet:px-[10px]">
             <Image
               src={"/assets/images/testimonial-shap.svg"}
               height={25.47}
@@ -335,14 +339,14 @@ export const TestimonialSection = () => {
               alt="Instagram"
               className="mb-[38px]"
             />
-            <p className="text-[26px] text-white font-normal">
+            <p className="text-[26px] text-white font-normal tablet:text-center">
               Quis pellentesque pulvinar fames massa sit neque scelerisque.
               Risus non amet at ac lobortis porttitor quis facilisis. Quis
               mollis diam.
             </p>
 
             <div className="mt-[60px] flex justify-between items-center">
-              <div className="flex gap-[25px] items-center">
+              <div className="flex gap-[25px] items-center tablet:gap-4 flex-1">
                 <Image
                   src={"/assets/images/RipImage.jpg"}
                   alt="testimonial image"
@@ -360,7 +364,7 @@ export const TestimonialSection = () => {
                   </p>
                 </div>
               </div>
-              <div className="flex gap-[5.63px]">
+              <div className="flex gap-[5.63px] flex-1">
                 <Image
                   src={"/assets/images/start.svg"}
                   width={23.21}
@@ -397,7 +401,7 @@ export const TestimonialSection = () => {
         </SwiperSlide>
 
         <SwiperSlide className="">
-          <div className="relative py-[55px] px-[34px] testimonialBorder">
+          <div className="relative py-[55px] px-[34px] testimonialBorder tablet:px-[10px]">
             <Image
               src={"/assets/images/testimonial-shap.svg"}
               height={25.47}
@@ -405,14 +409,14 @@ export const TestimonialSection = () => {
               alt="Instagram"
               className="mb-[38px]"
             />
-            <p className="text-[26px] text-white font-normal">
+            <p className="text-[26px] text-white font-normal tablet:text-center">
               Quis pellentesque pulvinar fames massa sit neque scelerisque.
               Risus non amet at ac lobortis porttitor quis facilisis. Quis
               mollis diam.
             </p>
 
             <div className="mt-[60px] flex justify-between items-center">
-              <div className="flex gap-[25px] items-center">
+              <div className="flex gap-[25px] items-center tablet:gap-4 flex-1">
                 <Image
                   src={"/assets/images/RipImage.jpg"}
                   alt="testimonial image"
@@ -430,7 +434,7 @@ export const TestimonialSection = () => {
                   </p>
                 </div>
               </div>
-              <div className="flex gap-[5.63px]">
+              <div className="flex gap-[5.63px] flex-1">
                 <Image
                   src={"/assets/images/start.svg"}
                   width={23.21}

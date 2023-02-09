@@ -7,7 +7,7 @@ export const Navigation = () => {
   const [isMobile, setIsMobile] = React.useState(false);
   return (
     <div>
-      <div className="container m-auto mt-[50px]">
+      <div className="container m-auto mt-[50px] tablet:mt-[20px]">
         <div className="flex justify-between items-center">
           <div>
             <Link href={"/"}>
@@ -49,6 +49,7 @@ export const Navigation = () => {
             </ul>
           </div>
           <div
+            className="hidden tablet:block"
             onClick={() => {
               setIsMobile(!isMobile);
             }}

@@ -78,16 +78,19 @@ button {
   }
 
   .bigHeader {
-    @apply text-[96.29px] leading-[122.5%] font-black text-white;
+    @apply text-[96.29px] leading-[122.5%] font-black text-white tablet:text-[48px];
   }
   .heading {
-    @apply text-[37px] leading-[48px] font-extrabold font-['MonumentBold'];
+    @apply text-[37px] leading-[48px] font-extrabold font-['MonumentBold'] tablet:text-[32px];
   }
   .text48 {
     @apply text-[48px] leading-[67px] font-extrabold font-['MonumentBold'];
   }
   .text25 {
     @apply text-[25px] font-normal;
+  }
+  .text37 {
+    @apply text-[37px] leading-[48px] tablet:text-[32px];
   }
   .gradientText {
     background: linear-gradient(236.96deg, #f55f29 13.69%, #fdc221 99.79%);
@@ -278,11 +281,29 @@ span.swiper-pagination-bullet {
 }
 
 .container {
-  @apply max-w-[1736px] mx-auto px-5 desktop1680:px-[50px];
+  @apply max-w-[1736px] mx-auto px-5 desktop1680:px-[50px] tablet:px-[15px];
 }
 .containerSmall {
   @apply max-w-[1615px] mx-auto px-5 desktop1680:px-[50px];
 }
 .blogContainer {
   @apply max-w-[1204px] mx-auto px-5 desktop1680:px-[50px];
+}
+
+@screen tablet {
+  .instagram-slider .swiper-button-prev.swiper-button-disabled {
+    display: none;
+  }
+  .instagram-slider .swiper-button-next {
+    display: none;
+  }
+  .instagram-slider .swiper-button-prev {
+    display: none;
+  }
+  .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+    justify-content: center;
+  }
+  .testimonialBorderGrediant {
+    height: 50px;
+  }
 }

@@ -22,8 +22,12 @@ export default function Home() {
       <HeroSection />
       <WeKnowSection />
       <SliderSection />
-      <section>
-        <img src="/assets/images/double-shape.svg" alt="Shape" />
+      <section className="m-auto w-full text-center">
+        <img
+          src="/assets/images/double-shape.svg"
+          alt="Shape"
+          className="m-auto"
+        />
       </section>
       <WeDontRip />
       <TestimonialSection />

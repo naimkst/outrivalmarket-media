@@ -12,7 +12,7 @@ module.exports = {
         desktop1440: { max: "1441px" },
         desktop: { max: "1279px" },
         miniLaptop: { max: "1278px" },
-        laptop: { max: "1023px" },
+        laptop: { max: "1024px" },
         tablet: { max: "768px" },
         phone: { max: "639px" },
       },
