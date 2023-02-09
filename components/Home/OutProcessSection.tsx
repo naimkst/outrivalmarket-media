@@ -3,19 +3,19 @@ import React from "react";
 
 export const OurProcessSection = () => {
   return (
-    <div className="relative h-auto pb-[350px] overflow-x-hidden">
+    <div className="relative h-auto pb-[350px] tablet:pb-0">
       <img
         src="/assets/images/hero-shape.svg"
         alt=""
-        className="absolute left-0 top-10"
+        className="absolute left-0 top-10 tablet:hidden"
       />
       <img
         src="/assets/images/marketing-shadow.svg"
         alt=""
-        className="absolute right-0 bottom-10"
+        className="absolute right-0 bottom-10  tablet:hidden"
       />
       <div className="container m-auto py-[50px] ">
-        <div className="text-center pb-[100px]">
+        <div className="text-center pb-[100px] tablet:pb-[50x]">
           <h2 className="text-[37px] font-['MonumentBold'] text-white mb-[40px]">
             Our <span className="CTAtextGradean"> Process</span>
           </h2>
@@ -24,21 +24,21 @@ export const OurProcessSection = () => {
           </p>
         </div>
 
-        <div className="relative max-w-[1393px] m-auto h-[1943px]">
+        <div className="relative max-w-[1393px] m-auto h-[1943px] tablet:h-auto">
           <Image
             src="/assets/images/process/process-point.svg"
             alt="process"
-            className="absolute top-[53%] left-[44%] transform -translate-x-1/2 -translate-y-1/2"
+            className="absolute top-[53%] left-[44%] transform -translate-x-1/2 -translate-y-1/2  tablet:hidden"
             height={1943}
             width={482}
           />
-          <div className="flex justify-end">
+          <div className="flex justify-end tablet:flex-col tablet:text-center">
             <div className="flex-1"></div>
-            <div className="max-w-[456px] pl-[60px]">
+            <div className="max-w-[456px] pl-[60px] tablet:max-w-full tablet:pl-0">
               <img
                 src="/assets/images/process/01.png"
                 alt=""
-                className="mb-[47px]"
+                className="mb-[47px] tablet:m-auto tablet:mb-5"
               />
               <h3 className="text-[25px] font-bold text-white mb-[15px]">
                 Strategize
@@ -51,11 +51,11 @@ export const OurProcessSection = () => {
           </div>
 
           <div className="flex justify-start mt-[60px]">
-            <div className="max-w-[456px] pl-[68px]">
+            <div className="max-w-[456px] pl-[68px] tablet:max-w-full tablet:pl-0  tablet:text-center">
               <img
                 src="/assets/images/process/02.png"
                 alt=""
-                className="mb-[47px]"
+                className="mb-[47px] tablet:m-auto tablet:mb-5"
               />
               <h3 className="text-[25px] font-bold text-white mb-[15px]">
                 Initial Action
@@ -70,11 +70,11 @@ export const OurProcessSection = () => {
 
           <div className="flex justify-end mt-[40px]">
             <div className="flex-1"></div>
-            <div className="max-w-[456px] pl-[60px]">
+            <div className="max-w-[456px] pl-[60px] tablet:max-w-full tablet:pl-0  tablet:text-center">
               <img
                 src="/assets/images/process/03.png"
                 alt=""
-                className="mb-[47px]"
+                className="mb-[47px] tablet:m-auto tablet:mb-5"
               />
               <h3 className="text-[25px] font-bold text-white mb-[15px]">
                 Magic Begins
@@ -86,11 +86,11 @@ export const OurProcessSection = () => {
           </div>
 
           <div className="flex justify-start mt-[45px]">
-            <div className="max-w-[456px]">
+            <div className="max-w-[456px]  tablet:max-w-full tablet:pl-0  tablet:text-center">
               <img
                 src="/assets/images/process/04.png"
                 alt=""
-                className="mb-[47px]"
+                className="mb-[47px] tablet:m-auto tablet:mb-5"
               />
               <h3 className="text-[25px] font-bold text-white mb-[15px]">
                 Magic Continues
@@ -103,13 +103,13 @@ export const OurProcessSection = () => {
             <div className="flex-1"></div>
           </div>
 
-          <div className="flex justify-end mt-[110px]">
+          <div className="flex justify-end mt-[110px] tablet:justify-start tablet:flex-col">
             <div className="flex-1"></div>
-            <div className="max-w-[456px] pl-[60px]">
+            <div className="max-w-[456px] pl-[60px] tablet:max-w-full tablet:pl-0  tablet:text-center">
               <img
                 src="/assets/images/process/05.png"
                 alt=""
-                className="mb-[47px]"
+                className="mb-[47px] tablet:m-auto tablet:mb-5"
               />
               <h3 className="text-[25px] font-bold text-white mb-[15px]">
                 Revenue, Revenue, Baby
@@ -120,12 +120,12 @@ export const OurProcessSection = () => {
             </div>
           </div>
 
-          <div className="flex justify-start mt-[110px]">
-            <div className="max-w-[456px]">
+          <div className="flex justify-start mt-[110px] tablet:flex-col">
+            <div className="max-w-[456px] tablet:max-w-full tablet:pl-0  tablet:text-center">
               <img
                 src="/assets/images/process/06.png"
                 alt=""
-                className="mb-[47px]"
+                className="mb-[47px] tablet:m-auto tablet:mb-5"
               />
               <h3 className="text-[25px] font-bold text-white mb-[15px]">
                 Repeat & Repeat The Process

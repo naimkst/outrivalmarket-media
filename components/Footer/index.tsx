@@ -8,14 +8,15 @@ export const Footer = () => {
     <>
       <div className="container m-auto py-[50px] mt-[30px] overflow-x-hidden">
         <div className="grid grid-cols-6">
-          <div className="col-span-2">
+          <div className="col-span-2 tablet:order-last tablet:text-center tablet:col-span-6 tablet:mt-5">
             <Image
               src={"/assets/images/footer-logo.svg"}
               width={200}
               height={131.89}
               alt="footer logo"
+              className="tablet:m-auto"
             />
-            <ul className="flex gap-3 mt-[25px]">
+            <ul className="flex gap-3 mt-[25px] tablet:justify-center">
               <li className="">
                 <a href="">
                   <img
@@ -54,8 +55,8 @@ export const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="col-span-4">
-            <div className="grid grid-cols-3">
+          <div className="col-span-4 tablet:col-span-6">
+            <div className="grid grid-cols-3 tablet:grid-cols-1 tablet:text-center">
               <div>
                 <h2 className="text-[30px] text-[#FF8B2D] font-bold  mb-[25px]">
                   Our Company
@@ -107,7 +108,7 @@ export const Footer = () => {
                     </a>
                   </li>
                   <li className="text-[20px] font-normal text-white mb-[22px]">
-                    <p className="flex items-center gap-2">
+                    <p className="flex items-center gap-2 tablet:justify-center">
                       <span>
                         <FiPhone size={20} />
                       </span>
@@ -115,7 +116,7 @@ export const Footer = () => {
                     </p>
                   </li>
                   <li className="text-[20px] font-normal text-white mb-[22px]">
-                    <p className="flex items-center gap-2">
+                    <p className="flex items-center gap-2 tablet:justify-center">
                       <span>
                         <RxEnvelopeClosed size={20} />
                       </span>

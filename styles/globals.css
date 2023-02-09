@@ -92,6 +92,9 @@ button {
   .text37 {
     @apply text-[37px] leading-[48px] tablet:text-[32px];
   }
+  .buttonText {
+    @apply text-[24px] font-semibold text-center h-[70px] px-[45px] buttonGredean text-white mt-[50px] tablet:px-[20px] tablet:text-[20px];
+  }
   .gradientText {
     background: linear-gradient(236.96deg, #f55f29 13.69%, #fdc221 99.79%);
     -webkit-background-clip: text;
@@ -290,6 +293,11 @@ span.swiper-pagination-bullet {
   @apply max-w-[1204px] mx-auto px-5 desktop1680:px-[50px];
 }
 
+@screen desktop1440 {
+  .aboutBackground::after {
+    content: none;
+  }
+}
 @screen tablet {
   .instagram-slider .swiper-button-prev.swiper-button-disabled {
     display: none;
@@ -305,5 +313,12 @@ span.swiper-pagination-bullet {
   }
   .testimonialBorderGrediant {
     height: 50px;
+  }
+  .aboutBackground {
+    border-radius: 0px;
+    height: auto;
+  }
+  .togetherToday {
+    border-radius: 0px;
   }
 }

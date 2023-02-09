@@ -3,8 +3,8 @@ import React from "react";
 
 export const FeelSocialSection = () => {
   return (
-    <div className="relative container m-auto rounded-[20px] text-center z-50  overflow-x-hidden">
-      <div className="aboutBackground">
+    <div className="relative container m-auto rounded-[20px] text-center z-50 tablet:max-w-full tablet:m-0 tablet:p-0">
+      <div className="aboutBackground tablet:px-[15px] laptop:px-[10px]">
         <div className="py-[70px] max-w-[1214px] m-auto">
           <h2 className=" text-white text-[37px] font-extrabold font-['MonumentBold']">
             Feel that your social media can be booming, but just don’t know how?
@@ -20,7 +20,7 @@ export const FeelSocialSection = () => {
             like almost magically.. <br />
             See here what we are talkin about!
           </p>
-          <div className="mt-[50px] flex gap-[18px]">
+          <div className="mt-[50px] flex gap-[18px] tablet:flex-col">
             <div className="relative">
               <img
                 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 "
@@ -32,7 +32,7 @@ export const FeelSocialSection = () => {
                 alt="social image"
                 width={636}
                 height={352}
-                className="rounded-[20px]"
+                className="rounded-[20px] tablet:m-auto"
               />
             </div>
 
@@ -47,7 +47,7 @@ export const FeelSocialSection = () => {
                 alt="social image"
                 width={636}
                 height={352}
-                className="rounded-[20px]"
+                className="rounded-[20px] tablet:m-auto"
               />
             </div>
           </div>

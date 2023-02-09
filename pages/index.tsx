@@ -36,7 +36,7 @@ export default function Home() {
       <BookCoverSection />
       <CallToAction />
       <section>
-        <img src="/assets/images/cta-shap.svg" alt="Shape" />
+        <img src="/assets/images/cta-shap.svg" alt="Shape" className="m-auto" />
       </section>
       <OurProcessSection />
       <TogetherToday />

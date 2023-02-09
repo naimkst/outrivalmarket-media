@@ -19,7 +19,7 @@ export const MarketingDirectorSection = () => {
 
           <div className="relative">
             <div>
-              <p className=" text-[25px] text-white font-bold mb-[45px]">
+              <p className=" text-[25px] text-white font-bold mb-[45px] tablet:text-center">
                 You’re given a budget for marketing that you can spend <br />
                 (or must spend I shall say),
               </p>
