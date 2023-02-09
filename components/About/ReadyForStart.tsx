@@ -2,9 +2,9 @@ import React from "react";
 
 export const ReadyForStart = () => {
   return (
-    <div className="togetherToday containerSmall m-auto py-[53px] text-center my-[80px]  !px-[128px]">
-      <div>
-        <h2 className="text-[37px] font-['MonumentBold'] text-white mb-[34px]">
+    <div className="togetherToday containerSmall m-auto py-[53px] text-center my-[80px] tablet:my-0">
+      <div className="px-[128px]  tablet:px-0">
+        <h2 className="text37 font-['MonumentBold'] text-white mb-[34px]">
           So, if you're ready to take your social media to the next level, hit
           us up and let's get this party started!
         </h2>

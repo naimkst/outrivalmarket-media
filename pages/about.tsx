@@ -10,11 +10,15 @@ import React from "react";
 
 export default function About() {
   return (
-    <>
+    <div className="overflow-hidden">
       <HeroSection />
       <AboutSection />
       <div>
-        <img src="/assets/images/about/full-shape.svg" alt="" />
+        <img
+          src="/assets/images/about/full-shape.svg"
+          alt=""
+          className="m-auto"
+        />
       </div>
       <KnowledgeSection />
       <ReadyForStart />
@@ -22,6 +26,6 @@ export default function About() {
       <ChainDockSection />
       <TogetherToday />
       <FooterContent />
-    </>
+    </div>
   );
 }

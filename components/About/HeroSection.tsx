@@ -2,7 +2,7 @@ import React from "react";
 
 export const HeroSection = () => {
   return (
-    <div className="pt-[157px] relative h-[1000px]">
+    <div className="pt-[157px] relative h-[1000px] tablet:h-auto tablet:px-[15px] target:pb-[50px]">
       <div className="relative m-auto max-w-[1100px]">
         <h1 className="relative bigHeader text-center shadowBorder z-20  mb-[40px]">
           What's up, fella?
@@ -26,10 +26,14 @@ export const HeroSection = () => {
           looking to revamp your social media strategy, we've got you covered.
         </p>
       </div>
-      <div className="absolute left-0 top-10">
-        <img src="/assets/images/about/about-hero-shape.svg" alt="" />
+      <div className="absolute left-0 top-10 tablet:bottom-4 tablet:top-auto">
+        <img
+          src="/assets/images/about/about-hero-shape.svg"
+          alt=""
+          className="tablet:w-[150px]"
+        />
       </div>
-      <div className="absolute right-0 bottom-20">
+      <div className="absolute right-0 bottom-20 tablet:hidden">
         <img src="/assets/images/about/about-hero-right-shape.svg" alt="" />
       </div>
     </div>

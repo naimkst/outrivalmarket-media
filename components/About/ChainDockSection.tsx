@@ -14,9 +14,9 @@ export const ChainDockSection = () => {
 
   return (
     <div className="chainDockSection">
-      <div className="  py-[100px]">
+      <div className="py-[100px]">
         <div className="container">
-          <div className="max-w-[750px] m-auto text-center mb-[150px]">
+          <div className="max-w-[750px] m-auto text-center mb-[150px] tablet:max-w-full tablet:mb-[50px]">
             <h2 className="heading text-white !leading-[48px]">
               Chain dock grapple <br /> american killick
             </h2>
@@ -26,8 +26,8 @@ export const ChainDockSection = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 justify-between">
-            <div className="max-w-[724px] flex">
+          <div className="grid grid-cols-2 justify-between tablet:grid-cols-1">
+            <div className="max-w-[724px] tablet:max-w-full flex">
               <div className="mb-[60px]">
                 <div className="text25 !font-bold text-white mb-[25px] flex justify-between items-center">
                   <h3 className="max-w-[90%]">
@@ -56,7 +56,7 @@ export const ChainDockSection = () => {
               </div>
             </div>
 
-            <div className="max-w-[724px] flex justify-end ml-auto">
+            <div className="max-w-[724px] tablet:max-w-full flex justify-end ml-auto">
               <div className="mb-[60px]">
                 <div className="text25 !font-bold text-white mb-[25px] flex justify-between items-center">
                   <h3 className="max-w-[90%]">
@@ -87,7 +87,7 @@ export const ChainDockSection = () => {
               </div>
             </div>
 
-            <div className="max-w-[724px]">
+            <div className="max-w-[724px] tablet:max-w-full">
               <div className="mb-[60px]">
                 <div className="text25 !font-bold text-white mb-[25px] flex justify-between items-center">
                   <h3 className="max-w-[90%]">
@@ -116,7 +116,7 @@ export const ChainDockSection = () => {
               </div>
             </div>
 
-            <div className="max-w-[724px] flex justify-end ml-auto">
+            <div className="max-w-[724px] tablet:max-w-full flex justify-end ml-auto">
               <div className="mb-[60px]">
                 <div className="text25 !font-bold text-white mb-[25px] flex justify-between items-center">
                   <h3 className="max-w-[90%]">
@@ -155,7 +155,7 @@ export const ChainDockSection = () => {
               </div>
             </div>
 
-            <div className="max-w-[724px]">
+            <div className="max-w-[724px] tablet:max-w-full">
               <div className="mb-[60px]">
                 <div className="text25 !font-bold text-white mb-[25px] flex justify-between items-center">
                   <h3 className="max-w-[90%]">What is UGC?</h3>
@@ -179,7 +179,7 @@ export const ChainDockSection = () => {
               </div>
             </div>
 
-            <div className="max-w-[724px] flex justify-end ml-auto">
+            <div className="max-w-[724px] tablet:max-w-full flex justify-end ml-auto">
               <div className="mb-[60px]">
                 <div className="text25 !font-bold text-white mb-[25px] flex justify-between items-center">
                   <h3 className="max-w-[90%]">
@@ -213,7 +213,7 @@ export const ChainDockSection = () => {
               </div>
             </div>
 
-            <div className="max-w-[724px]">
+            <div className="max-w-[724px] tablet:max-w-full">
               <div className="mb-[60px]">
                 <div className="text25 !font-bold text-white mb-[25px] flex justify-between items-center">
                   <h3 className="max-w-[90%]">
@@ -242,7 +242,7 @@ export const ChainDockSection = () => {
               </div>
             </div>
 
-            <div className="max-w-[724px] flex justify-end ml-auto">
+            <div className="max-w-[724px] tablet:max-w-full flex justify-end ml-auto">
               <div className="mb-[60px]">
                 <div className="text25 !font-bold text-white mb-[25px] flex justify-between items-center">
                   <h3 className="max-w-[90%]">
@@ -269,7 +269,7 @@ export const ChainDockSection = () => {
               </div>
             </div>
 
-            <div className="max-w-[724px]">
+            <div className="max-w-[724px] tablet:max-w-full">
               <div className="mb-[60px]">
                 <div className="text25 !font-bold text-white mb-[25px] flex justify-between items-center">
                   <h3 className="max-w-[90%]">
@@ -295,7 +295,7 @@ export const ChainDockSection = () => {
               </div>
             </div>
 
-            <div className="max-w-[724px] flex justify-end ml-auto">
+            <div className="max-w-[724px] tablet:max-w-full flex justify-end ml-auto">
               <div className="mb-[60px]">
                 <div className="text25 !font-bold text-white mb-[25px] flex justify-between items-center">
                   <h3 className="max-w-[90%]">
@@ -321,7 +321,7 @@ export const ChainDockSection = () => {
               </div>
             </div>
 
-            <div className="max-w-[724px]">
+            <div className="max-w-[724px] tablet:max-w-full">
               <div className="mb-[60px]">
                 <div className="text25 !font-bold text-white mb-[25px] flex justify-between items-center">
                   <h3 className="max-w-[90%]">
@@ -349,7 +349,7 @@ export const ChainDockSection = () => {
               </div>
             </div>
 
-            <div className="max-w-[724px] flex justify-end ml-auto">
+            <div className="max-w-[724px] tablet:max-w-full flex justify-end ml-auto">
               <div className="mb-[60px]">
                 <div className="text25 !font-bold text-white mb-[25px] flex justify-between items-center">
                   <h3 className="max-w-[90%]">
