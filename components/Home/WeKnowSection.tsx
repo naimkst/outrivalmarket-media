@@ -27,7 +27,7 @@ export const WeKnowSection = () => {
                 <img
                   src="/assets/images/we-know-arrow.svg"
                   alt=""
-                  className="-mt-14 ml-[150px]"
+                  className="-mt-0 ml-[150px]"
                 />
               </div>
             </div>

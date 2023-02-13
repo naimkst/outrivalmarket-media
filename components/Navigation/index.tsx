@@ -16,12 +16,12 @@ export const Navigation = () => {
                 alt="logo"
                 width={301}
                 height={66}
-                className="w-[301px] h-[66px] tablet:w-[220.4px] tablet:h-[48.17px]"
+                className="w-[301px] h-[66px] tablet:w-[220.4px] tablet:h-[48.17px] laptop:w-[200px]"
               />
             </Link>
           </div>
           <div className="tablet:hidden">
-            <ul className="flex gap-[60px] items-center">
+            <ul className="flex gap-[60px] items-center laptop:gap-[20px]">
               <li className="text-white text-[20px] hover:hoverGradient">
                 <Link href={"/about"}>About</Link>
               </li>
@@ -43,7 +43,7 @@ export const Navigation = () => {
               <li className="text-white text-[20px] hover:hoverGradient">
                 <a href="">Contact</a>
               </li>
-              <li className="hoverGradient text-[20px] font-bold hover:hoverGradient border-[1px] py-[20px] px-[40px] rounded-[10px]">
+              <li className="hoverGradient text-[20px] font-bold hover:hoverGradient border-[1px] py-[20px] px-[40px] rounded-[10px] laptop:py-[12px] laptop:px-[20px]">
                 <a href="">Get Started</a>
               </li>
             </ul>

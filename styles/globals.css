@@ -88,7 +88,7 @@ button {
   }
 
   .bigHeader {
-    @apply text-[96.29px] leading-[122.5%] font-black text-white tablet:text-[48px];
+    @apply text-[96.29px] leading-[122.5%] font-black text-white tablet:text-[48px] desktop1366:text-[62px] phone:text-[40px];
   }
   .heading {
     @apply text-[37px] leading-[48px] font-extrabold font-['MonumentBold'] tablet:text-[32px];
@@ -322,7 +322,7 @@ span.swiper-pagination-bullet {
     justify-content: center;
   }
   .testimonialBorderGrediant {
-    height: 50px;
+    height: 65px;
   }
   .aboutBackground {
     border-radius: 0px;
@@ -330,5 +330,15 @@ span.swiper-pagination-bullet {
   }
   .togetherToday {
     border-radius: 0px;
+  }
+}
+@screen desktop1440 {
+  .testimonialBorderGrediant {
+    height: 45px;
+  }
+}
+@screen phone {
+  .testimonialBorderGrediant {
+    height: 45px;
   }
 }

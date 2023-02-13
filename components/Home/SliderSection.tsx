@@ -39,8 +39,16 @@ export const SliderSection = () => {
             spaceBetween: 20,
           },
           1024: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+          1279: {
             slidesPerView: 4,
-            spaceBetween: 50,
+            spaceBetween: 30,
+          },
+          1366: {
+            slidesPerView: 4,
+            spaceBetween: 30,
           },
         }}
         spaceBetween={30}
@@ -49,6 +57,7 @@ export const SliderSection = () => {
         <SwiperSlide className="">
           <div className="relative">
             <Image
+              className="tablet:m-auto"
               src={"/assets/images/instagram/instagram01.svg"}
               height={677.72}
               width={416.79}
@@ -60,6 +69,7 @@ export const SliderSection = () => {
         <SwiperSlide className="">
           <div className="relative">
             <Image
+              className="tablet:m-auto"
               src={"/assets/images/instagram/instagram02.svg"}
               height={677.72}
               width={416.79}
@@ -71,6 +81,7 @@ export const SliderSection = () => {
         <SwiperSlide className="">
           <div className="relative">
             <Image
+              className="tablet:m-auto"
               src={"/assets/images/instagram/instagram03.svg"}
               height={677.72}
               width={416.79}
@@ -82,6 +93,7 @@ export const SliderSection = () => {
         <SwiperSlide className="">
           <div className="relative">
             <Image
+              className="tablet:m-auto"
               src={"/assets/images/instagram/instagram04.svg"}
               height={677.72}
               width={416.79}
@@ -93,6 +105,7 @@ export const SliderSection = () => {
         <SwiperSlide className="">
           <div className="relative">
             <Image
+              className="tablet:m-auto"
               src={"/assets/images/instagram/instagram01.svg"}
               height={677.72}
               width={416.79}
