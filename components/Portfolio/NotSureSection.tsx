@@ -2,8 +2,8 @@ import React from "react";
 
 export const NotSureSection = () => {
   return (
-    <div className="relative py-[150px]">
-      <div className="max-w-[789px] m-auto text-center">
+    <div className="relative py-[150px] tablet:py-[80px] tablet:px-[15px]">
+      <div className="max-w-[789px] m-auto text-center tablet:max-w-full">
         <h2 className="heading text-white mb-[34px]">
           Not sure how all this works?? Looks like dreamy stuff to you?? Hey its
           Fo’real!, kidding aside..
@@ -17,7 +17,7 @@ export const NotSureSection = () => {
         </button>
       </div>
       <img
-        className="absolute right-0 -top-[0px]"
+        className="absolute right-0 -top-[0px] tablet:hidden"
         src="/assets/images/marketing-shadow.svg"
         alt=""
       />

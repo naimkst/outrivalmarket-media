@@ -11,7 +11,7 @@ export const CallToAction = () => {
         <img
           src="/assets/images/services/arrow.svg"
           alt=""
-          className="absolute -right-[100px] -top-[70px]"
+          className="absolute -right-[100px] -top-[70px] tablet:hidden"
         />
       </button>
     </div>

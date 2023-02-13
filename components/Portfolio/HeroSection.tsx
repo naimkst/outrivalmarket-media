@@ -3,8 +3,8 @@ import { SlArrowDown } from "react-icons/sl";
 
 export const HeroSection = () => {
   return (
-    <div className="pt-[157px] relative pb-[190px]">
-      <div className="relative m-auto max-w-[1440px] mb-[200px]">
+    <div className="pt-[157px] relative pb-[190px] tablet:pb-[80px]">
+      <div className="relative m-auto max-w-[1440px] mb-[200px] tablet:mb-[60px]">
         <h1 className="relative bigHeader text-center shadowBorder z-20  mb-[40px]">
           Elevate Your Brand with Our Multimedia Marketing Expertise. See Our
           Work Below
@@ -14,11 +14,11 @@ export const HeroSection = () => {
           Work Below
         </h1>
       </div>
-      <div className="w-[140px] h-[140px] bg-[#1B242B] m-auto flex items-center justify-center rounded-full">
+      <div className="w-[140px] h-[140px] bg-[#1B242B] m-auto flex items-center justify-center rounded-full ">
         <SlArrowDown size={46} color="#fff" />
       </div>
 
-      <div>
+      <div className="tablet:hidden">
         <div className="absolute left-0 bottom-[-215px]">
           <img src="/assets/images/portfolio/hero-section-shape.svg" alt="" />
         </div>

@@ -3,27 +3,27 @@ import React from "react";
 
 export const InstagramVideoSection = () => {
   return (
-    <div className="container m-auto py-[150px]">
-      <div className="grid grid-cols-2">
-        <div className="relative h-[580px]">
-          <Image
+    <div className="container m-auto py-[150px] tablet:py-[80px]">
+      <div className="grid grid-cols-2 items-center tablet:grid-cols-1 tablet:text-center">
+        <div className="relative">
+          <img
             src={"/assets/images/portfolio/portfolio-img-shape.png"}
             alt="--"
-            width={728}
-            height={699}
-            className=""
+            className="absolute z-10"
           />
-          <Image
-            src={"/assets/images/portfolio/instagram-video.jpg"}
-            alt="--"
-            width={728}
-            height={699}
-            className="rounded-[20px] absolute top-[80px] left-[80px] w-[570px]"
-          />
+          <div className="p-[60px] phone:p-[30px]">
+            <Image
+              src={"/assets/images/portfolio/instagram-video.jpg"}
+              alt="--"
+              width={728}
+              height={699}
+              className="rounded-[20px] relative z-30 "
+            />
+          </div>
           <img
             src={"/assets/images/portfolio/video-play.svg"}
             alt="--"
-            className=" absolute bottom-[0px] left-[110px]"
+            className="absolute bottom-[90px] left-[110px] z-40 phone:w-[50px] phone:bottom-[60px] phone:left-[60px]"
           />
         </div>
 

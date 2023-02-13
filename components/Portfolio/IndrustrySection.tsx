@@ -116,14 +116,16 @@ export const IndrustrySection = () => {
   };
   return (
     <div className="relative">
-      <div className="containerSmall m-auto">
+      <div className="containerSmall m-auto tablet:p-0">
         <div className="relative text-center">
-          <h2 className="heading gradientText mb-[85px]">Industry</h2>
+          <h2 className="heading gradientText mb-[85px] tablet:mb-[50px]">
+            Industry
+          </h2>
         </div>
 
-        <div className="containerSmall m-auto !p-0">
-          <div className="w-full bg-[#2E2E2E] mb-[43px]">
-            <ul className="flex items-center h-[103px] justify-between divide-x-[1px] w-full">
+        <div className="containerSmall m-auto !p-0 ">
+          <div className="w-full bg-[#2E2E2E] mb-[43px] tablet:overflow-x-scroll scrollbar-hide">
+            <ul className="flex items-center h-[103px] justify-between divide-x-[1px] w-full tablet:w-[1604px] tablet:ml-[15px]">
               {tabCollection?.map((item: any, index: number) => (
                 <li
                   key={`tab-${index}`}
@@ -138,23 +140,23 @@ export const IndrustrySection = () => {
             </ul>
           </div>
           {tabActive === 0 && (
-            <div className="grid grid-cols-3 gap-[60px] m-auto">
+            <div className="grid grid-cols-3 gap-[60px] m-auto tablet:grid-cols-2 tablet:gap-2 tablet:px-[15px]">
               {healthBeauty
                 ?.slice(0, itemLimit)
                 .map((item: any, index: number) => (
                   <div
                     key={`tabContent${index}`}
-                    className="relative h-[494px]"
+                    className="relative h-[494px] tablet:h-auto"
                   >
                     <Image
                       src={item}
                       alt="video image"
                       width={500}
                       height={500}
-                      className="w-[494px] h-[494px] rounded-[20px]"
+                      className="w-[494px] h-[494px] rounded-[20px] tablet:h-auto"
                     />
                     <img
-                      className="absolute bottom-[37px] left-[42px]"
+                      className="absolute bottom-[37px] left-[42px] tablet:w-[50px] tablet:left-0 tablet:m-auto tablet:right-0 tablet:bottom-[70px]"
                       src="/assets/images/portfolio/video-play.svg"
                       alt=""
                     />
@@ -164,23 +166,23 @@ export const IndrustrySection = () => {
           )}
 
           {tabActive === 1 && (
-            <div className="grid grid-cols-3 gap-[60px] m-auto">
+            <div className="grid grid-cols-3 gap-[60px] m-auto tablet:grid-cols-2 tablet:gap-2 tablet:px-[15px]">
               {lifestyle
                 ?.slice(0, itemLimit)
                 .map((item: any, index: number) => (
                   <div
                     key={`tabContent${index}`}
-                    className="relative h-[494px]"
+                    className="relative h-[494px] tablet:h-auto"
                   >
                     <Image
                       src={item}
                       alt="video image"
                       width={500}
                       height={500}
-                      className="w-[494px] h-[494px] rounded-[20px]"
+                      className="w-[494px] h-[494px] rounded-[20px] tablet:h-auto"
                     />
                     <img
-                      className="absolute bottom-[37px] left-[42px]"
+                      className="absolute bottom-[37px] left-[42px] tablet:w-[50px] tablet:left-0 tablet:m-auto tablet:right-0 tablet:bottom-[70px]"
                       src="/assets/images/portfolio/video-play.svg"
                       alt=""
                     />
@@ -190,18 +192,21 @@ export const IndrustrySection = () => {
           )}
 
           {tabActive === 2 && (
-            <div className="grid grid-cols-3 gap-[60px] m-auto">
+            <div className="grid grid-cols-3 gap-[60px] m-auto tablet:grid-cols-2 tablet:gap-2 tablet:px-[15px]">
               {nature?.slice(0, itemLimit).map((item: any, index: number) => (
-                <div key={`tabContent${index}`} className="relative h-[494px]">
+                <div
+                  key={`tabContent${index}`}
+                  className="relative h-[494px] tablet:h-auto"
+                >
                   <Image
                     src={item}
                     alt="video image"
                     width={500}
                     height={500}
-                    className="w-[494px] h-[494px] rounded-[20px]"
+                    className="w-[494px] h-[494px] rounded-[20px] tablet:h-auto"
                   />
                   <img
-                    className="absolute bottom-[37px] left-[42px]"
+                    className="absolute bottom-[37px] left-[42px] tablet:w-[50px] tablet:left-0 tablet:m-auto tablet:right-0 tablet:bottom-[70px]"
                     src="/assets/images/portfolio/video-play.svg"
                     alt=""
                   />
@@ -211,23 +216,23 @@ export const IndrustrySection = () => {
           )}
 
           {tabActive === 3 && (
-            <div className="grid grid-cols-3 gap-[60px] m-auto">
+            <div className="grid grid-cols-3 gap-[60px] m-auto tablet:grid-cols-2 tablet:gap-2 tablet:px-[15px]">
               {localMontreal
                 ?.slice(0, itemLimit)
                 .map((item: any, index: number) => (
                   <div
                     key={`tabContent${index}`}
-                    className="relative h-[494px]"
+                    className="relative h-[494px] tablet:h-auto"
                   >
                     <Image
                       src={item}
                       alt="video image"
                       width={500}
                       height={500}
-                      className="w-[494px] h-[494px] rounded-[20px]"
+                      className="w-[494px] h-[494px] rounded-[20px] tablet:h-auto"
                     />
                     <img
-                      className="absolute bottom-[37px] left-[42px]"
+                      className="absolute bottom-[37px] left-[42px] tablet:w-[50px] tablet:left-0 tablet:m-auto tablet:right-0 tablet:bottom-[70px]"
                       src="/assets/images/portfolio/video-play.svg"
                       alt=""
                     />
@@ -237,18 +242,21 @@ export const IndrustrySection = () => {
           )}
 
           {tabActive === 4 && (
-            <div className="grid grid-cols-3 gap-[60px] m-auto">
+            <div className="grid grid-cols-3 gap-[60px] m-auto tablet:grid-cols-2 tablet:gap-2 tablet:px-[15px]">
               {products?.slice(0, itemLimit).map((item: any, index: number) => (
-                <div key={`tabContent${index}`} className="relative h-[494px]">
+                <div
+                  key={`tabContent${index}`}
+                  className="relative h-[494px] tablet:h-auto"
+                >
                   <Image
                     src={item}
                     alt="video image"
                     width={500}
                     height={500}
-                    className="w-[494px] h-[494px] rounded-[20px]"
+                    className="w-[494px] h-[494px] rounded-[20px] tablet:h-auto"
                   />
                   <img
-                    className="absolute bottom-[37px] left-[42px]"
+                    className="absolute bottom-[37px] left-[42px] tablet:w-[50px] tablet:left-0 tablet:m-auto tablet:right-0 tablet:bottom-[70px]"
                     src="/assets/images/portfolio/video-play.svg"
                     alt=""
                   />
@@ -258,18 +266,21 @@ export const IndrustrySection = () => {
           )}
 
           {tabActive === 5 && (
-            <div className="grid grid-cols-3 gap-[60px] m-auto">
+            <div className="grid grid-cols-3 gap-[60px] m-auto tablet:grid-cols-2 tablet:gap-2 tablet:px-[15px]">
               {services?.slice(0, itemLimit).map((item: any, index: number) => (
-                <div key={`tabContent${index}`} className="relative h-[494px]">
+                <div
+                  key={`tabContent${index}`}
+                  className="relative h-[494px] tablet:h-auto"
+                >
                   <Image
                     src={item}
                     alt="video image"
                     width={500}
                     height={500}
-                    className="w-[494px] h-[494px] rounded-[20px]"
+                    className="w-[494px] h-[494px] rounded-[20px] tablet:h-auto"
                   />
                   <img
-                    className="absolute bottom-[37px] left-[42px]"
+                    className="absolute bottom-[37px] left-[42px] tablet:w-[50px] tablet:left-0 tablet:m-auto tablet:right-0 tablet:bottom-[70px]"
                     src="/assets/images/portfolio/video-play.svg"
                     alt=""
                   />
@@ -278,18 +289,21 @@ export const IndrustrySection = () => {
             </div>
           )}
           {tabActive === 6 && (
-            <div className="grid grid-cols-3 gap-[60px] m-auto">
+            <div className="grid grid-cols-3 gap-[60px] m-auto tablet:grid-cols-2 tablet:gap-2 tablet:px-[15px]">
               {brands?.slice(0, itemLimit).map((item: any, index: number) => (
-                <div key={`tabContent${index}`} className="relative h-[494px]">
+                <div
+                  key={`tabContent${index}`}
+                  className="relative h-[494px] tablet:h-auto"
+                >
                   <Image
                     src={item}
                     alt="video image"
                     width={500}
                     height={500}
-                    className="w-[494px] h-[494px] rounded-[20px]"
+                    className="w-[494px] h-[494px] rounded-[20px] tablet:h-auto"
                   />
                   <img
-                    className="absolute bottom-[37px] left-[42px]"
+                    className="absolute bottom-[37px] left-[42px] tablet:w-[50px] tablet:left-0 tablet:m-auto tablet:right-0 tablet:bottom-[70px]"
                     src="/assets/images/portfolio/video-play.svg"
                     alt=""
                   />
@@ -310,7 +324,7 @@ export const IndrustrySection = () => {
         </div>
       </div>
       <img
-        className="absolute right-0 -top-[280px]"
+        className="absolute right-0 -top-[280px] tablet:hidden"
         src="/assets/images/marketing-shadow.svg"
         alt=""
       />
