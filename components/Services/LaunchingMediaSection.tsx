@@ -8,17 +8,16 @@ export const LaunchingMediaSection = () => {
     setTabActive(id);
   };
   return (
-    <div className="py-[0px] container m-auto">
+    <div className="py-[0px] container m-auto tablet:!max-w-full tablet:p-0">
       <div className="text-center mb-[42px]">
         <h2 className="heading text-white mb-[34px]">
-          Launching your social media <br /> marketing campaign <br /> can be
-          bitter..
+          Launching your social media marketing campaign can be bitter..
         </h2>
         <p className="text25 !font-bold text-white">Lets do this together!</p>
       </div>
-      <div className="containerSmall m-auto bg-[#1C1C1C] !p-0">
-        <div className="w-full bg-[#2E2E2E]">
-          <ul className="flex items-center h-[103px] justify-between divide-x-[1px] w-full">
+      <div className="containerSmall m-auto bg-[#1C1C1C] !p-0 tablet:max-w-full">
+        <div className="w-full bg-[#2E2E2E] tablet:pt-10">
+          <ul className="scrollbar-hide flex items-center h-[103px] justify-between divide-x-[1px] w-full tablet:overflow-scroll tablet:ml-[10px]">
             <li
               onClick={() => isActive(0)}
               className={`${

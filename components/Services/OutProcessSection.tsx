@@ -7,12 +7,12 @@ export const OurProcessSection = () => {
       <img
         src="/assets/images/hero-shape.svg"
         alt=""
-        className="absolute left-0 top-10"
+        className="absolute left-0 top-10 tablet:hidden"
       />
       <img
         src="/assets/images/marketing-shadow.svg"
         alt=""
-        className="absolute right-0 bottom-10"
+        className="absolute right-0 bottom-10 tablet:hidden"
       />
       <div className="container m-auto py-[50px] ">
         <div className="text-center pb-[100px]">
@@ -24,22 +24,22 @@ export const OurProcessSection = () => {
           </p>
         </div>
 
-        <div className="relative max-w-[1476px] m-auto">
+        <div className="relative max-w-[1476px] m-auto tablet:max-w-auto">
           <div className="absolute top-14 left-1/2 transform -translate-x-1/2 ">
             <img
               src="/assets/images/services/prcess-shape.svg"
               alt="process"
-              className=""
+              className="tablet:hidden"
             />
           </div>
 
-          <div className="flex justify-end">
+          <div className="flex justify-end tablet:flex-none tablet:text-center tablet:mb-[50px]">
             <div className="flex-1"></div>
-            <div className="max-w-[456px] pl-[60px]">
+            <div className="max-w-[456px] pl-[60px] tablet:max-w-full tablet:pl-0">
               <img
                 src="/assets/images/process/01.png"
                 alt=""
-                className="mb-[47px]"
+                className="mb-[47px] tablet:m-auto tablet:mb-[20px]"
               />
               <h3 className="text-[25px] font-bold text-white mb-[15px]">
                 Strategize
@@ -50,12 +50,12 @@ export const OurProcessSection = () => {
             </div>
           </div>
 
-          <div className="flex justify-start">
-            <div className="max-w-[456px] pl-[68px]">
+          <div className="flex justify-start tablet:flex-none tablet:text-center tablet:mb-[50px]">
+            <div className="max-w-[456px] pl-[68px] tablet:max-w-full tablet:pl-0">
               <img
                 src="/assets/images/process/02.png"
                 alt=""
-                className="mb-[47px]"
+                className="mb-[47px] tablet:m-auto tablet:mb-[20px]"
               />
               <h3 className="text-[25px] font-bold text-white mb-[15px]">
                 Initial Action
@@ -68,13 +68,13 @@ export const OurProcessSection = () => {
             <div className="flex-1"></div>
           </div>
 
-          <div className="flex justify-end -mt-[50px]">
+          <div className="flex justify-end -mt-[50px] tablet:mt-0 tablet:flex-none tablet:mb-[50px] tablet:text-center">
             <div className="flex-1"></div>
-            <div className="max-w-[456px] pl-[60px]">
+            <div className="max-w-[456px] pl-[60px] tablet:max-w-full tablet:pl-0">
               <img
                 src="/assets/images/process/03.png"
                 alt=""
-                className="mb-[47px]"
+                className="mb-[47px] tablet:m-auto tablet:mb-[20px]"
               />
               <h3 className="text-[25px] font-bold text-white mb-[15px]">
                 Magic Begins
@@ -85,12 +85,12 @@ export const OurProcessSection = () => {
             </div>
           </div>
 
-          <div className="flex justify-start  pl-[68px]">
-            <div className="max-w-[456px]">
+          <div className="flex justify-start  pl-[68px] tablet:flex-col tablet:pl-0 tablet:text-center">
+            <div className="max-w-[456px] tablet:max-w-full">
               <img
                 src="/assets/images/process/04.png"
                 alt=""
-                className="mb-[47px]"
+                className="mb-[47px] tablet:m-auto tablet:mb-[20px]"
               />
               <h3 className="text-[25px] font-bold text-white mb-[15px]">
                 Magic Continues
@@ -104,7 +104,7 @@ export const OurProcessSection = () => {
         </div>
       </div>
 
-      <div className="containerSmall bg-[#0A131A] rounded-[20px] text-center py-[53px] mt-[100px]">
+      <div className="containerSmall bg-[#0A131A] rounded-[20px] text-center py-[53px] mt-[100px] tablet:mt-[50px] tablet:rounded-none">
         <h2 className="heading gradientText mb-[34px]">
           Lets Get In touch Now.
         </h2>
@@ -115,7 +115,7 @@ export const OurProcessSection = () => {
           <img
             src="/assets/images/services/arrow.svg"
             alt=""
-            className="absolute -right-[100px] -top-[70px]"
+            className="absolute -right-[100px] -top-[70px] tablet:hidden"
           />
         </button>
       </div>

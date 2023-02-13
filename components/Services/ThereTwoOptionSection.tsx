@@ -2,15 +2,15 @@ import React from "react";
 
 export const ThereTwoOptionSection = () => {
   return (
-    <div className="py-[100px]">
+    <div className="py-[100px] tablet:py-[50px]">
       <div className="containerSmall m-auto">
-        <h2 className="text-[37px] font-['MonumentBold'] text-white  text-center mb-[70px]">
+        <h2 className="text37 font-['MonumentBold'] text-white  text-center mb-[70px]">
           Here’s the thing...
           <br />
           <span className="CTAtextGradean"> there are two options</span>
         </h2>
 
-        <div className="grid grid-cols-2 gap-[25px]">
+        <div className="grid grid-cols-2 gap-[25px] tablet:grid-cols-1 tablet:text-center">
           <div className="bg-[#1C1C1C]">
             <div className="optionBG h-[87px] flex items-center justify-center mb-[50px]">
               <h2 className="text-[34px] text-white font-bold uppercase">

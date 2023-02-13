@@ -12,12 +12,20 @@ import React from "react";
 
 export default function Services() {
   return (
-    <>
+    <div className="overflow-hidden">
       <HeroSection />
       <AboutSection />
-      <img src="/assets/images/services/service-section-shape.svg" alt="" />
+      <img
+        src="/assets/images/services/service-section-shape.svg"
+        alt=""
+        className="m-auto"
+      />
       <ZtimeSection />
-      <img src="/assets/images/services/shape-section.svg" alt="" />
+      <img
+        src="/assets/images/services/shape-section.svg"
+        alt=""
+        className="m-auto"
+      />
       <HowItsWorkSection />
       <ThereTwoOptionSection />
       <CTASection />
@@ -25,6 +33,6 @@ export default function Services() {
       <LaunchingMediaSection />
       <TogetherToday />
       <FooterContent />
-    </>
+    </div>
   );
 }

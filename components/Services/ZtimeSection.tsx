@@ -4,7 +4,7 @@ export const ZtimeSection = () => {
   return (
     <div className="mt-[30px]">
       <div className="container m-auto">
-        <div className="w-[867px] h-[404px] m-auto bg-[#1C1C1C] flex items-center flex-col gap-[34px] justify-center px-[37px] mb-[150px]">
+        <div className="w-[867px] h-[404px] m-auto bg-[#1C1C1C] flex items-center flex-col gap-[34px] justify-center px-[37px] mb-[150px] tablet:w-full tablet:text-center tablet:h-auto tablet:py-[60px] tablet:px-[15px]">
           <h2 className="weKnowGradent heading text-white">
             Yes, its Gen-Z times, my friend!
           </h2>
@@ -14,7 +14,7 @@ export const ZtimeSection = () => {
           </p>
         </div>
 
-        <div className="flex justify-between items-center mb-[120px]">
+        <div className="flex justify-between items-center mb-[120px] tablet:flex-col tablet:text-center">
           <div className="flex-1">
             <h2 className="heading text-white">
               What is
@@ -31,8 +31,8 @@ export const ZtimeSection = () => {
           </div>
         </div>
 
-        <div className="flex justify-between items-center mb-[120px]">
-          <div className="flex-1">
+        <div className="flex justify-between items-center mb-[120px] tablet:flex-col tablet:text-center">
+          <div className="flex-1 tablet:order-last">
             <p className="text25 text-white">
               They are called social media marketing creators, they are <br />
               exceptionally talented individuals with a knack for
@@ -51,7 +51,7 @@ export const ZtimeSection = () => {
             </h2>
           </div>
         </div>
-        <div className="flex justify-between items-center mb-[120px]">
+        <div className="flex justify-between items-center mb-[120px] tablet:flex-col tablet:text-center">
           <div className="flex-1">
             <h2 className="heading text-white">
               Who is
@@ -67,8 +67,8 @@ export const ZtimeSection = () => {
           </div>
         </div>
 
-        <div className="flex justify-between items-center mb-[120px]">
-          <div className="flex-1">
+        <div className="flex justify-between items-center mb-[120px] tablet:flex-col tablet:text-center">
+          <div className="flex-1 tablet:order-last">
             <p className="text25 text-white">
               We will create for you (essentially your brand) original <br />
               content, with an authentic feel and touch driven by <br />

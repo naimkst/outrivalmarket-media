@@ -2,8 +2,8 @@ import React from "react";
 
 export const CTASection = () => {
   return (
-    <div className="mt-[150px] relative">
-      <div className="w-[867px] h-[404px] m-auto bg-[#1C1C1C] flex items-center flex-col gap-[34px] justify-center px-[37px] mb-[150px] z-10 relative">
+    <div className="mt-[150px] relative tablet:mt-[50px]">
+      <div className="w-[867px] h-[404px] m-auto bg-[#1C1C1C] flex items-center flex-col gap-[34px] justify-center px-[37px] mb-[150px] z-10 relative tablet:w-full tablet:h-auto tablet:py-[50px] tablet:text-center tablet:mb-[50px] tablet:px-[15px]">
         <h2 className="weKnowGradent heading text-white">
           Throw on dem' kicks and join!
         </h2>

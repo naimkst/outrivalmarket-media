@@ -77,6 +77,16 @@ button {
     width: 39px;
   }
 
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* For IE, Edge and Firefox */
+  .scrollbar-hide {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
   .bigHeader {
     @apply text-[96.29px] leading-[122.5%] font-black text-white tablet:text-[48px];
   }
@@ -84,7 +94,7 @@ button {
     @apply text-[37px] leading-[48px] font-extrabold font-['MonumentBold'] tablet:text-[32px];
   }
   .text48 {
-    @apply text-[48px] leading-[67px] font-extrabold font-['MonumentBold'];
+    @apply text-[48px] leading-[67px] font-extrabold font-['MonumentBold'] tablet:text-[32px] tablet:leading-[40.5px];
   }
   .text25 {
     @apply text-[25px] font-normal;

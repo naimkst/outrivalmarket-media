@@ -3,16 +3,12 @@ import { BoxImage } from "../GlobalComponent/BoxImage";
 
 export const AboutSection = () => {
   return (
-    <div className="container m-auto mb-[0px]">
-      <div className="grid grid-cols-2 items-center justify-between">
-        <div className=" relative">
+    <div className="container m-auto mb-[0px] tablet:mt-[80px]">
+      <div className="grid grid-cols-2 items-center justify-between tablet:grid-cols-1">
+        <div className=" relative tablet:text-center">
           <h2 className="text48 text-white">
-            Working with local <br />
-            brands is
-            <span className="weKnowGradent">
-              our expertise <br /> And privilege!
-            </span>
-            .
+            Working with local brands is
+            <span className="weKnowGradent">our expertise And privilege!</span>.
           </h2>
         </div>
 
