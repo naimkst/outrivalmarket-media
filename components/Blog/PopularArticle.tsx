@@ -3,22 +3,24 @@ import React from "react";
 
 export const PopularArticle = () => {
   return (
-    <div className="pt-[150px]">
+    <div className="pt-[150px] tablet:py-[80px] tablet:px-[15px]">
       <div className="blogContainer !p-0">
-        <h2 className="heading gradientText mb-[34px]">Popular Articles</h2>
-        <div className="grid grid-cols-2 gap-[30px] mt-[70px] ">
-          <div className="grid grid-cols-2 gap-0 relative">
-            <div className="relative">
+        <h2 className="heading gradientText mb-[34px] tablet:text-center">
+          Popular Articles
+        </h2>
+        <div className="grid grid-cols-2 gap-[30px] mt-[70px] tablet:grid-cols-1">
+          <div className="grid grid-cols-2 gap-0 relative tablet:grid-cols-1">
+            <div className="relative tablet:order-first">
               <Image
                 src={"/assets/images/blog/04.jpg"}
                 alt=""
                 width={700}
                 height={700}
-                className="h-full w-[350px] object-cover rounded-[20px] absolute top-0 left-0 z-20"
+                className="h-full w-[350px] object-cover rounded-[20px] absolute top-0 left-0 z-20 tablet:relative tablet:w-full"
               />
             </div>
 
-            <div className="bg-[#0C151C] relative z-10 -ml-10 rounded-r-[20px]">
+            <div className="bg-[#0C151C] relative z-10 -ml-10 rounded-r-[20px] tablet:-mt-[30px] tablet:z-30 tablet:ml-0 tablet:rounded-[20px]">
               <div className="px-[20px] pt-[40px] ml-10">
                 <div className="flex justify-between items-center mb-[20px]">
                   <span className="h-[27px] bg-[#328BF2] text-white px-[25px] rounded-full text-[15.57px] font-normal flex items-center">
@@ -46,18 +48,18 @@ export const PopularArticle = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-0 relative">
-            <div className="relative">
+          <div className="grid grid-cols-2 gap-0 relative tablet:grid-cols-1">
+            <div className="relative tablet:order-first">
               <Image
-                src={"/assets/images/blog/05.jpg"}
+                src={"/assets/images/blog/07.jpg"}
                 alt=""
                 width={700}
                 height={700}
-                className="h-full w-[350px] object-cover rounded-[20px] absolute top-0 left-0 z-20"
+                className="h-full w-[350px] object-cover rounded-[20px] absolute top-0 left-0 z-20 tablet:relative tablet:w-full"
               />
             </div>
 
-            <div className="bg-[#0C151C] relative z-10 -ml-10 rounded-r-[20px]">
+            <div className="bg-[#0C151C] relative z-10 -ml-10 rounded-r-[20px] tablet:-mt-[30px] tablet:z-30 tablet:ml-0 tablet:rounded-[20px]">
               <div className="px-[20px] pt-[40px] ml-10">
                 <div className="flex justify-between items-center mb-[20px]">
                   <span className="h-[27px] bg-[#328BF2] text-white px-[25px] rounded-full text-[15.57px] font-normal flex items-center">

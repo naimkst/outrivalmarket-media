@@ -7,7 +7,7 @@ import React from "react";
 
 export default function Blog() {
   return (
-    <div>
+    <div className="overflow-hidden">
       <BlogCardSection />
       <PopularArticle />
       <div>

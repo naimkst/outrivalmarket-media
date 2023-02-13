@@ -3,19 +3,19 @@ import React from "react";
 
 export const BlogCardSection = () => {
   return (
-    <div className="pt-[150px]">
-      <div className="blogContainer !p-0">
-        <div className="grid grid-cols-2 gap-0 relative">
-          <div className="relative -ml-10">
+    <div className="pt-[150px] tablet:pt-[70px]">
+      <div className="blogContainer !p-0 tablet:mx-[15px]">
+        <div className="grid grid-cols-2 gap-0 relative tablet:grid-cols-1">
+          <div className="relative -ml-10 target:order-last tablet:ml-0">
             <Image
               src={"/assets/images/blog/01.jpg"}
               alt=""
               width={700}
               height={700}
-              className="h-full w-[710px] object-cover rounded-l-[20px] absolute top-0 left-0 z-10 ml-10"
+              className="h-full w-[710px] object-cover rounded-l-[20px] absolute top-0 left-0 z-10 ml-10 tablet:relative tablet:rounded-[20px] tablet:m-auto tablet:w-full tablet:ml-0 tablet:h-[400px]"
             />
           </div>
-          <div className="bg-[#0C151C] rounded-[20px] relative z-20">
+          <div className="bg-[#0C151C] rounded-[20px] relative z-20 tablet:-mt-[30px]">
             <div className="px-[40px] pt-[40px]">
               <div className="flex justify-between items-center mb-[58px]">
                 <span className="h-[27px] bg-[#FEA800] text-white px-[25px] rounded-full text-[15.57px] font-normal flex items-center">
@@ -42,19 +42,19 @@ export const BlogCardSection = () => {
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-[30px] mt-[70px] ">
-          <div className="grid grid-cols-2 gap-0 relative">
-            <div className="relative">
+        <div className="grid grid-cols-2 gap-[30px] mt-[70px] tablet:grid-cols-1">
+          <div className="grid grid-cols-2 gap-0 relative tablet:grid-cols-1">
+            <div className="relative target:order-last">
               <Image
                 src={"/assets/images/blog/02.jpg"}
                 alt=""
                 width={700}
                 height={700}
-                className="h-full w-[350px] object-cover rounded-[20px] absolute top-0 left-0 z-20"
+                className="h-full w-[350px] object-cover rounded-[20px] absolute top-0 left-0 z-20 tablet:relative tablet:w-full "
               />
             </div>
 
-            <div className="bg-[#0C151C] relative z-10 -ml-10">
+            <div className="bg-[#0C151C] relative z-10 -ml-10 tablet:ml-0 tablet:rounded-[20px] tablet:-mt-[30px] tablet:z-30">
               <div className="px-[20px] pt-[40px] ml-10">
                 <div className="flex justify-between items-center mb-[20px]">
                   <span className="h-[27px] bg-[#328BF2] text-white px-[25px] rounded-full text-[15.57px] font-normal flex items-center">
@@ -82,18 +82,18 @@ export const BlogCardSection = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-0 relative">
-            <div className="relative">
+          <div className="grid grid-cols-2 gap-0 relative tablet:grid-cols-1">
+            <div className="relative target:order-last">
               <Image
                 src={"/assets/images/blog/03.jpg"}
                 alt=""
                 width={700}
                 height={700}
-                className="h-full w-[350px] object-cover rounded-[20px] absolute top-0 left-0 z-20"
+                className="h-full w-[350px] object-cover rounded-[20px] absolute top-0 left-0 z-20 tablet:relative tablet:w-full "
               />
             </div>
 
-            <div className="bg-[#0C151C] relative z-10 -ml-10">
+            <div className="bg-[#0C151C] relative z-10 -ml-10 tablet:ml-0 tablet:rounded-[20px] tablet:-mt-[30px] tablet:z-30">
               <div className="px-[20px] pt-[40px] ml-10">
                 <div className="flex justify-between items-center mb-[20px]">
                   <span className="h-[27px] bg-[#328BF2] text-white px-[25px] rounded-full text-[15.57px] font-normal flex items-center">

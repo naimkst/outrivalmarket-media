@@ -300,7 +300,7 @@ span.swiper-pagination-bullet {
   @apply max-w-[1615px] mx-auto px-5 desktop1680:px-[50px] tablet:px-[15px];
 }
 .blogContainer {
-  @apply max-w-[1204px] mx-auto px-5 desktop1680:px-[50px];
+  @apply max-w-[1204px] mx-auto px-5 desktop1680:px-[50px] tablet:px-[15px];
 }
 
 @screen desktop1440 {

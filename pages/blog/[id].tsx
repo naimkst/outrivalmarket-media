@@ -7,7 +7,7 @@ export default function SingleBlog() {
   return (
     <div className="pt-[150px]">
       <div className="container m-auto">
-        <div className="text-center max-w-[723px] m-auto pb-[98px] border-b-[1px] border-[#9197A6]">
+        <div className="text-center max-w-[723px] m-auto pb-[98px] border-b-[1px] border-[#9197A6] tablet:pb-[50px]">
           <p className="text-white text25 mb-[20px]">
             Published on <span className="font-bold"> November 15th</span>
           </p>
@@ -38,7 +38,7 @@ export default function SingleBlog() {
           </div>
         </div>
 
-        <div className="pt-[98px] blogContainer m-auto">
+        <div className="pt-[98px] blogContainer m-auto tablet:pt-[50px]">
           <p className="text-white text25">
             In Herman Hesse’s novel Siddhartha, the title character and his
             friend leave home, disowning all possessions, to seek spiritual
@@ -84,22 +84,22 @@ export default function SingleBlog() {
         </div>
 
         <div className="max-w-[1280px] m-auto">
-          <div className="grid grid-cols-2 items-center">
+          <div className="grid grid-cols-2 items-center tablet:grid-cols-1">
             <div className="relative">
-              <Image
+              <img
                 src={"/assets/images/blog/image-shape.png"}
                 alt="blog title"
-                width={646.5}
-                height={884}
-                className="rounded-[20px] w-[655.5px] h-[860px]"
+                className="absolute"
               />
-              <Image
-                src={"/assets/images/blog/shape-image.jpg"}
-                alt="blog title"
-                width={537}
-                height={780}
-                className="rounded-[20px] w-[420px] absolute left-[120px] top-[120px]"
-              />
+              <div className="p-[115px] tablet:p-[130px] phone:p-[70px]">
+                <Image
+                  src={"/assets/images/blog/shape-image.jpg"}
+                  alt="blog title"
+                  width={537}
+                  height={780}
+                  className="rounded-[20px] relative"
+                />
+              </div>
             </div>
             <div>
               <p className="text-white text25 font-normal">
