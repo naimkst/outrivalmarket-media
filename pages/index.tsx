@@ -13,12 +13,14 @@ import { CallToAction } from "@/components/Home/CallToAction";
 import { OurProcessSection } from "@/components/Home/OutProcessSection";
 import { TogetherToday } from "@/components/Home/TogetherToday";
 import { FooterContent } from "@/components/Home/FooterContent";
+import { Seo } from "@/components/GlobalComponent/Seo";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
     <>
+      <Seo />
       <HeroSection />
       <WeKnowSection />
       <SliderSection />

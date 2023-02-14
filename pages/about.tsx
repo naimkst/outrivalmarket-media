@@ -5,12 +5,14 @@ import { KnowledgeSection } from "@/components/About/KnowledgeSection";
 import { OurTeam } from "@/components/About/OurTeam";
 import { ReadyForStart } from "@/components/About/ReadyForStart";
 import { TogetherToday } from "@/components/About/TogetherToday";
+import { Seo } from "@/components/GlobalComponent/Seo";
 import { FooterContent } from "@/components/Home/FooterContent";
 import React from "react";
 
 export default function About() {
   return (
     <div className="overflow-hidden">
+      <Seo />
       <HeroSection />
       <AboutSection />
       <div>

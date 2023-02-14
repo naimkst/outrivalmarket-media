@@ -9,10 +9,12 @@ import { NotSureSection } from "@/components/Portfolio/NotSureSection";
 import { Platform } from "@/components/Portfolio/Platform";
 import React from "react";
 import { MotionSection } from "@/components/Portfolio/MotionSection";
+import { Seo } from "@/components/GlobalComponent/Seo";
 
 export default function Portfolio() {
   return (
     <div className="overflow-hidden">
+      <Seo />
       <HeroSection />
       <Platform />
       <IndrustrySection />

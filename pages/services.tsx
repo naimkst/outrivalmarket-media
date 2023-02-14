@@ -1,4 +1,5 @@
 import { TogetherToday } from "@/components/About/TogetherToday";
+import { Seo } from "@/components/GlobalComponent/Seo";
 import { FooterContent } from "@/components/Home/FooterContent";
 import { AboutSection } from "@/components/Services/AboutSection";
 import { CTASection } from "@/components/Services/CTASection";
@@ -13,6 +14,7 @@ import React from "react";
 export default function Services() {
   return (
     <div className="overflow-hidden">
+      <Seo />
       <HeroSection />
       <AboutSection />
       <img
