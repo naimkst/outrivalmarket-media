@@ -2,7 +2,7 @@ import React from "react";
 
 export const ThereTwoOptionSection = () => {
   return (
-    <div className="py-[100px] tablet:py-[50px]">
+    <div className="py-[100px] tablet:py-[50px] laptop:py-0">
       <div className="containerSmall m-auto">
         <h2 className="text37 font-['MonumentBold'] text-white  text-center mb-[70px]">
           Here’s the thing...

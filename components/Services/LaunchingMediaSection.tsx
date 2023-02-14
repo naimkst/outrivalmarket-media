@@ -8,21 +8,21 @@ export const LaunchingMediaSection = () => {
     setTabActive(id);
   };
   return (
-    <div className="py-[0px] container m-auto tablet:!max-w-full tablet:p-0">
+    <div className="py-[0px] container m-auto laptop:!max-w-full laptop:p-0">
       <div className="text-center mb-[42px]">
-        <h2 className="heading text-white mb-[34px]">
+        <h2 className="heading text-white mb-[34px] phone:px-[15px] laptop:px-[15px]">
           Launching your social media marketing campaign can be bitter..
         </h2>
         <p className="text25 !font-bold text-white">Lets do this together!</p>
       </div>
-      <div className="containerSmall m-auto bg-[#1C1C1C] !p-0 tablet:max-w-full ">
-        <div className="w-full bg-[#2E2E2E] tablet:overflow-x-scroll scrollbar-hide ">
-          <div className="flex items-center h-[103px] justify-between divide-x-[1px] w-full tablet:mx-[10px] tablet:w-[1230px]">
+      <div className="containerSmall m-auto bg-[#1C1C1C] !p-0 laptop:max-w-full ">
+        <div className="w-full bg-[#2E2E2E] laptop:overflow-x-scroll scrollbar-hide ">
+          <div className="flex items-center h-[103px] justify-between divide-x-[1px] w-full laptop:mx-[10px] laptop:w-[1230px]">
             <p
               onClick={() => isActive(0)}
               className={`${
                 tabActive === 0 ? "tabActiveBg" : ""
-              } text25 text-white !font-bold px-16 text-center h-full flex items-center cursor-pointer tablet:px-3`}
+              } text25 text-white !font-bold px-16 text-center h-full flex items-center cursor-pointer laptop:px-3`}
             >
               Social Media Brand Ambassador
             </p>
@@ -30,7 +30,7 @@ export const LaunchingMediaSection = () => {
               onClick={() => isActive(1)}
               className={`${
                 tabActive === 1 ? "tabActiveBg" : ""
-              } text25 text-white !font-bold px-16 text-center h-full flex items-center cursor-pointer tablet:px-3`}
+              } text25 text-white !font-bold px-16 text-center h-full flex items-center cursor-pointer laptop:px-3`}
             >
               UGC Original Content
             </p>
@@ -38,7 +38,7 @@ export const LaunchingMediaSection = () => {
               onClick={() => isActive(2)}
               className={`${
                 tabActive === 2 ? "tabActiveBg" : ""
-              } text25 text-white !font-bold px-16 text-center h-full flex items-center cursor-pointer tablet:px-3`}
+              } text25 text-white !font-bold px-16 text-center h-full flex items-center cursor-pointer laptop:px-3`}
             >
               Brand Video Concept
             </p>
@@ -48,7 +48,7 @@ export const LaunchingMediaSection = () => {
                 onClick={() => isActive(3)}
                 className={`${
                   tabActive === 3 ? "tabActiveBg" : ""
-                } text25 text-white !font-bold px-16 text-center h-full flex items-center cursor-pointer tablet:px-3`}
+                } text25 text-white !font-bold px-16 text-center h-full flex items-center cursor-pointer laptop:px-3`}
               >
                 Stop Motion Animation
               </p>
@@ -56,8 +56,8 @@ export const LaunchingMediaSection = () => {
           </div>
         </div>
         {tabActive === 0 && (
-          <div className="px-[67px] grid grid-cols-2 justify-between items-center tablet:text-center tablet:grid-cols-1 tablet:px-[15px] tablet:py-[50px]">
-            <p className="text-[38px] text-white tablet:text-[32px] tablet:text-center tablet:order-last">
+          <div className="px-[67px] grid grid-cols-2 justify-between items-center laptop:text-center laptop:grid-cols-1 laptop:px-[15px] laptop:py-[50px]">
+            <p className="text-[38px] text-white laptop:text-[32px] laptop:text-center laptop:order-last">
               Let us find your next Social Media ambassador for{" "}
               <span className="!font-bold"> your brand</span>; The perfect human
               that shares <span className="!font-bold"> your values</span>, and
@@ -68,8 +68,8 @@ export const LaunchingMediaSection = () => {
         )}
 
         {tabActive === 1 && (
-          <div className="px-[67px] grid grid-cols-2 justify-between items-center tablet:text-center tablet:grid-cols-1 tablet:px-[15px] tablet:py-[50px]">
-            <p className="text-[38px] text-white tablet:text-[32px] tablet:text-center tablet:order-last">
+          <div className="px-[67px] grid grid-cols-2 justify-between items-center laptop:text-center laptop:grid-cols-1 laptop:px-[15px] laptop:py-[50px]">
+            <p className="text-[38px] text-white laptop:text-[32px] laptop:text-center laptop:order-last">
               Let us find your next Social Media ambassador for{" "}
               <span className="!font-bold"> your brand</span>; The perfect human
               that shares <span className="!font-bold"> your values</span>, and
@@ -80,8 +80,8 @@ export const LaunchingMediaSection = () => {
         )}
 
         {tabActive === 2 && (
-          <div className="px-[67px] grid grid-cols-2 justify-between items-center tablet:text-center tablet:grid-cols-1 tablet:px-[15px] tablet:py-[50px]">
-            <p className="text-[38px] text-white tablet:text-center tablet:order-last">
+          <div className="px-[67px] grid grid-cols-2 justify-between items-center laptop:text-center laptop:grid-cols-1 laptop:px-[15px] laptop:py-[50px]">
+            <p className="text-[38px] text-white laptop:text-center laptop:order-last">
               Let us find your next Social Media ambassador for{" "}
               <span className="!font-bold"> your brand</span>; The perfect human
               that shares <span className="!font-bold"> your values</span>, and
@@ -92,8 +92,8 @@ export const LaunchingMediaSection = () => {
         )}
 
         {tabActive === 3 && (
-          <div className="px-[67px] grid grid-cols-2 justify-between items-center tablet:text-center tablet:grid-cols-1 tablet:px-[15px] tablet:py-[50px]">
-            <p className="text-[38px] text-white tablet:text-center tablet:order-last">
+          <div className="px-[67px] grid grid-cols-2 justify-between items-center laptop:text-center laptop:grid-cols-1 laptop:px-[15px] laptop:py-[50px]">
+            <p className="text-[38px] text-white laptop:text-center laptop:order-last">
               Let us find your next Social Media ambassador for{" "}
               <span className="!font-bold"> your brand</span>; The perfect human
               that shares <span className="!font-bold"> your values</span>, and

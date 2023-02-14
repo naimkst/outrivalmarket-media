@@ -12,7 +12,7 @@ export const TabImageBox = ({ imgUrl }: any) => {
         />
       </div>
 
-      <div className="relative p-[115px] desktop1440:p-[100px] desktop:p-[60px] tablet:p-[110px] phone:p-[60px]">
+      <div className="relative p-[115px] desktop1440:p-[100px] desktop:p-[60px] tablet:p-[110px] phone:p-[60px] laptop:p-[150px]">
         <Image
           src={imgUrl ? imgUrl : "/assets/images/about/01.jpg"}
           width={667.1}

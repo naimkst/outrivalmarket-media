@@ -146,17 +146,17 @@ export const IndrustrySection = () => {
                 .map((item: any, index: number) => (
                   <div
                     key={`tabContent${index}`}
-                    className="relative h-[494px] tablet:h-auto"
+                    className="relative h-[494px] laptop:h-auto"
                   >
                     <Image
                       src={item}
                       alt="video image"
                       width={500}
                       height={500}
-                      className="w-[494px] h-[494px] rounded-[20px] tablet:h-auto"
+                      className="w-[494px] h-[494px] rounded-[20px] laptop:h-auto"
                     />
                     <img
-                      className="absolute bottom-[37px] left-[42px] tablet:w-[50px] tablet:left-0 tablet:m-auto tablet:right-0 tablet:bottom-[70px]"
+                      className="absolute bottom-[37px] left-[42px]  phone:w-[50px] phone:m-auto phone:left-0 phone:right-0 phone:bottom-[55px] laptop:w-[50px] laptop:left-[20px] laptop:bottom-[20px]"
                       src="/assets/images/portfolio/video-play.svg"
                       alt=""
                     />
@@ -172,17 +172,17 @@ export const IndrustrySection = () => {
                 .map((item: any, index: number) => (
                   <div
                     key={`tabContent${index}`}
-                    className="relative h-[494px] tablet:h-auto"
+                    className="relative h-[494px] laptop:h-auto"
                   >
                     <Image
                       src={item}
                       alt="video image"
                       width={500}
                       height={500}
-                      className="w-[494px] h-[494px] rounded-[20px] tablet:h-auto"
+                      className="w-[494px] h-[494px] rounded-[20px] laptop:h-auto"
                     />
                     <img
-                      className="absolute bottom-[37px] left-[42px] tablet:w-[50px] tablet:left-0 tablet:m-auto tablet:right-0 tablet:bottom-[70px]"
+                      className="absolute bottom-[37px] left-[42px]  phone:w-[50px] phone:m-auto phone:left-0 phone:right-0 phone:bottom-[55px] laptop:w-[50px] laptop:left-[20px] laptop:bottom-[20px]"
                       src="/assets/images/portfolio/video-play.svg"
                       alt=""
                     />
@@ -192,21 +192,21 @@ export const IndrustrySection = () => {
           )}
 
           {tabActive === 2 && (
-            <div className="grid grid-cols-3 gap-[60px] m-auto tablet:grid-cols-2 tablet:gap-2 tablet:px-[15px]">
+            <div className="grid grid-cols-3 gap-[60px] m-auto tablet:grid-cols-2 tablet:gap-2 laptop:gap-3 tablet:px-[15px]">
               {nature?.slice(0, itemLimit).map((item: any, index: number) => (
                 <div
                   key={`tabContent${index}`}
-                  className="relative h-[494px] tablet:h-auto"
+                  className="relative h-[494px] laptop:h-auto"
                 >
                   <Image
                     src={item}
                     alt="video image"
                     width={500}
                     height={500}
-                    className="w-[494px] h-[494px] rounded-[20px] tablet:h-auto"
+                    className="w-[494px] h-[494px] rounded-[20px] laptop:h-auto"
                   />
                   <img
-                    className="absolute bottom-[37px] left-[42px] tablet:w-[50px] tablet:left-0 tablet:m-auto tablet:right-0 tablet:bottom-[70px]"
+                    className="absolute bottom-[37px] left-[42px]  phone:w-[50px] phone:m-auto phone:left-0 phone:right-0 phone:bottom-[55px] laptop:w-[50px] laptop:left-[20px] laptop:bottom-[20px]"
                     src="/assets/images/portfolio/video-play.svg"
                     alt=""
                   />
@@ -222,17 +222,17 @@ export const IndrustrySection = () => {
                 .map((item: any, index: number) => (
                   <div
                     key={`tabContent${index}`}
-                    className="relative h-[494px] tablet:h-auto"
+                    className="relative h-[494px] laptop:h-auto"
                   >
                     <Image
                       src={item}
                       alt="video image"
                       width={500}
                       height={500}
-                      className="w-[494px] h-[494px] rounded-[20px] tablet:h-auto"
+                      className="w-[494px] h-[494px] rounded-[20px] laptop:h-auto"
                     />
                     <img
-                      className="absolute bottom-[37px] left-[42px] tablet:w-[50px] tablet:left-0 tablet:m-auto tablet:right-0 tablet:bottom-[70px]"
+                      className="absolute bottom-[37px] left-[42px]  phone:w-[50px] phone:m-auto phone:left-0 phone:right-0 phone:bottom-[55px] laptop:w-[50px] laptop:left-[20px] laptop:bottom-[20px]"
                       src="/assets/images/portfolio/video-play.svg"
                       alt=""
                     />
@@ -246,17 +246,17 @@ export const IndrustrySection = () => {
               {products?.slice(0, itemLimit).map((item: any, index: number) => (
                 <div
                   key={`tabContent${index}`}
-                  className="relative h-[494px] tablet:h-auto"
+                  className="relative h-[494px] laptop:h-auto"
                 >
                   <Image
                     src={item}
                     alt="video image"
                     width={500}
                     height={500}
-                    className="w-[494px] h-[494px] rounded-[20px] tablet:h-auto"
+                    className="w-[494px] h-[494px] rounded-[20px] laptop:h-auto"
                   />
                   <img
-                    className="absolute bottom-[37px] left-[42px] tablet:w-[50px] tablet:left-0 tablet:m-auto tablet:right-0 tablet:bottom-[70px]"
+                    className="absolute bottom-[37px] left-[42px]  phone:w-[50px] phone:m-auto phone:left-0 phone:right-0 phone:bottom-[55px] laptop:w-[50px] laptop:left-[20px] laptop:bottom-[20px]"
                     src="/assets/images/portfolio/video-play.svg"
                     alt=""
                   />
@@ -270,17 +270,17 @@ export const IndrustrySection = () => {
               {services?.slice(0, itemLimit).map((item: any, index: number) => (
                 <div
                   key={`tabContent${index}`}
-                  className="relative h-[494px] tablet:h-auto"
+                  className="relative h-[494px] laptop:h-auto"
                 >
                   <Image
                     src={item}
                     alt="video image"
                     width={500}
                     height={500}
-                    className="w-[494px] h-[494px] rounded-[20px] tablet:h-auto"
+                    className="w-[494px] h-[494px] rounded-[20px] laptop:h-auto"
                   />
                   <img
-                    className="absolute bottom-[37px] left-[42px] tablet:w-[50px] tablet:left-0 tablet:m-auto tablet:right-0 tablet:bottom-[70px]"
+                    className="absolute bottom-[37px] left-[42px]  phone:w-[50px] phone:m-auto phone:left-0 phone:right-0 phone:bottom-[55px] laptop:w-[50px] laptop:left-[20px] laptop:bottom-[20px]"
                     src="/assets/images/portfolio/video-play.svg"
                     alt=""
                   />
@@ -293,17 +293,17 @@ export const IndrustrySection = () => {
               {brands?.slice(0, itemLimit).map((item: any, index: number) => (
                 <div
                   key={`tabContent${index}`}
-                  className="relative h-[494px] tablet:h-auto"
+                  className="relative h-[494px] laptop:h-auto"
                 >
                   <Image
                     src={item}
                     alt="video image"
                     width={500}
                     height={500}
-                    className="w-[494px] h-[494px] rounded-[20px] tablet:h-auto"
+                    className="w-[494px] h-[494px] rounded-[20px] laptop:h-auto"
                   />
                   <img
-                    className="absolute bottom-[37px] left-[42px] tablet:w-[50px] tablet:left-0 tablet:m-auto tablet:right-0 tablet:bottom-[70px]"
+                    className="absolute bottom-[37px] left-[42px]  phone:w-[50px] phone:m-auto phone:left-0 phone:right-0 phone:bottom-[55px] laptop:w-[50px] laptop:left-[20px] laptop:bottom-[20px]"
                     src="/assets/images/portfolio/video-play.svg"
                     alt=""
                   />
@@ -324,7 +324,7 @@ export const IndrustrySection = () => {
         </div>
       </div>
       <img
-        className="absolute right-0 -top-[280px] tablet:hidden"
+        className="absolute right-0 -top-[280px] laptop:hidden"
         src="/assets/images/marketing-shadow.svg"
         alt=""
       />

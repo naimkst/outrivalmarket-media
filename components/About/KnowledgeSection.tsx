@@ -3,15 +3,13 @@ import React from "react";
 export const KnowledgeSection = () => {
   return (
     <div className="containerSmall m-auto py-[90px]">
-      <div className="flex items-center justify-between tablet:flex-col tablet:text-center">
+      <div className="flex items-center justify-between tablet:flex-col tablet:text-center gap-5">
         <div className="max-w-[554px] tablet:max-w-full tablet:mb-[40px]">
           <h2 className="heading text-white">
             Knowledge join reach market
             <span className="weKnowGradent">{`organic note don't lunch`}</span>.
           </h2>
-          <button className="text-[24px] font-semibold text-center h-[70px] px-[45px] buttonGredean text-white mt-[40px]">
-            Connect with us here
-          </button>
+          <button className="buttonText">Connect with us here</button>
         </div>
         <div className="max-w-[964px]">
           <p className="text25 text-white">

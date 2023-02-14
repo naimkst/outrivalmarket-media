@@ -3,7 +3,7 @@ import React from "react";
 
 export const NewArticleSection = () => {
   return (
-    <div className="pt-[0px] tablet:px-[15px] tablet:py-[50px]">
+    <div className="pt-[0px] tablet:px-[15px] tablet:py-[50px] laptop:mx-[15px] tablet:mx-0">
       <div className="blogContainer !p-0">
         <h2 className="heading gradientText mb-[34px] tablet:text-center">
           New Articles

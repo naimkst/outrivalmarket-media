@@ -44,9 +44,7 @@ export const AboutSection = () => {
             alt=""
             className="absolute left-[310px] bottom-[35px]"
           />
-          <button className="text-[24px] font-semibold text-center h-[70px] px-[45px] buttonGredean text-white mt-[72px]">
-            Connect with us here
-          </button>
+          <button className="buttonText">Connect with us here</button>
         </div>
 
         <div className="tablet:order-first">

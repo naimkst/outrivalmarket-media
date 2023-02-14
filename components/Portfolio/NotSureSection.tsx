@@ -12,9 +12,7 @@ export const NotSureSection = () => {
           Check out our service page here
         </p>
 
-        <button className=" relative text-[24px] font-semibold text-center h-[70px] px-[45px] buttonGredean text-white">
-          Our Services
-        </button>
+        <button className="buttonText">Our Services</button>
       </div>
       <img
         className="absolute right-0 -top-[0px] tablet:hidden"

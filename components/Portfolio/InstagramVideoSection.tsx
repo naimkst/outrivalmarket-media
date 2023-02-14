@@ -49,9 +49,7 @@ export const InstagramVideoSection = ({ isOpen, data }: any) => {
               <p className="text25 !font-bold text-white mb-[35px]">
                 Let’s work together:
               </p>
-              <button className=" relative text-[24px] font-semibold text-center h-[70px] px-[45px] buttonGredean text-white mb-[50px]">
-                Click Here
-              </button>
+              <button className="buttonText">Click Here</button>
 
               <p className="text25 text-white mb-[21px]">Tags</p>
 

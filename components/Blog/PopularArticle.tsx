@@ -3,7 +3,7 @@ import React from "react";
 
 export const PopularArticle = () => {
   return (
-    <div className="pt-[150px] tablet:py-[80px] tablet:px-[15px]">
+    <div className="pt-[150px] tablet:py-[80px] tablet:px-[15px] laptop:mx-[15px] tablet:mx-0">
       <div className="blogContainer !p-0">
         <h2 className="heading gradientText mb-[34px] tablet:text-center">
           Popular Articles

@@ -3,7 +3,7 @@ import React from "react";
 
 export const BlogCardSection = () => {
   return (
-    <div className="pt-[150px] tablet:pt-[70px]">
+    <div className="pt-[150px] tablet:pt-[70px] laptop:mx-[15px] tablet:mx-0">
       <div className="blogContainer !p-0 tablet:mx-[15px]">
         <div className="grid grid-cols-2 gap-0 relative tablet:grid-cols-1">
           <div className="relative -ml-10 target:order-last tablet:ml-0">

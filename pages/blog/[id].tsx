@@ -82,9 +82,7 @@ export default function SingleBlog() {
               we can help <br /> you boost your brand? Just click the button
               below and lets get stated!
             </p>
-            <button className=" relative text-[24px] font-semibold text-center h-[70px] px-[45px] buttonGredean text-white">
-              Connect with us here
-            </button>
+            <button className="buttonText">Connect with us here</button>
           </div>
 
           <div className="max-w-[1280px] m-auto">

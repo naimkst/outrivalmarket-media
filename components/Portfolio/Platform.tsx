@@ -47,92 +47,92 @@ export const Platform = () => {
       </div>
 
       {platform === 0 && (
-        <div className="grid grid-cols-3 gap-[60px] containerSmall m-auto tablet:grid-cols-2 tablet:gap-3">
-          <div className="relative h-[494px] tablet:h-auto">
+        <div className="grid grid-cols-3 gap-[60px] containerSmall m-auto tablet:grid-cols-2 tablet:gap-3 laptop:gap-3">
+          <div className="relative h-[494px] laptop:h-auto">
             <Image
               src={"/assets/images/portfolio/01.jpg"}
               alt="video image"
               width={500}
               height={500}
-              className="w-[494px] h-[494px] rounded-[20px] tablet:h-auto"
+              className="w-[494px] h-[494px] rounded-[20px] laptop:h-auto"
             />
             <img
-              className="absolute bottom-[37px] left-[42px]  tablet:w-[50px] tablet:m-auto tablet:left-0 tablet:right-0 tablet:bottom-[55px]"
+              className="absolute bottom-[37px] left-[42px]  phone:w-[50px] phone:m-auto phone:left-0 phone:right-0 phone:bottom-[55px] laptop:w-[50px] laptop:left-[20px] laptop:bottom-[20px]"
               src="/assets/images/portfolio/video-play.svg"
               alt=""
             />
           </div>
 
-          <div className="relative h-[494px] tablet:h-auto">
+          <div className="relative h-[494px] laptop:h-auto">
             <Image
               src={"/assets/images/portfolio/02.jpg"}
               alt="video image"
               width={500}
               height={500}
-              className="w-[494px] h-[494px] rounded-[20px] tablet:h-auto"
+              className="w-[494px] h-[494px] rounded-[20px] laptop:h-auto"
             />
             <img
-              className="absolute bottom-[37px] left-[42px] tablet:w-[50px] tablet:m-auto tablet:left-0 tablet:right-0 tablet:bottom-[55px]"
+              className="absolute bottom-[37px] left-[42px]  phone:w-[50px] phone:m-auto phone:left-0 phone:right-0 phone:bottom-[55px] laptop:w-[50px] laptop:left-[20px] laptop:bottom-[20px]"
               src="/assets/images/portfolio/video-play.svg"
               alt=""
             />
           </div>
 
-          <div className="relative h-[494px] tablet:h-auto">
+          <div className="relative h-[494px] laptop:h-auto">
             <Image
               src={"/assets/images/portfolio/03.jpg"}
               alt="video image"
               width={500}
               height={500}
-              className="w-[494px] h-[494px] rounded-[20px] tablet:h-auto"
+              className="w-[494px] h-[494px] rounded-[20px] laptop:h-auto"
             />
             <img
-              className="absolute bottom-[37px] left-[42px]  tablet:w-[50px] tablet:m-auto tablet:left-0 tablet:right-0 tablet:bottom-[55px]"
+              className="absolute bottom-[37px] left-[42px]  phone:w-[50px] phone:m-auto phone:left-0 phone:right-0 phone:bottom-[55px] laptop:w-[50px] laptop:left-[20px] laptop:bottom-[20px]"
               src="/assets/images/portfolio/video-play.svg"
               alt=""
             />
           </div>
 
-          <div className="relative h-[494px] tablet:h-auto">
+          <div className="relative h-[494px] laptop:h-auto">
             <Image
               src={"/assets/images/portfolio/04.jpg"}
               alt="video image"
               width={500}
               height={500}
-              className="w-[494px] h-[494px] rounded-[20px] tablet:h-auto"
+              className="w-[494px] h-[494px] rounded-[20px] laptop:h-auto"
             />
             <img
-              className="absolute bottom-[37px] left-[42px]  tablet:w-[50px] tablet:m-auto tablet:left-0 tablet:right-0 tablet:bottom-[55px]"
+              className="absolute bottom-[37px] left-[42px]  phone:w-[50px] phone:m-auto phone:left-0 phone:right-0 phone:bottom-[55px] laptop:w-[50px] laptop:left-[20px] laptop:bottom-[20px]"
               src="/assets/images/portfolio/video-play.svg"
               alt=""
             />
           </div>
 
-          <div className="relative h-[494px] tablet:h-auto">
+          <div className="relative h-[494px] laptop:h-auto">
             <Image
               src={"/assets/images/portfolio/05.jpg"}
               alt="video image"
               width={500}
               height={500}
-              className="w-[494px] h-[494px] rounded-[20px] tablet:h-auto"
+              className="w-[494px] h-[494px] rounded-[20px] laptop:h-auto"
             />
             <img
-              className="absolute bottom-[37px] left-[42px]  tablet:w-[50px] tablet:m-auto tablet:left-0 tablet:right-0 tablet:bottom-[55px]"
+              className="absolute bottom-[37px] left-[42px]  phone:w-[50px] phone:m-auto phone:left-0 phone:right-0 phone:bottom-[55px] laptop:w-[50px] laptop:left-[20px] laptop:bottom-[20px]"
               src="/assets/images/portfolio/video-play.svg"
               alt=""
             />
           </div>
 
-          <div className="relative h-[494px] tablet:h-auto">
+          <div className="relative h-[494px] laptop:h-auto">
             <Image
               src={"/assets/images/portfolio/06.jpg"}
               alt="video image"
               width={500}
               height={500}
-              className="w-[494px] h-[494px] rounded-[20px] tablet:h-auto"
+              className="w-[494px] h-[494px] rounded-[20px] laptop:h-auto"
             />
             <img
-              className="absolute bottom-[37px] left-[42px]  tablet:w-[50px] tablet:m-auto tablet:left-0 tablet:right-0 tablet:bottom-[55px]"
+              className="absolute bottom-[37px] left-[42px]  phone:w-[50px] phone:m-auto phone:left-0 phone:right-0 phone:bottom-[55px] laptop:w-[50px] laptop:left-[20px] laptop:bottom-[20px]"
               src="/assets/images/portfolio/video-play.svg"
               alt=""
             />
@@ -141,90 +141,90 @@ export const Platform = () => {
       )}
 
       {platform === 1 && (
-        <div className="grid grid-cols-3 gap-[60px] containerSmall m-auto tablet:grid-cols-2 tablet:gap-3">
-          <div className="relative h-[494px] tablet:h-auto">
+        <div className="grid grid-cols-3 gap-[60px] containerSmall m-auto tablet:grid-cols-2 tablet:gap-3 laptop:gap-3">
+          <div className="relative h-[494px] laptop:h-auto">
             <Image
               src={"/assets/images/portfolio/06.jpg"}
               alt="video image"
               width={500}
               height={500}
-              className="w-[494px] h-[494px] rounded-[20px] tablet:h-auto"
+              className="w-[494px] h-[494px] rounded-[20px] laptop:h-auto"
             />
             <img
-              className="absolute bottom-[37px] left-[42px]  tablet:w-[50px] tablet:m-auto tablet:left-0 tablet:right-0 tablet:bottom-[55px]"
+              className="absolute bottom-[37px] left-[42px]  phone:w-[50px] phone:m-auto phone:left-0 phone:right-0 phone:bottom-[55px] laptop:w-[50px] laptop:left-[20px] laptop:bottom-[20px]"
               src="/assets/images/portfolio/video-play.svg"
               alt=""
             />
           </div>
-          <div className="relative h-[494px] tablet:h-auto">
+          <div className="relative h-[494px] laptop:h-auto">
             <Image
               src={"/assets/images/portfolio/01.jpg"}
               alt="video image"
               width={500}
               height={500}
-              className="w-[494px] h-[494px] rounded-[20px] tablet:h-auto"
+              className="w-[494px] h-[494px] rounded-[20px] laptop:h-auto"
             />
             <img
-              className="absolute bottom-[37px] left-[42px]  tablet:w-[50px] tablet:m-auto tablet:left-0 tablet:right-0 tablet:bottom-[55px]"
+              className="absolute bottom-[37px] left-[42px]  phone:w-[50px] phone:m-auto phone:left-0 phone:right-0 phone:bottom-[55px] laptop:w-[50px] laptop:left-[20px] laptop:bottom-[20px]"
               src="/assets/images/portfolio/video-play.svg"
               alt=""
             />
           </div>
 
-          <div className="relative h-[494px] tablet:h-auto">
+          <div className="relative h-[494px] laptop:h-auto">
             <Image
               src={"/assets/images/portfolio/05.jpg"}
               alt="video image"
               width={500}
               height={500}
-              className="w-[494px] h-[494px] rounded-[20px] tablet:h-auto"
+              className="w-[494px] h-[494px] rounded-[20px] laptop:h-auto"
             />
             <img
-              className="absolute bottom-[37px] left-[42px]  tablet:w-[50px] tablet:m-auto tablet:left-0 tablet:right-0 tablet:bottom-[55px]"
+              className="absolute bottom-[37px] left-[42px]  phone:w-[50px] phone:m-auto phone:left-0 phone:right-0 phone:bottom-[55px] laptop:w-[50px] laptop:left-[20px] laptop:bottom-[20px]"
               src="/assets/images/portfolio/video-play.svg"
               alt=""
             />
           </div>
-          <div className="relative h-[494px] tablet:h-auto">
+          <div className="relative h-[494px] laptop:h-auto">
             <Image
               src={"/assets/images/portfolio/02.jpg"}
               alt="video image"
               width={500}
               height={500}
-              className="w-[494px] h-[494px] rounded-[20px] tablet:h-auto"
+              className="w-[494px] h-[494px] rounded-[20px] laptop:h-auto"
             />
             <img
-              className="absolute bottom-[37px] left-[42px]  tablet:w-[50px] tablet:m-auto tablet:left-0 tablet:right-0 tablet:bottom-[55px]"
+              className="absolute bottom-[37px] left-[42px]  phone:w-[50px] phone:m-auto phone:left-0 phone:right-0 phone:bottom-[55px] laptop:w-[50px] laptop:left-[20px] laptop:bottom-[20px]"
               src="/assets/images/portfolio/video-play.svg"
               alt=""
             />
           </div>
 
-          <div className="relative h-[494px] tablet:h-auto">
+          <div className="relative h-[494px] laptop:h-auto">
             <Image
               src={"/assets/images/portfolio/03.jpg"}
               alt="video image"
               width={500}
               height={500}
-              className="w-[494px] h-[494px] rounded-[20px] tablet:h-auto"
+              className="w-[494px] h-[494px] rounded-[20px] laptop:h-auto"
             />
             <img
-              className="absolute bottom-[37px] left-[42px]  tablet:w-[50px] tablet:m-auto tablet:left-0 tablet:right-0 tablet:bottom-[55px]"
+              className="absolute bottom-[37px] left-[42px]  phone:w-[50px] phone:m-auto phone:left-0 phone:right-0 phone:bottom-[55px] laptop:w-[50px] laptop:left-[20px] laptop:bottom-[20px]"
               src="/assets/images/portfolio/video-play.svg"
               alt=""
             />
           </div>
 
-          <div className="relative h-[494px] tablet:h-auto">
+          <div className="relative h-[494px] laptop:h-auto">
             <Image
               src={"/assets/images/portfolio/04.jpg"}
               alt="video image"
               width={500}
               height={500}
-              className="w-[494px] h-[494px] rounded-[20px] tablet:h-auto"
+              className="w-[494px] h-[494px] rounded-[20px] laptop:h-auto"
             />
             <img
-              className="absolute bottom-[37px] left-[42px]  tablet:w-[50px] tablet:m-auto tablet:left-0 tablet:right-0 tablet:bottom-[55px]"
+              className="absolute bottom-[37px] left-[42px]  phone:w-[50px] phone:m-auto phone:left-0 phone:right-0 phone:bottom-[55px] laptop:w-[50px] laptop:left-[20px] laptop:bottom-[20px]"
               src="/assets/images/portfolio/video-play.svg"
               alt=""
             />

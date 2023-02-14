@@ -29,7 +29,7 @@ export const ChainDockSection = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 justify-between tablet:grid-cols-1">
+          <div className="grid grid-cols-2 justify-between tablet:grid-cols-1 gap-5">
             <div className="max-w-[724px] tablet:max-w-full flex">
               <div className="mb-[60px] w-full">
                 <div className="text25 !font-bold text-white mb-[25px] flex justify-between items-center">
