@@ -6,12 +6,14 @@
 
 @font-face {
   font-family: "Monument";
-  src: url("./fonts/MonumentExtended-Regular.ttf");
+  src: url("/assets/fonts/MonumentExtended-Regular.ttf");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "MonumentBold";
-  src: url("./fonts/MonumentExtended-Ultrabold.ttf");
+  src: url("/assets/fonts/MonumentExtended-Ultrabold.ttf");
+  font-display: swap;
 }
 
 html,
