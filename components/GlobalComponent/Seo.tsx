@@ -21,10 +21,7 @@ export const Seo = () => {
           property="og:description"
           content="Aura Delice's is a boutique kosher chocolatier, creating chocolates accompanied by a delicious aura, finished with exotic colors and filled with yumminess | Your favorite Outremont local chocolate and candy store"
         />
-        <meta
-          property="og:image"
-          content="/assets/images/aura-delices-logo.png"
-        />
+        <meta property="og:image" content="/assets/images/logo.svg" />
       </Head>
     </div>
   );
