@@ -25,7 +25,7 @@ export const Layouts = ({ children }: any) => {
         />
         <meta
           property="og:image"
-          content="/public/assets/images/aura-delices-logo.png"
+          content="/assets/images/aura-delices-logo.png"
         />
       </Head>
       <Navigation />
