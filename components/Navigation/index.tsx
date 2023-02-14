@@ -40,9 +40,11 @@ export const Navigation = () => {
                   <a href="">Blog</a>
                 </li>
               </Link>
-              <li className="text-white text-[20px] hover:hoverGradient">
-                <a href="">Contact</a>
-              </li>
+              <Link href={"/contact-us"}>
+                <li className="text-white text-[20px] hover:hoverGradient">
+                  <a href="">Contact</a>
+                </li>
+              </Link>
               <li className="hoverGradient text-[20px] font-bold hover:hoverGradient border-[1px] py-[20px] px-[40px] rounded-[10px] laptop:py-[12px] laptop:px-[20px]">
                 <a href="">Get Started</a>
               </li>

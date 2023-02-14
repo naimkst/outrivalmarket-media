@@ -273,6 +273,31 @@ span.swiper-pagination-bullet {
   background-size: cover;
   z-index: -1;
 }
+.instagramPopup {
+  background: #020c13;
+  z-index: 1;
+  overflow: hidden;
+  border-radius: 20px;
+  width: 100%;
+}
+.instagramPopup:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    236.96deg,
+    #fdc221 13.69%,
+    #f55f29 23.24%,
+    #a916eb 48.27%,
+    #590ffe 75.44%,
+    #1dc6e8 101.05%
+  );
+  opacity: 0.1;
+  border-radius: 20px;
+  position: absolute;
+  background-size: cover;
+  z-index: 3;
+}
 .optionBG {
   background: linear-gradient(
     236.96deg,
@@ -291,6 +316,9 @@ span.swiper-pagination-bullet {
 }
 .fireUpSectionBg {
   background: linear-gradient(236.96deg, #f55f29 13.69%, #fdc221 99.79%);
+}
+.contactButton {
+  background-color: #020c13;
 }
 
 .container {
@@ -332,11 +360,7 @@ span.swiper-pagination-bullet {
     border-radius: 0px;
   }
 }
-@screen desktop1440 {
-  .testimonialBorderGrediant {
-    height: 45px;
-  }
-}
+
 @screen phone {
   .testimonialBorderGrediant {
     height: 45px;

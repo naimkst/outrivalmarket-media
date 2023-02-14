@@ -21,7 +21,6 @@ export default function Portfolio() {
       <CallToAction />
       <NotSureSection />
       <FireUpUsSection />
-      <InstagramVideoSection />
       <TogetherToday />
       <FooterContent />
     </div>

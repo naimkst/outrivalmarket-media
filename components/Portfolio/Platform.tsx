@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import { InstagramVideoSection } from "./InstagramVideoSection";
 
 export const Platform = () => {
   const [platform, setPlatform] = React.useState(0);
@@ -13,7 +14,7 @@ export const Platform = () => {
         <div className="grid grid-cols-2 divide-x-[1px] divide-[#808589]">
           <div
             onClick={() => setPlatform(0)}
-            className="flex items-center gap-[50px] justify-end pr-[70px] tablet:pr-2 tablet:gap-2"
+            className="flex items-center gap-[50px] justify-end pr-[70px] tablet:pr-2 tablet:gap-2 cursor-pointer"
           >
             <h2 className="heading text-white !font-bold tablet:text-[17px]">
               Instagram
@@ -29,7 +30,7 @@ export const Platform = () => {
 
           <div
             onClick={() => setPlatform(1)}
-            className="flex items-center gap-[50px] pl-[70px] tablet:pl-2 tablet:gap-2"
+            className="flex items-center gap-[50px] pl-[70px] tablet:pl-2 tablet:gap-2  cursor-pointer"
           >
             <h2 className="heading text-white !font-bold tablet:text-[17px]">
               TikTok

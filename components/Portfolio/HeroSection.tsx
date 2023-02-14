@@ -3,7 +3,7 @@ import { SlArrowDown } from "react-icons/sl";
 
 export const HeroSection = () => {
   return (
-    <div className="pt-[157px] relative pb-[190px] tablet:pb-[80px]">
+    <div className="pt-[157px] relative pb-[190px] tablet:pb-[80px] z-0">
       <div className="relative m-auto max-w-[1440px] mb-[200px] tablet:mb-[60px]">
         <h1 className="relative bigHeader text-center shadowBorder z-20  mb-[40px]">
           Elevate Your Brand with Our Multimedia Marketing Expertise. See Our

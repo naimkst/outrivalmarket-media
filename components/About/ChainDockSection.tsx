@@ -1,16 +1,19 @@
 import React from "react";
 
 export const ChainDockSection = () => {
-  const [faqId, setFaqId] = React.useState(0);
+  const [faqId1, setFaqId1] = React.useState(false);
+  const [faqId2, setFaqId2] = React.useState(false);
+  const [faqId3, setFaqId3] = React.useState(false);
+  const [faqId4, setFaqId4] = React.useState(false);
+  const [faqId5, setFaqId5] = React.useState(false);
+  const [faqId6, setFaqId6] = React.useState(false);
+  const [faqId7, setFaqId7] = React.useState(false);
+  const [faqId8, setFaqId8] = React.useState(false);
+  const [faqId9, setFaqId9] = React.useState(false);
+  const [faqId10, setFaqId10] = React.useState(false);
+  const [faqId11, setFaqId11] = React.useState(false);
+  const [faqId12, setFaqId12] = React.useState(false);
   const [faq, setFaq] = React.useState(true);
-
-  const handleFaq = (id: any) => {
-    if (faqId === id) {
-      setFaqId(0);
-    } else {
-      setFaqId(id);
-    }
-  };
 
   return (
     <div className="chainDockSection">
@@ -21,43 +24,43 @@ export const ChainDockSection = () => {
               Chain dock grapple <br /> american killick
             </h2>
             <p className="text25 text-white">
-              Ballast gaff chain prey gangway fathom fathom lubber. Pink across
-              of swab pinnace brethren grapple grapple Topgallant a yarr .
+              {`Ballast gaff chain prey gangway fathom fathom lubber. Pink across
+              of swab pinnace brethren grapple grapple Topgallant a yarr.`}
             </p>
           </div>
 
           <div className="grid grid-cols-2 justify-between tablet:grid-cols-1">
             <div className="max-w-[724px] tablet:max-w-full flex">
-              <div className="mb-[60px]">
+              <div className="mb-[60px] w-full">
                 <div className="text25 !font-bold text-white mb-[25px] flex justify-between items-center">
                   <h3 className="max-w-[90%]">
                     What are stop-motion product videos?
                   </h3>
                   <p
                     onClick={() => {
-                      handleFaq(1);
+                      setFaqId1(!faqId1);
                     }}
                     className="faqGrediant flex items-center justify-center text-[35px] leading-0 cursor-pointer"
                   >
-                    {faqId != 1 ? "-" : "+"}
+                    {faqId1 ? "-" : "+"}
                   </p>
                 </div>
-                {faqId != 1 && (
+                {faqId1 && (
                   <p className="text25 text-white font-normal">
-                    Stop-motion product videos are a type of animation technique
+                    {`Stop-motion product videos are a type of animation technique
                     in which objects are photographed in a series of frames,
                     with each frame showing a slight change in position or
                     angle. These frames are then played back in sequence to
                     create the illusion of movement. It's a great way to
                     showcase a product's features and benefits in a creative and
-                    engaging way.
+                    engaging way.`}
                   </p>
                 )}
               </div>
             </div>
 
             <div className="max-w-[724px] tablet:max-w-full flex justify-end ml-auto">
-              <div className="mb-[60px]">
+              <div className="mb-[60px] w-full">
                 <div className="text25 !font-bold text-white mb-[25px] flex justify-between items-center">
                   <h3 className="max-w-[90%]">
                     How can Outrival Media create stop-motion product videos for
@@ -65,14 +68,14 @@ export const ChainDockSection = () => {
                   </h3>
                   <p
                     onClick={() => {
-                      handleFaq(2);
+                      setFaqId2(!faqId2);
                     }}
                     className="faqGrediant flex items-center justify-center text-[35px] leading-0 cursor-pointer"
                   >
-                    {faqId != 2 ? "-" : "+"}
+                    {faqId2 ? "-" : "+"}
                   </p>
                 </div>
-                {faqId != 2 && (
+                {faqId2 && (
                   <p className="text25 text-white font-normal">
                     Our team specializes in creating visually stunning
                     stop-motion product videos that will showcase your products
@@ -88,36 +91,36 @@ export const ChainDockSection = () => {
             </div>
 
             <div className="max-w-[724px] tablet:max-w-full">
-              <div className="mb-[60px]">
+              <div className="mb-[60px] w-full">
                 <div className="text25 !font-bold text-white mb-[25px] flex justify-between items-center">
                   <h3 className="max-w-[90%]">
                     What are the benefits of using stop-motion product videos?
                   </h3>
                   <p
                     onClick={() => {
-                      handleFaq(3);
+                      setFaqId3(!faqId3);
                     }}
                     className="faqGrediant flex items-center justify-center text-[35px] leading-0 cursor-pointer"
                   >
-                    {faqId != 3 ? "-" : "+"}
+                    {faqId3 ? "-" : "+"}
                   </p>
                 </div>
-                {faqId != 3 && (
+                {faqId3 && (
                   <p className="text25 text-white font-normal">
-                    Stop-motion product videos are a great way to showcase your
+                    {` Stop-motion product videos are a great way to showcase your
                     products in a unique and engaging way. It can help to
                     increase brand awareness, boost sales, and create a strong
                     emotional connection with your target audience.
                     Additionally, it makes your product stand out, and it's a
                     great way to show off your product's features and benefits
-                    in a creative and memorable way.
+                    in a creative and memorable way.`}
                   </p>
                 )}
               </div>
             </div>
 
             <div className="max-w-[724px] tablet:max-w-full flex justify-end ml-auto">
-              <div className="mb-[60px]">
+              <div className="mb-[60px] w-full">
                 <div className="text25 !font-bold text-white mb-[25px] flex justify-between items-center">
                   <h3 className="max-w-[90%]">
                     How can Outrival Media help me establish and enhance my
@@ -125,14 +128,14 @@ export const ChainDockSection = () => {
                   </h3>
                   <p
                     onClick={() => {
-                      handleFaq(4);
+                      setFaqId4(!faqId4);
                     }}
                     className="faqGrediant flex items-center justify-center text-[35px] leading-0 cursor-pointer"
                   >
-                    {faqId != 4 ? "-" : "+"}
+                    {faqId4 ? "-" : "+"}
                   </p>
                 </div>
-                {faqId != 4 && (
+                {faqId4 && (
                   <p className="text25 text-white font-normal">
                     Outrival Media can assist you in the following ways: Setting
                     up social media accounts: We can help create and optimize
@@ -156,19 +159,19 @@ export const ChainDockSection = () => {
             </div>
 
             <div className="max-w-[724px] tablet:max-w-full">
-              <div className="mb-[60px]">
+              <div className="mb-[60px] w-full">
                 <div className="text25 !font-bold text-white mb-[25px] flex justify-between items-center">
                   <h3 className="max-w-[90%]">What is UGC?</h3>
                   <p
                     onClick={() => {
-                      handleFaq(5);
+                      setFaqId5(!faqId5);
                     }}
                     className="faqGrediant flex items-center justify-center text-[35px] leading-0 cursor-pointer"
                   >
-                    {faqId != 5 ? "-" : "+"}
+                    {faqId5 ? "-" : "+"}
                   </p>
                 </div>
-                {faqId != 5 && (
+                {faqId5 && (
                   <p className="text25 text-white font-normal">
                     UGC stands for User-Generated Content. It is any content
                     created by users, such as photos, videos, testimonials,
@@ -180,24 +183,24 @@ export const ChainDockSection = () => {
             </div>
 
             <div className="max-w-[724px] tablet:max-w-full flex justify-end ml-auto">
-              <div className="mb-[60px]">
+              <div className="mb-[60px] w-full">
                 <div className="text25 !font-bold text-white mb-[25px] flex justify-between items-center">
                   <h3 className="max-w-[90%]">
-                    How can UGC help me engage with potential customers on
-                    social media?
+                    {`How can UGC help me engage with potential customers on
+                    social media?`}
                   </h3>
                   <p
                     onClick={() => {
-                      handleFaq(6);
+                      setFaqId6(!faqId6);
                     }}
                     className="faqGrediant flex items-center justify-center text-[35px] leading-0 cursor-pointer"
                   >
-                    {faqId != 6 ? "-" : "+"}
+                    {faqId6 ? "-" : "+"}
                   </p>
                 </div>
-                {faqId != 6 && (
+                {faqId6 && (
                   <p className="text25 text-white font-normal">
-                    UGC can help in several ways: Authenticity: UGC is often
+                    {`UGC can help in several ways: Authenticity: UGC is often
                     perceived as more authentic and trustworthy than
                     brand-created content, as it comes from real customers.
                     Social proof: UGC can serve as social proof and help
@@ -207,14 +210,14 @@ export const ChainDockSection = () => {
                     by creating a sense of community and encouraging them to
                     share their own experiences. Personalization: UGC can be
                     tailored to the audience, making it more relatable and
-                    personalized.
+                    personalized.`}
                   </p>
                 )}
               </div>
             </div>
 
             <div className="max-w-[724px] tablet:max-w-full">
-              <div className="mb-[60px]">
+              <div className="mb-[60px] w-full">
                 <div className="text25 !font-bold text-white mb-[25px] flex justify-between items-center">
                   <h3 className="max-w-[90%]">
                     How can Outrival Media help me leverage UGC in my social
@@ -222,14 +225,14 @@ export const ChainDockSection = () => {
                   </h3>
                   <p
                     onClick={() => {
-                      handleFaq(7);
+                      setFaqId7(!faqId7);
                     }}
                     className="faqGrediant flex items-center justify-center text-[35px] leading-0 cursor-pointer"
                   >
-                    {faqId != 7 ? "-" : "+"}
+                    {faqId7 ? "-" : "+"}
                   </p>
                 </div>
-                {faqId != 7 && (
+                {faqId7 && (
                   <p className="text25 text-white font-normal">
                     Outrival Media can assist you in identifying and curating
                     relevant UGC, and integrating it into your social media
@@ -243,7 +246,7 @@ export const ChainDockSection = () => {
             </div>
 
             <div className="max-w-[724px] tablet:max-w-full flex justify-end ml-auto">
-              <div className="mb-[60px]">
+              <div className="mb-[60px] w-full">
                 <div className="text25 !font-bold text-white mb-[25px] flex justify-between items-center">
                   <h3 className="max-w-[90%]">
                     Does Outrival Media offer a self-serve option for social
@@ -251,14 +254,14 @@ export const ChainDockSection = () => {
                   </h3>
                   <p
                     onClick={() => {
-                      handleFaq(8);
+                      setFaqId8(!faqId8);
                     }}
                     className="faqGrediant flex items-center justify-center text-[35px] leading-0 cursor-pointer"
                   >
-                    {faqId != 8 ? "-" : "+"}
+                    {faqId8 ? "-" : "+"}
                   </p>
                 </div>
-                {faqId != 8 && (
+                {faqId8 && (
                   <p className="text25 text-white font-normal">
                     Yes, we do. With the self-serve option, we will come-up with
                     and design content for the client and then share it with
@@ -270,21 +273,21 @@ export const ChainDockSection = () => {
             </div>
 
             <div className="max-w-[724px] tablet:max-w-full">
-              <div className="mb-[60px]">
+              <div className="mb-[60px] w-full">
                 <div className="text25 !font-bold text-white mb-[25px] flex justify-between items-center">
                   <h3 className="max-w-[90%]">
                     What is included in the self-serve option?
                   </h3>
                   <p
                     onClick={() => {
-                      handleFaq(9);
+                      setFaqId9(!faqId9);
                     }}
                     className="faqGrediant flex items-center justify-center text-[35px] leading-0 cursor-pointer"
                   >
-                    {faqId != 9 ? "-" : "+"}
+                    {faqId9 ? "-" : "+"}
                   </p>
                 </div>
-                {faqId != 9 && (
+                {faqId9 && (
                   <p className="text25 text-white font-normal">
                     The self-serve option includes: The creation and design of
                     content by our team Sharing of the content with the client
@@ -296,81 +299,81 @@ export const ChainDockSection = () => {
             </div>
 
             <div className="max-w-[724px] tablet:max-w-full flex justify-end ml-auto">
-              <div className="mb-[60px]">
+              <div className="mb-[60px] w-full">
                 <div className="text25 !font-bold text-white mb-[25px] flex justify-between items-center">
                   <h3 className="max-w-[90%]">
-                    Does Outrival Media also offer a "we manage it for you"
-                    option for social media management?
+                    {`Does Outrival Media also offer a "we manage it for you"
+                    option for social media management?`}
                   </h3>
                   <p
                     onClick={() => {
-                      handleFaq(10);
+                      setFaqId10(!faqId10);
                     }}
                     className="faqGrediant flex items-center justify-center text-[35px] leading-0 cursor-pointer"
                   >
-                    {faqId != 10 ? "-" : "+"}
+                    {faqId10 ? "-" : "+"}
                   </p>
                 </div>
-                {faqId != 10 && (
+                {faqId10 && (
                   <p className="text25 text-white font-normal">
-                    Yes, we do. With the "we manage it for you" option, we will
+                    {`Yes, we do. With the "we manage it for you" option, we will
                     run and manage the client's social media accounts on their
-                    behalf.
+                    behalf.`}
                   </p>
                 )}
               </div>
             </div>
 
             <div className="max-w-[724px] tablet:max-w-full">
-              <div className="mb-[60px]">
+              <div className="mb-[60px] w-full">
                 <div className="text25 !font-bold text-white mb-[25px] flex justify-between items-center">
                   <h3 className="max-w-[90%]">
-                    What is included in the "we manage it for you" option?
+                    {`What is included in the "we manage it for you" option?`}
                   </h3>
                   <p
                     onClick={() => {
-                      handleFaq(11);
+                      setFaqId11(!faqId11);
                     }}
                     className="faqGrediant flex items-center justify-center text-[35px] leading-0 cursor-pointer"
                   >
-                    {faqId != 11 ? "-" : "+"}
+                    {faqId11 ? "-" : "+"}
                   </p>
                 </div>
-                {faqId != 11 && (
+                {faqId11 && (
                   <p className="text25 text-white font-normal">
-                    The "we manage it for you" option includes: Running and
+                    {`The "we manage it for you" option includes: Running and
                     managing the client's social media accounts Developing and
                     implementing a content strategy Scheduling and publishing
                     posts Monitoring and responding to social media activity
                     Providing regular reports and analysis of social media
-                    performance
+                    performance`}
                   </p>
                 )}
               </div>
             </div>
 
             <div className="max-w-[724px] tablet:max-w-full flex justify-end ml-auto">
-              <div className="mb-[60px]">
+              <div className="mb-[60px] w-full">
                 <div className="text25 !font-bold text-white mb-[25px] flex justify-between items-center">
                   <h3 className="max-w-[90%]">
-                    Can I switch between the self-serve and "we manage it for
-                    you" options?
+                    {`Can I switch between the self-serve and "we manage it for
+                    you" options?`}
                   </h3>
                   <p
                     onClick={() => {
-                      handleFaq(12);
+                      setFaqId12(!faqId12);
                     }}
                     className="faqGrediant flex items-center justify-center text-[35px] leading-0 cursor-pointer"
                   >
-                    {faqId != 12 ? "-" : "+"}
+                    {faqId12 ? "-" : "+"}
                   </p>
                 </div>
-                {faqId != 12 && (
+                {faqId12 && (
                   <p className="text25 text-white font-normal">
-                    Yes, you can switch between the self-serve and "we manage it
+                    {`Yes, you can switch between the self-serve and "we manage it
                     for you" options depending on your needs and preferences.
                     Our team will work with you to understand your goals and
-                    recommend the best option for you.
+                    recommend the best option for you.`}
                   </p>
                 )}
               </div>
