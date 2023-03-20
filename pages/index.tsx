@@ -52,8 +52,8 @@ export default function Home() {
         <img src="/assets/images/cta-shap.svg" alt="Shape" className="m-auto" />
       </section>
       <OurProcessSection data={data?.data?.attributes?.OurProcess} />
-      <TogetherToday />
-      <FooterContent />
+      <TogetherToday data={data?.data?.attributes?.LetsTogether} />
+      <FooterContent data={data?.data?.attributes?.FooterAbout} />
     </>
   );
 }
