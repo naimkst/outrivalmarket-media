@@ -1,30 +1,24 @@
 import React from "react";
+import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 
-export const HeroSection = () => {
+export const HeroSection = ({ data }: any) => {
   return (
     <div className="pt-[157px] relative h-[1000px] tablet:h-auto tablet:px-[15px] target:pb-[50px]">
       <div className="relative m-auto max-w-[1100px]">
         <h1 className="relative bigHeader text-center shadowBorder z-20  mb-[40px]">
-          {`What's up, fella?`}
+          {data?.Title}
         </h1>
         <h1 className="bigHeader text-center gradentTexBottom absolute m-auto left-0 right-0 top-[2px] z-10">
-          {`What's up, fella?`}
+          {data?.Title}
         </h1>
 
         <h3 className="heading text-center text-white  !leading-[55px]">
-          Welcome to Outrival Media, your go-to squad for all things social
-          media.
+          {data?.SubTitle}
         </h3>
 
-        <p className="text-white text25 text-center mb-[30px] mt-[50px]">
-          {`We're a bunch of Marketing Mavericks based in the heart of Montreal,
-          Canada, and we're here to help you dominate the digital landscape.`}
-        </p>
-
-        <p className="text-white text25 text-center">
-          {`Whether you're a small business just starting out or a big brand
-          looking to revamp your social media strategy, we've got you covered.`}
-        </p>
+        <ReactMarkdown className="text-white text25 text-center mb-[30px] mt-[50px]">
+          {data?.Description}
+        </ReactMarkdown>
       </div>
       <div className="absolute left-0 top-10 tablet:bottom-4 tablet:top-auto">
         <img

@@ -25,7 +25,6 @@ export default function Home() {
     data: home,
   } = useFetch(`${process.env.NEXT_PUBLIC_API_URL}/home-page?populate=deep`);
   const data: any = home;
-  console.log(data?.data);
   return (
     <>
       <Seo />

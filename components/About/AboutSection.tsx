@@ -1,56 +1,57 @@
+import { showImage } from "@/helper/helper";
+import Link from "next/link";
 import React from "react";
+import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 import { BoxImage } from "../GlobalComponent/BoxImage";
 
-export const AboutSection = () => {
+export const AboutSection = ({ data }: any) => {
   return (
     <div className="container m-auto mb-[69px]">
-      <div className="grid grid-cols-2 items-center mb-[100px] tablet:grid-cols-1">
-        <div>
-          <BoxImage imgUrl="/assets/images/about/01.jpg" />
-        </div>
-        <div className="flex justify-end tablet:text-center">
-          <div className="max-w-[743px]">
-            <p className="text-white text25 mb-[50px]">
-              {`Our team is made up of a diverse group of creative minds and
-              marketing experts who know how to make your brand stand out. We're
-              a group of passionate individuals who are dedicated to helping
-              businesses and brands achieve their social media goals.`}
-            </p>
-            <p className="text-white text25">
-              {`Our team is made up of a diverse group of creative minds and
-              marketing experts who know how to make your brand stand out. We're
-              a group of passionate individuals who are dedicated to helping
-              businesses and brands achieve their social media goals.`}
-            </p>
-          </div>
-        </div>
-      </div>
+      {data?.map(
+        (item: any, index: number) =>
+          item.IsShow &&
+          (index % 2 === 0 ? (
+            <div className="grid grid-cols-2 items-center mb-[100px] tablet:grid-cols-1">
+              <div>
+                <BoxImage imgUrl={showImage(item?.Image) || ""} />
+              </div>
+              <div className="flex justify-end tablet:text-center">
+                <div className="max-w-[743px]">
+                  <ReactMarkdown className="text-white text25 mb-[50px]">
+                    {item?.Content}
+                  </ReactMarkdown>
+                </div>
+                {item?.ButtonText && (
+                  <Link href={String(item?.ButtonLink)}>
+                    <button className="buttonText">{item.ButtonText}</button>
+                  </Link>
+                )}
+              </div>
+            </div>
+          ) : (
+            <div className="grid grid-cols-2 items-center justify-between tablet:grid-cols-1">
+              <div className="max-w-[743px] relative tablet:text-center">
+                <ReactMarkdown className="text-white text25 mb-[50px]">
+                  {item?.Content}
+                </ReactMarkdown>
+                <img
+                  src="/assets/images/about/about-arrow.svg"
+                  alt=""
+                  className="absolute left-[310px] bottom-[35px]"
+                />
+                {item?.ButtonText && (
+                  <Link href={String(item?.ButtonLink)}>
+                    <button className="buttonText">{item.ButtonText}</button>
+                  </Link>
+                )}
+              </div>
 
-      <div className="grid grid-cols-2 items-center justify-between tablet:grid-cols-1">
-        <div className="max-w-[743px] relative tablet:text-center">
-          <p className="text-white text25 mb-[50px]">
-            {` We'll not only manage your social media platforms, but we'll also
-            whip up some killer UGC and original content to make your brand
-            stand out from the rest. From crafting captivating captions to
-            creating visually stunning stop-motion videos, we have the skills
-            and expertise to elevate your social media presence.`}
-          </p>
-          <p className="text-white text25">
-            {`Let’s work together to create a cohesive visual identity that aligns
-            with your brand values and resonates with your target audience.`}
-          </p>
-          <img
-            src="/assets/images/about/about-arrow.svg"
-            alt=""
-            className="absolute left-[310px] bottom-[35px]"
-          />
-          <button className="buttonText">Connect with us here</button>
-        </div>
-
-        <div className="tablet:order-first">
-          <BoxImage imgUrl="/assets/images/about/02.jpg" />
-        </div>
-      </div>
+              <div className="tablet:order-first">
+                <BoxImage imgUrl={showImage(item?.Image) || ""} />
+              </div>
+            </div>
+          ))
+      )}
     </div>
   );
 };
