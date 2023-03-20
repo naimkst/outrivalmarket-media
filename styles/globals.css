@@ -334,6 +334,12 @@ span.swiper-pagination-bullet {
 .promiseSection p {
   @apply text-[25px] text-white font-[400] mb-[30px];
 }
+.marketDirector strong {
+  @apply text-[25px] text-white font-bold mb-[45px] tablet:text-center;
+}
+.marketDirector p {
+  @apply text-[25px] text-white font-normal mb-[45px] tablet:text-center;
+}
 .container {
   @apply max-w-[1736px] mx-auto px-5 desktop1680:px-[50px] tablet:px-[15px];
 }

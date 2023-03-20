@@ -42,9 +42,11 @@ export default function Home() {
       </section>
       <WeDontRip data={data?.data?.attributes?.Promising} />
       <TestimonialSection />
-      <MarketingDirectorSection />
-      <FeelSocialSection />
-      <BookCoverSection />
+      <MarketingDirectorSection
+        data={data?.data?.attributes?.MarketingSection}
+      />
+      <FeelSocialSection data={data?.data?.attributes?.FeelSocialSection} />
+      <BookCoverSection data={data?.data?.attributes?.BookCover} />
       <CallToAction />
       <section>
         <img src="/assets/images/cta-shap.svg" alt="Shape" className="m-auto" />

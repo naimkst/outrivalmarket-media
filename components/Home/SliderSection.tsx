@@ -56,7 +56,7 @@ export const SliderSection = ({ data }: any) => {
         slidesPerView={4}
       >
         {data?.Image?.data?.map((item: any, index: number) => (
-          <SwiperSlide className="">
+          <SwiperSlide key={`solicalslider${index}`} className="">
             <div className="relative">
               <Image
                 className="tablet:m-auto"

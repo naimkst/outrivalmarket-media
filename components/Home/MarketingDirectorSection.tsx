@@ -1,8 +1,10 @@
+import { showImage } from "@/helper/helper";
 import Image from "next/image";
 import React from "react";
+import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 import { ImageHeightBox } from "../GlobalComponent/ImageHeightBox";
 
-export const MarketingDirectorSection = () => {
+export const MarketingDirectorSection = ({ data }: any) => {
   return (
     <div className="py-[30px] relative ">
       <div className="absolute right-0 tablet:hidden">
@@ -11,35 +13,20 @@ export const MarketingDirectorSection = () => {
       <div className="flex gap-4 container m-auto justify-between items-center tablet:flex-col">
         <div className="flex-1 order-last">
           <h2 className="heading text-white mb-[50px] tablet:text-center">
-            As A Marketing Director,{" "}
+            {data?.Title?.FirstText}{" "}
             <span className="weKnowGradent">
-              You Might Not Want To Face It... <br />
+              {data?.Title?.ColorText} <br />
             </span>{" "}
           </h2>
 
-          <div className="relative">
+          <div className="relative marketDirector">
             <div>
-              <p className=" text-[25px] text-white font-bold mb-[45px] tablet:text-center">
-                You’re given a budget for marketing that you can spend <br />
-                (or must spend I shall say),
-              </p>
-
-              <p className=" text-[25px] text-white font-normal mb-[45px] tablet:text-center">
-                Billboards and citybus ads are noise, but similar to crying
-                babies at a daycare.. Google Ads are great,
-              </p>
-
-              <p className=" text-[30px] text-white font-normal mb-[45px] tablet:text-center">
-                <span className="font-bold">But here is the punchline.</span>{" "}
-                <br />
-                Most awareness will come from your social media presence. Dude
-                we are in 20 freeken 23,
-              </p>
+              <ReactMarkdown>{data?.Description}</ReactMarkdown>
             </div>
           </div>
         </div>
         <div className="flex-1">
-          <ImageHeightBox src="/assets/images/marketing-director.jpg" />
+          <ImageHeightBox src={showImage(data?.Image)} />
         </div>
       </div>
     </div>
