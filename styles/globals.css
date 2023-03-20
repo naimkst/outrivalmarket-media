@@ -322,7 +322,12 @@ span.swiper-pagination-bullet {
 .contactButton {
   background-color: #020c13;
 }
-
+.weknow strong {
+  @apply text37 font-bold text-white tablet:text-center;
+}
+.weknow p {
+  @apply text-[25px] text-white font-[400] tablet:text-center mb-[30px];
+}
 .container {
   @apply max-w-[1736px] mx-auto px-5 desktop1680:px-[50px] tablet:px-[15px];
 }

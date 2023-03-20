@@ -14,15 +14,24 @@ import { OurProcessSection } from "@/components/Home/OutProcessSection";
 import { TogetherToday } from "@/components/Home/TogetherToday";
 import { FooterContent } from "@/components/Home/FooterContent";
 import { Seo } from "@/components/GlobalComponent/Seo";
+import useFetch from "@/hooks/useFetch";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const {
+    loading,
+    error,
+    data: home,
+  } = useFetch(`${process.env.NEXT_PUBLIC_API_URL}/home-page?populate=deep`);
+  const data: any = home;
+  console.log(data?.data);
   return (
     <>
       <Seo />
-      <HeroSection />
-      <WeKnowSection />
+
+      <HeroSection data={data?.data?.attributes?.HeroSection} />
+      <WeKnowSection data={data?.data?.attributes?.WeKnow} />
       <SliderSection />
       <section className="m-auto w-full text-center">
         <img
