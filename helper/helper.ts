@@ -1,5 +1,5 @@
 export function showImage(item: any, loop?: any) {
-  console.log(item, "Image show");
+  // console.log(item, "Image show");
   {
     if (item) {
       if (loop) {

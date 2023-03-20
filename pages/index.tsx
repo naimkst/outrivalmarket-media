@@ -40,7 +40,7 @@ export default function Home() {
           className="m-auto"
         />
       </section>
-      <WeDontRip />
+      <WeDontRip data={data?.data?.attributes?.Promising} />
       <TestimonialSection />
       <MarketingDirectorSection />
       <FeelSocialSection />
