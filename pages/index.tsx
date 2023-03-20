@@ -29,31 +29,71 @@ export default function Home() {
   return (
     <>
       <Seo />
+      {data?.data?.attributes?.HeroSection?.IsShow && (
+        <HeroSection data={data?.data?.attributes?.HeroSection} />
+      )}
 
-      <HeroSection data={data?.data?.attributes?.HeroSection} />
-      <WeKnowSection data={data?.data?.attributes?.WeKnow} />
-      <SliderSection data={data?.data?.attributes?.SocialSliderImage} />
-      <section className="m-auto w-full text-center">
-        <img
-          src="/assets/images/double-shape.svg"
-          alt="Shape"
-          className="m-auto"
+      {data?.data?.attributes?.WeKnow?.IsShow && (
+        <WeKnowSection data={data?.data?.attributes?.WeKnow} />
+      )}
+
+      {data?.data?.attributes?.SocialSliderImage?.IsShow && (
+        <>
+          <SliderSection data={data?.data?.attributes?.SocialSliderImage} />
+          <section className="m-auto w-full text-center">
+            <img
+              src="/assets/images/double-shape.svg"
+              alt="Shape"
+              className="m-auto"
+            />
+          </section>
+        </>
+      )}
+
+      {data?.data?.attributes?.Promising?.IsShow && (
+        <WeDontRip data={data?.data?.attributes?.Promising} />
+      )}
+
+      {data?.data?.attributes?.Testimonial?.IsShow && <TestimonialSection />}
+
+      {data?.data?.attributes?.MarketingSection?.IsShow && (
+        <MarketingDirectorSection
+          data={data?.data?.attributes?.MarketingSection}
         />
-      </section>
-      <WeDontRip data={data?.data?.attributes?.Promising} />
-      <TestimonialSection />
-      <MarketingDirectorSection
-        data={data?.data?.attributes?.MarketingSection}
-      />
-      <FeelSocialSection data={data?.data?.attributes?.FeelSocialSection} />
-      <BookCoverSection data={data?.data?.attributes?.BookCover} />
-      <CallToAction data={data?.data?.attributes?.ReadyToCta} />
-      <section>
-        <img src="/assets/images/cta-shap.svg" alt="Shape" className="m-auto" />
-      </section>
-      <OurProcessSection data={data?.data?.attributes?.OurProcess} />
-      <TogetherToday data={data?.data?.attributes?.LetsTogether} />
-      <FooterContent data={data?.data?.attributes?.FooterAbout} />
+      )}
+
+      {data?.data?.attributes?.FeelSocialSection?.IsShow && (
+        <FeelSocialSection data={data?.data?.attributes?.FeelSocialSection} />
+      )}
+
+      {data?.data?.attributes?.BookCover?.IsShow && (
+        <BookCoverSection data={data?.data?.attributes?.BookCover} />
+      )}
+
+      {data?.data?.attributes?.ReadyToCta?.IsShow && (
+        <>
+          <CallToAction data={data?.data?.attributes?.ReadyToCta} />
+          <section>
+            <img
+              src="/assets/images/cta-shap.svg"
+              alt="Shape"
+              className="m-auto"
+            />
+          </section>
+        </>
+      )}
+
+      {data?.data?.attributes?.OurProcess?.IsShow && (
+        <OurProcessSection data={data?.data?.attributes?.OurProcess} />
+      )}
+
+      {data?.data?.attributes?.LetsTogether?.IsShow && (
+        <TogetherToday data={data?.data?.attributes?.LetsTogether} />
+      )}
+
+      {data?.data?.attributes?.FooterAbout?.IsShow && (
+        <FooterContent data={data?.data?.attributes?.FooterAbout} />
+      )}
     </>
   );
 }
