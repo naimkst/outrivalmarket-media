@@ -5,8 +5,9 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import Image from "next/image";
+import { showImage } from "@/helper/helper";
 
-export const SliderSection = () => {
+export const SliderSection = ({ data }: any) => {
   return (
     <div className="py-[50px] container m-auto overflow-x-hidden">
       <Swiper
@@ -54,65 +55,19 @@ export const SliderSection = () => {
         spaceBetween={30}
         slidesPerView={4}
       >
-        <SwiperSlide className="">
-          <div className="relative">
-            <Image
-              className="tablet:m-auto"
-              src={"/assets/images/instagram/instagram01.svg"}
-              height={677.72}
-              width={416.79}
-              alt="Instagram"
-            />
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide className="">
-          <div className="relative">
-            <Image
-              className="tablet:m-auto"
-              src={"/assets/images/instagram/instagram02.svg"}
-              height={677.72}
-              width={416.79}
-              alt="Instagram"
-            />
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide className="">
-          <div className="relative">
-            <Image
-              className="tablet:m-auto"
-              src={"/assets/images/instagram/instagram03.svg"}
-              height={677.72}
-              width={416.79}
-              alt="Instagram"
-            />
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide className="">
-          <div className="relative">
-            <Image
-              className="tablet:m-auto"
-              src={"/assets/images/instagram/instagram04.svg"}
-              height={677.72}
-              width={416.79}
-              alt="Instagram"
-            />
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide className="">
-          <div className="relative">
-            <Image
-              className="tablet:m-auto"
-              src={"/assets/images/instagram/instagram01.svg"}
-              height={677.72}
-              width={416.79}
-              alt="Instagram"
-            />
-          </div>
-        </SwiperSlide>
+        {data?.Image?.data?.map((item: any, index: number) => (
+          <SwiperSlide className="">
+            <div className="relative">
+              <Image
+                className="tablet:m-auto"
+                src={showImage(item, true) || ""}
+                height={677.72}
+                width={416.79}
+                alt="Instagram"
+              />
+            </div>
+          </SwiperSlide>
+        ))}
       </Swiper>
     </div>
   );

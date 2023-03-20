@@ -32,7 +32,7 @@ export default function Home() {
 
       <HeroSection data={data?.data?.attributes?.HeroSection} />
       <WeKnowSection data={data?.data?.attributes?.WeKnow} />
-      <SliderSection />
+      <SliderSection data={data?.data?.attributes?.SocialSliderImage} />
       <section className="m-auto w-full text-center">
         <img
           src="/assets/images/double-shape.svg"
