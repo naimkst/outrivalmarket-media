@@ -47,11 +47,11 @@ export default function Home() {
       />
       <FeelSocialSection data={data?.data?.attributes?.FeelSocialSection} />
       <BookCoverSection data={data?.data?.attributes?.BookCover} />
-      <CallToAction />
+      <CallToAction data={data?.data?.attributes?.ReadyToCta} />
       <section>
         <img src="/assets/images/cta-shap.svg" alt="Shape" className="m-auto" />
       </section>
-      <OurProcessSection />
+      <OurProcessSection data={data?.data?.attributes?.OurProcess} />
       <TogetherToday />
       <FooterContent />
     </>
