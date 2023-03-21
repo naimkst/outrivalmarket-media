@@ -1,6 +1,6 @@
 import React from "react";
 
-export const ChainDockSection = () => {
+export const ChainDockSection = ({ data }: any) => {
   const [faqId1, setFaqId1] = React.useState(false);
   const [faqId2, setFaqId2] = React.useState(false);
   const [faqId3, setFaqId3] = React.useState(false);
@@ -13,7 +13,7 @@ export const ChainDockSection = () => {
   const [faqId10, setFaqId10] = React.useState(false);
   const [faqId11, setFaqId11] = React.useState(false);
   const [faqId12, setFaqId12] = React.useState(false);
-  const [faq, setFaq] = React.useState(true);
+  const [faq, setFaq] = React.useState<any>(null);
 
   return (
     <div className="chainDockSection">
@@ -21,45 +21,36 @@ export const ChainDockSection = () => {
         <div className="container">
           <div className="max-w-[750px] m-auto text-center mb-[150px] tablet:max-w-full tablet:mb-[50px]">
             <h2 className="heading text-white !leading-[48px]">
-              Chain dock grapple <br /> american killick
+              {data?.Title}
             </h2>
-            <p className="text25 text-white">
-              {`Ballast gaff chain prey gangway fathom fathom lubber. Pink across
-              of swab pinnace brethren grapple grapple Topgallant a yarr.`}
-            </p>
+            <p className="text25 text-white">{data?.Description}</p>
           </div>
 
           <div className="grid grid-cols-2 justify-between tablet:grid-cols-1 gap-5">
-            <div className="max-w-[724px] tablet:max-w-full flex">
-              <div className="mb-[60px] w-full">
-                <div className="text25 !font-bold text-white mb-[25px] flex justify-between items-center">
-                  <h3 className="max-w-[90%]">
-                    What are stop-motion product videos?
-                  </h3>
-                  <p
-                    onClick={() => {
-                      setFaqId1(!faqId1);
-                    }}
-                    className="faqGrediant flex items-center justify-center text-[35px] leading-0 cursor-pointer"
-                  >
-                    {faqId1 ? "-" : "+"}
-                  </p>
+            {data?.FAQ?.map((item: any, index: number) => (
+              <div className="max-w-[724px] tablet:max-w-full flex">
+                <div className="mb-[60px] w-full">
+                  <div className="text25 !font-bold text-white mb-[25px] flex justify-between items-center">
+                    <h3 className="max-w-[90%]">{item?.Title}</h3>
+                    <p
+                      onClick={() => {
+                        setFaq(faq == index ? null : index);
+                      }}
+                      className="faqGrediant flex items-center justify-center text-[35px] leading-0 cursor-pointer"
+                    >
+                      {faq ? "-" : "+"}
+                    </p>
+                  </div>
+                  {faq == index && (
+                    <p className="text25 text-white font-normal">
+                      {data?.Description}
+                    </p>
+                  )}
                 </div>
-                {faqId1 && (
-                  <p className="text25 text-white font-normal">
-                    {`Stop-motion product videos are a type of animation technique
-                    in which objects are photographed in a series of frames,
-                    with each frame showing a slight change in position or
-                    angle. These frames are then played back in sequence to
-                    create the illusion of movement. It's a great way to
-                    showcase a product's features and benefits in a creative and
-                    engaging way.`}
-                  </p>
-                )}
               </div>
-            </div>
+            ))}
 
-            <div className="max-w-[724px] tablet:max-w-full flex justify-end ml-auto">
+            {/* <div className="max-w-[724px] tablet:max-w-full flex justify-end ml-auto">
               <div className="mb-[60px] w-full">
                 <div className="text25 !font-bold text-white mb-[25px] flex justify-between items-center">
                   <h3 className="max-w-[90%]">
@@ -377,7 +368,7 @@ export const ChainDockSection = () => {
                   </p>
                 )}
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

@@ -17,7 +17,13 @@ export default function About() {
     data: home,
   } = useFetch(`${process.env.NEXT_PUBLIC_API_URL}/about-us?populate=deep`);
   const data: any = home;
-  console.log(data?.data);
+  const {
+    loading: teamLoading,
+    error: teamError,
+    data: team,
+  } = useFetch(`${process.env.NEXT_PUBLIC_API_URL}/our-teams?populate=deep`);
+  const teamData: any = team;
+  console.log(home?.data);
   return (
     <div className="overflow-hidden">
       <Seo />
@@ -40,10 +46,21 @@ export default function About() {
       {data?.data?.attributes?.ReadyToCta?.IsShow && (
         <ReadyForStart data={data?.data?.attributes?.ReadyToCta} />
       )}
-      <OurTeam />
-      <ChainDockSection />
-      <TogetherToday />
-      <FooterContent />
+      {data?.data?.attributes?.TeamSection?.IsShow && (
+        <OurTeam
+          data={data?.data?.attributes?.TeamSection}
+          teamData={teamData?.data}
+        />
+      )}
+      {data?.data?.attributes?.FAQSection?.IsShow && (
+        <ChainDockSection data={data?.data?.attributes?.FAQSection} />
+      )}
+      {data?.data?.attributes?.CTA?.IsShow && (
+        <TogetherToday data={data?.data?.attributes?.CTA} />
+      )}
+      {data?.data?.attributes?.FooterAbout?.IsShow && (
+        <FooterContent data={data?.data?.attributes?.FooterAbout} />
+      )}
     </div>
   );
 }
