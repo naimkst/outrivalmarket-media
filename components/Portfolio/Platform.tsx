@@ -1,14 +1,35 @@
+import { showImage } from "@/helper/helper";
+import useFetch from "@/hooks/useFetch";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { InstagramVideoSection } from "./InstagramVideoSection";
 
-export const Platform = () => {
+export const Platform = ({ data }: any) => {
   const [platform, setPlatform] = React.useState(0);
+
+  const {
+    loading,
+    error,
+    data: insTagramportfolio,
+  } = useFetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/portfolios?populate=deep&[filters][VideoType][$eq]=Instagram`
+  );
+
+  const instaVideo: any = insTagramportfolio;
+
+  const { data: tiktokPortfolio } = useFetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/portfolios?populate=deep&[filters][VideoType][$eq]=TikTok`
+  );
+
+  const tiktokVideo: any = tiktokPortfolio;
+
+  console.log(insTagramportfolio, "insTagramportfolio");
   return (
-    <div className="container m-auto mb-[150px] tablet:mb-[80px]">
+    <div className="container m-auto mb-[150px] tablet:mb-[80px]" id="platform">
       <div className="max-w-[978px] m-auto text-center mb-[100px] tablet:mb-[50px]">
         <h2 className="heading gradientText mb-[85px] tablet:mb-[50px]">
-          Platform
+          {data?.Title}
         </h2>
 
         <div className="grid grid-cols-2 divide-x-[1px] divide-[#808589]">
@@ -48,187 +69,50 @@ export const Platform = () => {
 
       {platform === 0 && (
         <div className="grid grid-cols-3 gap-[60px] containerSmall m-auto tablet:grid-cols-2 tablet:gap-3 laptop:gap-3">
-          <div className="relative h-[494px] laptop:h-auto">
-            <Image
-              src={"/assets/images/portfolio/01.jpg"}
-              alt="video image"
-              width={500}
-              height={500}
-              className="w-[494px] h-[494px] rounded-[20px] laptop:h-auto"
-            />
-            <img
-              className="absolute bottom-[37px] left-[42px]  phone:w-[50px] phone:m-auto phone:left-0 phone:right-0 phone:bottom-[55px] laptop:w-[50px] laptop:left-[20px] laptop:bottom-[20px]"
-              src="/assets/images/portfolio/video-play.svg"
-              alt=""
-            />
-          </div>
-
-          <div className="relative h-[494px] laptop:h-auto">
-            <Image
-              src={"/assets/images/portfolio/02.jpg"}
-              alt="video image"
-              width={500}
-              height={500}
-              className="w-[494px] h-[494px] rounded-[20px] laptop:h-auto"
-            />
-            <img
-              className="absolute bottom-[37px] left-[42px]  phone:w-[50px] phone:m-auto phone:left-0 phone:right-0 phone:bottom-[55px] laptop:w-[50px] laptop:left-[20px] laptop:bottom-[20px]"
-              src="/assets/images/portfolio/video-play.svg"
-              alt=""
-            />
-          </div>
-
-          <div className="relative h-[494px] laptop:h-auto">
-            <Image
-              src={"/assets/images/portfolio/03.jpg"}
-              alt="video image"
-              width={500}
-              height={500}
-              className="w-[494px] h-[494px] rounded-[20px] laptop:h-auto"
-            />
-            <img
-              className="absolute bottom-[37px] left-[42px]  phone:w-[50px] phone:m-auto phone:left-0 phone:right-0 phone:bottom-[55px] laptop:w-[50px] laptop:left-[20px] laptop:bottom-[20px]"
-              src="/assets/images/portfolio/video-play.svg"
-              alt=""
-            />
-          </div>
-
-          <div className="relative h-[494px] laptop:h-auto">
-            <Image
-              src={"/assets/images/portfolio/04.jpg"}
-              alt="video image"
-              width={500}
-              height={500}
-              className="w-[494px] h-[494px] rounded-[20px] laptop:h-auto"
-            />
-            <img
-              className="absolute bottom-[37px] left-[42px]  phone:w-[50px] phone:m-auto phone:left-0 phone:right-0 phone:bottom-[55px] laptop:w-[50px] laptop:left-[20px] laptop:bottom-[20px]"
-              src="/assets/images/portfolio/video-play.svg"
-              alt=""
-            />
-          </div>
-
-          <div className="relative h-[494px] laptop:h-auto">
-            <Image
-              src={"/assets/images/portfolio/05.jpg"}
-              alt="video image"
-              width={500}
-              height={500}
-              className="w-[494px] h-[494px] rounded-[20px] laptop:h-auto"
-            />
-            <img
-              className="absolute bottom-[37px] left-[42px]  phone:w-[50px] phone:m-auto phone:left-0 phone:right-0 phone:bottom-[55px] laptop:w-[50px] laptop:left-[20px] laptop:bottom-[20px]"
-              src="/assets/images/portfolio/video-play.svg"
-              alt=""
-            />
-          </div>
-
-          <div className="relative h-[494px] laptop:h-auto">
-            <Image
-              src={"/assets/images/portfolio/06.jpg"}
-              alt="video image"
-              width={500}
-              height={500}
-              className="w-[494px] h-[494px] rounded-[20px] laptop:h-auto"
-            />
-            <img
-              className="absolute bottom-[37px] left-[42px]  phone:w-[50px] phone:m-auto phone:left-0 phone:right-0 phone:bottom-[55px] laptop:w-[50px] laptop:left-[20px] laptop:bottom-[20px]"
-              src="/assets/images/portfolio/video-play.svg"
-              alt=""
-            />
-          </div>
+          {instaVideo?.data?.map((item: any, index: number) => (
+            <Link
+              key={`instagram-${index}`}
+              href={String(item?.attributes?.Link)}
+            >
+              <div className="relative h-[494px] object-cover laptop:h-auto">
+                <Image
+                  src={showImage(item?.attributes?.Image) || ""}
+                  alt="video image"
+                  width={500}
+                  height={500}
+                  className="w-[494px] h-[494px] rounded-[20px] laptop:h-auto object-cover"
+                />
+                <img
+                  className="absolute bottom-[37px] left-[42px]  phone:w-[50px] phone:m-auto phone:left-0 phone:right-0 phone:bottom-[55px] laptop:w-[50px] laptop:left-[20px] laptop:bottom-[20px]"
+                  src="/assets/images/portfolio/video-play.svg"
+                  alt=""
+                />
+              </div>
+            </Link>
+          ))}
         </div>
       )}
 
       {platform === 1 && (
         <div className="grid grid-cols-3 gap-[60px] containerSmall m-auto tablet:grid-cols-2 tablet:gap-3 laptop:gap-3">
-          <div className="relative h-[494px] laptop:h-auto">
-            <Image
-              src={"/assets/images/portfolio/06.jpg"}
-              alt="video image"
-              width={500}
-              height={500}
-              className="w-[494px] h-[494px] rounded-[20px] laptop:h-auto"
-            />
-            <img
-              className="absolute bottom-[37px] left-[42px]  phone:w-[50px] phone:m-auto phone:left-0 phone:right-0 phone:bottom-[55px] laptop:w-[50px] laptop:left-[20px] laptop:bottom-[20px]"
-              src="/assets/images/portfolio/video-play.svg"
-              alt=""
-            />
-          </div>
-          <div className="relative h-[494px] laptop:h-auto">
-            <Image
-              src={"/assets/images/portfolio/01.jpg"}
-              alt="video image"
-              width={500}
-              height={500}
-              className="w-[494px] h-[494px] rounded-[20px] laptop:h-auto"
-            />
-            <img
-              className="absolute bottom-[37px] left-[42px]  phone:w-[50px] phone:m-auto phone:left-0 phone:right-0 phone:bottom-[55px] laptop:w-[50px] laptop:left-[20px] laptop:bottom-[20px]"
-              src="/assets/images/portfolio/video-play.svg"
-              alt=""
-            />
-          </div>
-
-          <div className="relative h-[494px] laptop:h-auto">
-            <Image
-              src={"/assets/images/portfolio/05.jpg"}
-              alt="video image"
-              width={500}
-              height={500}
-              className="w-[494px] h-[494px] rounded-[20px] laptop:h-auto"
-            />
-            <img
-              className="absolute bottom-[37px] left-[42px]  phone:w-[50px] phone:m-auto phone:left-0 phone:right-0 phone:bottom-[55px] laptop:w-[50px] laptop:left-[20px] laptop:bottom-[20px]"
-              src="/assets/images/portfolio/video-play.svg"
-              alt=""
-            />
-          </div>
-          <div className="relative h-[494px] laptop:h-auto">
-            <Image
-              src={"/assets/images/portfolio/02.jpg"}
-              alt="video image"
-              width={500}
-              height={500}
-              className="w-[494px] h-[494px] rounded-[20px] laptop:h-auto"
-            />
-            <img
-              className="absolute bottom-[37px] left-[42px]  phone:w-[50px] phone:m-auto phone:left-0 phone:right-0 phone:bottom-[55px] laptop:w-[50px] laptop:left-[20px] laptop:bottom-[20px]"
-              src="/assets/images/portfolio/video-play.svg"
-              alt=""
-            />
-          </div>
-
-          <div className="relative h-[494px] laptop:h-auto">
-            <Image
-              src={"/assets/images/portfolio/03.jpg"}
-              alt="video image"
-              width={500}
-              height={500}
-              className="w-[494px] h-[494px] rounded-[20px] laptop:h-auto"
-            />
-            <img
-              className="absolute bottom-[37px] left-[42px]  phone:w-[50px] phone:m-auto phone:left-0 phone:right-0 phone:bottom-[55px] laptop:w-[50px] laptop:left-[20px] laptop:bottom-[20px]"
-              src="/assets/images/portfolio/video-play.svg"
-              alt=""
-            />
-          </div>
-
-          <div className="relative h-[494px] laptop:h-auto">
-            <Image
-              src={"/assets/images/portfolio/04.jpg"}
-              alt="video image"
-              width={500}
-              height={500}
-              className="w-[494px] h-[494px] rounded-[20px] laptop:h-auto"
-            />
-            <img
-              className="absolute bottom-[37px] left-[42px]  phone:w-[50px] phone:m-auto phone:left-0 phone:right-0 phone:bottom-[55px] laptop:w-[50px] laptop:left-[20px] laptop:bottom-[20px]"
-              src="/assets/images/portfolio/video-play.svg"
-              alt=""
-            />
-          </div>
+          {tiktokVideo?.data?.map((item: any, index: number) => (
+            <Link key={`tiktok-${index}`} href={String(item?.attributes?.Link)}>
+              <div className="relative h-[494px] laptop:h-auto object-cover">
+                <Image
+                  src={showImage(item?.attributes?.Image) || ""}
+                  alt="video image"
+                  width={500}
+                  height={500}
+                  className="w-[494px] h-[494px] rounded-[20px] laptop:h-auto object-cover"
+                />
+                <img
+                  className="absolute bottom-[37px] left-[42px]  phone:w-[50px] phone:m-auto phone:left-0 phone:right-0 phone:bottom-[55px] laptop:w-[50px] laptop:left-[20px] laptop:bottom-[20px]"
+                  src="/assets/images/portfolio/video-play.svg"
+                  alt=""
+                />
+              </div>
+            </Link>
+          ))}
         </div>
       )}
     </div>

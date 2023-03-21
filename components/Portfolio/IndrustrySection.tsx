@@ -1,5 +1,8 @@
+import { showImage } from "@/helper/helper";
+import useFetch from "@/hooks/useFetch";
 import Image from "next/image";
-import React from "react";
+import Link from "next/link";
+import React, { useEffect } from "react";
 import { SlArrowDown } from "react-icons/sl";
 import { TabImageBox } from "../GlobalComponent/TabImageBox";
 
@@ -104,219 +107,100 @@ const tabCollection = [
   "Brands",
 ];
 
-export const IndrustrySection = () => {
-  const [tabActive, setTabActive] = React.useState(0);
+export const IndrustrySection = ({ data }: any) => {
+  const [tabActive, setTabActive] = React.useState(null);
   const [itemLimit, setItemLimit] = React.useState(6);
-  const isActive = (id: number) => {
+  const isActive = (id: any) => {
     setTabActive(id);
     setItemLimit(6);
   };
+
+  const {
+    loading,
+    error,
+    data: category,
+  } = useFetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/industry-categories?populate=deep`
+  );
+  const categories: any = category;
+
+  const {
+    loading: loadingIndustry,
+    error: errorIndustry,
+    data: ind,
+  } = useFetch(`${process.env.NEXT_PUBLIC_API_URL}/industries?populate=deep`);
+  const industry: any = ind;
+
   const loadMore = () => {
     setItemLimit(itemLimit + 6);
   };
+
+  useEffect(() => {
+    setTabActive(categories?.data[0]?.attributes?.Title);
+  }, [categories]);
+
   return (
     <div className="relative">
       <div className="containerSmall m-auto tablet:p-0">
         <div className="relative text-center">
           <h2 className="heading gradientText mb-[85px] tablet:mb-[50px]">
-            Industry
+            {data?.Title}
           </h2>
         </div>
 
         <div className="containerSmall m-auto !p-0 ">
-          <div className="w-full bg-[#2E2E2E] mb-[43px] tablet:overflow-x-scroll scrollbar-hide">
+          <div className="w-full bg-[#2E2E2E] mb-[43px] tablet:overflow-x-scroll scrollbar-hide relative z-10">
             <ul className="flex items-center h-[103px] justify-between divide-x-[1px] w-full tablet:w-[1604px] tablet:ml-[15px]">
-              {tabCollection?.map((item: any, index: number) => (
+              {categories?.data?.map((item: any, index: number) => (
                 <li
                   key={`tab-${index}`}
-                  onClick={() => isActive(index)}
+                  onClick={() => isActive(item?.attributes?.Title)}
+                  onLoadedData={() =>
+                    index == 0 && isActive(item?.attributes?.Title)
+                  }
                   className={`${
-                    tabActive === index ? "tabActiveBg" : ""
-                  } text25 text-white !font-bold px-2 text-center h-full flex items-center justify-center flex-1`}
+                    tabActive === item?.attributes?.Title ? "tabActiveBg" : ""
+                  } text25 text-white !font-bold px-2 text-center h-full flex items-center justify-center flex-1 cursor-pointer`}
                 >
-                  {item}
+                  {item?.attributes?.Title}
                 </li>
               ))}
             </ul>
           </div>
-          {tabActive === 0 && (
-            <div className="grid grid-cols-3 gap-[60px] m-auto tablet:grid-cols-2 tablet:gap-2 tablet:px-[15px]">
-              {healthBeauty
-                ?.slice(0, itemLimit)
-                .map((item: any, index: number) => (
-                  <div
-                    key={`tabContent${index}`}
-                    className="relative h-[494px] laptop:h-auto"
-                  >
-                    <Image
-                      src={item}
-                      alt="video image"
-                      width={500}
-                      height={500}
-                      className="w-[494px] h-[494px] rounded-[20px] laptop:h-auto"
-                    />
-                    <img
-                      className="absolute bottom-[37px] left-[42px]  phone:w-[50px] phone:m-auto phone:left-0 phone:right-0 phone:bottom-[55px] laptop:w-[50px] laptop:left-[20px] laptop:bottom-[20px]"
-                      src="/assets/images/portfolio/video-play.svg"
-                      alt=""
-                    />
-                  </div>
-                ))}
-            </div>
-          )}
 
-          {tabActive === 1 && (
-            <div className="grid grid-cols-3 gap-[60px] m-auto tablet:grid-cols-2 tablet:gap-2 tablet:px-[15px]">
-              {lifestyle
-                ?.slice(0, itemLimit)
-                .map((item: any, index: number) => (
-                  <div
-                    key={`tabContent${index}`}
-                    className="relative h-[494px] laptop:h-auto"
-                  >
-                    <Image
-                      src={item}
-                      alt="video image"
-                      width={500}
-                      height={500}
-                      className="w-[494px] h-[494px] rounded-[20px] laptop:h-auto"
-                    />
-                    <img
-                      className="absolute bottom-[37px] left-[42px]  phone:w-[50px] phone:m-auto phone:left-0 phone:right-0 phone:bottom-[55px] laptop:w-[50px] laptop:left-[20px] laptop:bottom-[20px]"
-                      src="/assets/images/portfolio/video-play.svg"
-                      alt=""
-                    />
-                  </div>
-                ))}
-            </div>
-          )}
-
-          {tabActive === 2 && (
-            <div className="grid grid-cols-3 gap-[60px] m-auto tablet:grid-cols-2 tablet:gap-2 laptop:gap-3 tablet:px-[15px]">
-              {nature?.slice(0, itemLimit).map((item: any, index: number) => (
-                <div
-                  key={`tabContent${index}`}
-                  className="relative h-[494px] laptop:h-auto"
-                >
-                  <Image
-                    src={item}
-                    alt="video image"
-                    width={500}
-                    height={500}
-                    className="w-[494px] h-[494px] rounded-[20px] laptop:h-auto"
-                  />
-                  <img
-                    className="absolute bottom-[37px] left-[42px]  phone:w-[50px] phone:m-auto phone:left-0 phone:right-0 phone:bottom-[55px] laptop:w-[50px] laptop:left-[20px] laptop:bottom-[20px]"
-                    src="/assets/images/portfolio/video-play.svg"
-                    alt=""
-                  />
-                </div>
-              ))}
-            </div>
-          )}
-
-          {tabActive === 3 && (
-            <div className="grid grid-cols-3 gap-[60px] m-auto tablet:grid-cols-2 tablet:gap-2 tablet:px-[15px]">
-              {localMontreal
-                ?.slice(0, itemLimit)
-                .map((item: any, index: number) => (
-                  <div
-                    key={`tabContent${index}`}
-                    className="relative h-[494px] laptop:h-auto"
-                  >
-                    <Image
-                      src={item}
-                      alt="video image"
-                      width={500}
-                      height={500}
-                      className="w-[494px] h-[494px] rounded-[20px] laptop:h-auto"
-                    />
-                    <img
-                      className="absolute bottom-[37px] left-[42px]  phone:w-[50px] phone:m-auto phone:left-0 phone:right-0 phone:bottom-[55px] laptop:w-[50px] laptop:left-[20px] laptop:bottom-[20px]"
-                      src="/assets/images/portfolio/video-play.svg"
-                      alt=""
-                    />
-                  </div>
-                ))}
-            </div>
-          )}
-
-          {tabActive === 4 && (
-            <div className="grid grid-cols-3 gap-[60px] m-auto tablet:grid-cols-2 tablet:gap-2 tablet:px-[15px]">
-              {products?.slice(0, itemLimit).map((item: any, index: number) => (
-                <div
-                  key={`tabContent${index}`}
-                  className="relative h-[494px] laptop:h-auto"
-                >
-                  <Image
-                    src={item}
-                    alt="video image"
-                    width={500}
-                    height={500}
-                    className="w-[494px] h-[494px] rounded-[20px] laptop:h-auto"
-                  />
-                  <img
-                    className="absolute bottom-[37px] left-[42px]  phone:w-[50px] phone:m-auto phone:left-0 phone:right-0 phone:bottom-[55px] laptop:w-[50px] laptop:left-[20px] laptop:bottom-[20px]"
-                    src="/assets/images/portfolio/video-play.svg"
-                    alt=""
-                  />
-                </div>
-              ))}
-            </div>
-          )}
-
-          {tabActive === 5 && (
-            <div className="grid grid-cols-3 gap-[60px] m-auto tablet:grid-cols-2 tablet:gap-2 tablet:px-[15px]">
-              {services?.slice(0, itemLimit).map((item: any, index: number) => (
-                <div
-                  key={`tabContent${index}`}
-                  className="relative h-[494px] laptop:h-auto"
-                >
-                  <Image
-                    src={item}
-                    alt="video image"
-                    width={500}
-                    height={500}
-                    className="w-[494px] h-[494px] rounded-[20px] laptop:h-auto"
-                  />
-                  <img
-                    className="absolute bottom-[37px] left-[42px]  phone:w-[50px] phone:m-auto phone:left-0 phone:right-0 phone:bottom-[55px] laptop:w-[50px] laptop:left-[20px] laptop:bottom-[20px]"
-                    src="/assets/images/portfolio/video-play.svg"
-                    alt=""
-                  />
-                </div>
-              ))}
-            </div>
-          )}
-          {tabActive === 6 && (
-            <div className="grid grid-cols-3 gap-[60px] m-auto tablet:grid-cols-2 tablet:gap-2 tablet:px-[15px]">
-              {brands?.slice(0, itemLimit).map((item: any, index: number) => (
-                <div
-                  key={`tabContent${index}`}
-                  className="relative h-[494px] laptop:h-auto"
-                >
-                  <Image
-                    src={item}
-                    alt="video image"
-                    width={500}
-                    height={500}
-                    className="w-[494px] h-[494px] rounded-[20px] laptop:h-auto"
-                  />
-                  <img
-                    className="absolute bottom-[37px] left-[42px]  phone:w-[50px] phone:m-auto phone:left-0 phone:right-0 phone:bottom-[55px] laptop:w-[50px] laptop:left-[20px] laptop:bottom-[20px]"
-                    src="/assets/images/portfolio/video-play.svg"
-                    alt=""
-                  />
-                </div>
-              ))}
-            </div>
-          )}
+          <div className="grid grid-cols-3 gap-[60px] m-auto tablet:grid-cols-2 tablet:gap-2 tablet:px-[15px]">
+            {industry?.data?.slice(0, itemLimit).map(
+              (item: any, index: number) =>
+                item?.attributes.industry_category?.data?.attributes.Title ==
+                  tabActive && (
+                  <Link href={String(item.attributes.Link)}>
+                    <div
+                      key={`tabContent${index}`}
+                      className="relative h-[494px] laptop:h-auto object-cover"
+                    >
+                      <Image
+                        src={showImage(item?.attributes?.Image) || ""}
+                        alt="video image"
+                        width={500}
+                        height={500}
+                        className="w-[494px] h-[494px] rounded-[20px] laptop:h-auto object-cover"
+                      />
+                      <img
+                        className="absolute bottom-[37px] left-[42px]  phone:w-[50px] phone:m-auto phone:left-0 phone:right-0 phone:bottom-[55px] laptop:w-[50px] laptop:left-[20px] laptop:bottom-[20px]"
+                        src="/assets/images/portfolio/video-play.svg"
+                        alt=""
+                      />
+                    </div>
+                  </Link>
+                )
+            )}
+          </div>
 
           <div className="mt-28">
             <p className="text25 text-white text-center mb-5">See More</p>
             <div
               onClick={() => loadMore()}
-              className="w-[140px] h-[140px] bg-[#1B242B] m-auto flex items-center justify-center rounded-full"
+              className="w-[140px] h-[140px] bg-[#1B242B] m-auto flex items-center justify-center rounded-full cursor-pointer"
             >
               <SlArrowDown size={46} color="#fff" />
             </div>
@@ -324,7 +208,7 @@ export const IndrustrySection = () => {
         </div>
       </div>
       <img
-        className="absolute right-0 -top-[280px] laptop:hidden"
+        className="absolute right-0 -top-[280px] laptop:hidden -z-1"
         src="/assets/images/marketing-shadow.svg"
         alt=""
       />

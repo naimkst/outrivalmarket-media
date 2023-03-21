@@ -20,7 +20,6 @@ export default function Services() {
   } = useFetch(`${process.env.NEXT_PUBLIC_API_URL}/service?populate=deep`);
   const data: any = home;
 
-  console.log(data?.data?.attributes);
   return (
     <div className="overflow-hidden">
       <Seo />

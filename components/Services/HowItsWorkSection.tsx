@@ -18,7 +18,10 @@ export const HowItsWorkSection = ({ data }: any) => {
         />
         {data?.WorkItem?.map((item: any, index: number) =>
           index == 0 ? (
-            <div className="grid grid-cols-2 justify-center m-auto mb-[70px] pt-[35px] desktop:grid-cols-1">
+            <div
+              key={`howitwork${index}`}
+              className="grid grid-cols-2 justify-center m-auto mb-[70px] pt-[35px] desktop:grid-cols-1"
+            >
               <div className="flex-1  max-w-[446px] flex justify-center text-center m-auto desktop:max-w-full">
                 <p className="text-[28px] text-white text-center">
                   {item?.Title}
@@ -27,7 +30,10 @@ export const HowItsWorkSection = ({ data }: any) => {
               <div className="flex-1"></div>
             </div>
           ) : index == 1 ? (
-            <div className="grid grid-cols-2 justify-center m-auto mb-[70px] laptop:grid-cols-1">
+            <div
+              key={`howitwork${index}`}
+              className="grid grid-cols-2 justify-center m-auto mb-[70px] laptop:grid-cols-1"
+            >
               <div className="flex-1"></div>
 
               <div className="flex-1  max-w-[476px] flex justify-center text-center m-auto laptop:max-w-full">
@@ -37,7 +43,10 @@ export const HowItsWorkSection = ({ data }: any) => {
               </div>
             </div>
           ) : index == 2 ? (
-            <div className="grid grid-cols-2 justify-center m-auto mb-[70px] pt-[30px] laptop:grid-cols-1 laptop:pt-0">
+            <div
+              key={`howitwork${index}`}
+              className="grid grid-cols-2 justify-center m-auto mb-[70px] pt-[30px] laptop:grid-cols-1 laptop:pt-0"
+            >
               <div className="flex-1  max-w-[446px] flex justify-center text-center m-auto laptop:max-w-full">
                 <p className="text-[28px] text-white text-center">
                   {item?.Title}
@@ -46,7 +55,10 @@ export const HowItsWorkSection = ({ data }: any) => {
               <div className="flex-1"></div>
             </div>
           ) : (
-            <div className="grid grid-cols-2 justify-center m-auto mb-[70px] desktop:grid-cols-1">
+            <div
+              key={`howitwork${index}`}
+              className="grid grid-cols-2 justify-center m-auto mb-[70px] desktop:grid-cols-1"
+            >
               <div className="flex-1"></div>
 
               <div className="flex-1  max-w-[476px] flex justify-center text-center m-auto  desktop:max-w-full">
