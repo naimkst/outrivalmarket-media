@@ -1,7 +1,9 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
+import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 
-export const OurProcessSection = () => {
+export const OurProcessSection = ({ data, cta }: any) => {
   return (
     <div className="relative h-auto pb-[100px] ">
       <img
@@ -17,11 +19,13 @@ export const OurProcessSection = () => {
       <div className="container m-auto py-[50px] ">
         <div className="text-center pb-[100px]">
           <h2 className="text-[37px] font-['MonumentBold'] text-white mb-[40px]">
-            Our <span className="CTAtextGradean"> Process</span>
+            {data?.Title?.FirstText}{" "}
+            <span className="CTAtextGradean"> {data?.Title?.ColorText}</span>
           </h2>
-          <p className="text-[25px] font-normal text-white mb-[30px]">
-            This is all about <span className="font-bold"> simplicity!</span>
-          </p>
+
+          <ReactMarkdown className="text-[25px] font-normal text-white mb-[30px]">
+            {data?.Subtitle}
+          </ReactMarkdown>
         </div>
 
         <div className="relative max-w-[1476px] m-auto laptop:max-w-auto">
@@ -33,92 +37,101 @@ export const OurProcessSection = () => {
             />
           </div>
 
-          <div className="flex justify-end laptop:flex-none laptop:text-center laptop:mb-[50px] laptop:flex-col">
-            <div className="flex-1"></div>
-            <div className="max-w-[456px] pl-[60px] laptop:max-w-full laptop:pl-0">
-              <img
-                src="/assets/images/process/01.png"
-                alt=""
-                className="mb-[47px] laptop:m-auto laptop:mb-[20px]"
-              />
-              <h3 className="text-[25px] font-bold text-white mb-[15px]">
-                Strategize
-              </h3>
-              <p className="text-[25px] font-normal text-white">
-                We have an initial strategizing meeting.
-              </p>
-            </div>
-          </div>
-
-          <div className="flex justify-start laptop:flex-none laptop:text-center laptop:mb-[50px]">
-            <div className="max-w-[456px] pl-[68px] laptop:max-w-full laptop:pl-0">
-              <img
-                src="/assets/images/process/02.png"
-                alt=""
-                className="mb-[47px] laptop:m-auto laptop:mb-[20px]"
-              />
-              <h3 className="text-[25px] font-bold text-white mb-[15px]">
-                Initial Action
-              </h3>
-              <p className="text-[25px] font-normal text-white">
-                Products mailed to us to our Local Montreal Studio (if you are
-                offering a service, then skip this part, duh’)
-              </p>
-            </div>
-            <div className="flex-1"></div>
-          </div>
-
-          <div className="flex justify-end -mt-[50px] laptop:mt-0 laptop:flex-none laptop:mb-[50px] laptop:text-center laptop:flex-col">
-            <div className="flex-1"></div>
-            <div className="max-w-[456px] pl-[60px] laptop:max-w-full laptop:pl-0">
-              <img
-                src="/assets/images/process/03.png"
-                alt=""
-                className="mb-[47px] laptop:m-auto laptop:mb-[20px]"
-              />
-              <h3 className="text-[25px] font-bold text-white mb-[15px]">
-                Magic Begins
-              </h3>
-              <p className="text-[25px] font-normal text-white">
-                We do our magic, and create some epic UGC!
-              </p>
-            </div>
-          </div>
-
-          <div className="flex justify-start  pl-[68px] laptop:flex-col laptop:pl-0 laptop:text-center">
-            <div className="max-w-[456px] laptop:max-w-full">
-              <img
-                src="/assets/images/process/04.png"
-                alt=""
-                className="mb-[47px] laptop:m-auto laptop:mb-[20px]"
-              />
-              <h3 className="text-[25px] font-bold text-white mb-[15px]">
-                Magic Continues
-              </h3>
-              <p className="text-[25px] font-normal text-white">
-                The posting fun begins!
-              </p>
-            </div>
-            <div className="flex-1"></div>
-          </div>
+          {data?.ProcessItem?.map((item: any, index: number) =>
+            index == 0 ? (
+              <div className="flex justify-end laptop:flex-none laptop:text-center laptop:mb-[50px] laptop:flex-col">
+                <div className="flex-1"></div>
+                <div className="max-w-[456px] pl-[60px] laptop:max-w-full laptop:pl-0">
+                  <img
+                    src="/assets/images/process/01.png"
+                    alt=""
+                    className="mb-[47px] laptop:m-auto laptop:mb-[20px]"
+                  />
+                  <h3 className="text-[25px] font-bold text-white mb-[15px]">
+                    {item?.Title}
+                  </h3>
+                  <p className="text-[25px] font-normal text-white">
+                    {item?.Description}
+                  </p>
+                </div>
+              </div>
+            ) : index == 1 ? (
+              <div className="flex justify-start laptop:flex-none laptop:text-center laptop:mb-[50px]">
+                <div className="max-w-[456px] pl-[68px] laptop:max-w-full laptop:pl-0">
+                  <img
+                    src="/assets/images/process/02.png"
+                    alt=""
+                    className="mb-[47px] laptop:m-auto laptop:mb-[20px]"
+                  />
+                  <h3 className="text-[25px] font-bold text-white mb-[15px]">
+                    {item?.Title}
+                  </h3>
+                  <p className="text-[25px] font-normal text-white">
+                    {item?.Description}
+                  </p>
+                </div>
+                <div className="flex-1"></div>
+              </div>
+            ) : index == 2 ? (
+              <div className="flex justify-end -mt-[50px] laptop:mt-0 laptop:flex-none laptop:mb-[50px] laptop:text-center laptop:flex-col">
+                <div className="flex-1"></div>
+                <div className="max-w-[456px] pl-[60px] laptop:max-w-full laptop:pl-0">
+                  <img
+                    src="/assets/images/process/03.png"
+                    alt=""
+                    className="mb-[47px] laptop:m-auto laptop:mb-[20px]"
+                  />
+                  <h3 className="text-[25px] font-bold text-white mb-[15px]">
+                    {item?.Title}
+                  </h3>
+                  <p className="text-[25px] font-normal text-white">
+                    {item?.Description}
+                  </p>
+                </div>
+              </div>
+            ) : (
+              <div className="flex justify-start  pl-[68px] laptop:flex-col laptop:pl-0 laptop:text-center">
+                <div className="max-w-[456px] laptop:max-w-full">
+                  <img
+                    src="/assets/images/process/04.png"
+                    alt=""
+                    className="mb-[47px] laptop:m-auto laptop:mb-[20px]"
+                  />
+                  <h3 className="text-[25px] font-bold text-white mb-[15px]">
+                    {item?.Title}
+                  </h3>
+                  <p className="text-[25px] font-normal text-white">
+                    {item?.Description}
+                  </p>
+                </div>
+                <div className="flex-1"></div>
+              </div>
+            )
+          )}
         </div>
       </div>
 
-      <div className="containerSmall bg-[#0A131A] rounded-[20px] text-center py-[53px] mt-[100px] laptop:mt-[50px] laptop:rounded-none">
-        <h2 className="heading gradientText mb-[34px]">
-          Lets Get In touch Now.
-        </h2>
+      {cta?.IsShow && (
+        <div className="containerSmall bg-[#0A131A] rounded-[20px] text-center py-[53px] mt-[100px] laptop:mt-[50px] laptop:rounded-none">
+          <h2 className="heading gradientText mb-[34px]">
+            {cta?.Title?.FirstText}
+          </h2>
 
-        <p className="text25 text-white mb-[25px]">Click this darn button</p>
-        <button className="buttonText">
-          Connect with us here
-          <img
-            src="/assets/images/services/arrow.svg"
-            alt=""
-            className="absolute -right-[100px] -top-[70px] laptop:hidden"
-          />
-        </button>
-      </div>
+          <ReactMarkdown className="text25 text-white mb-[25px]">
+            {cta?.Description}
+          </ReactMarkdown>
+          <Link href={String(cta?.ButtonUrl)}>
+            <button className="buttonText">
+              {cta?.ButtonText}
+              <img
+                src="/assets/images/services/arrow.svg"
+                alt=""
+                className="absolute -right-[100px] -top-[70px] laptop:hidden"
+              />
+            </button>
+          </Link>
+        </div>
+      )}
     </div>
   );
 };

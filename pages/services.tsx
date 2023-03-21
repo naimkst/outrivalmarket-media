@@ -60,7 +60,13 @@ export default function Services() {
       {data?.data?.attributes?.ThrowCTA?.IsShow && (
         <CTASection data={data?.data?.attributes?.ThrowCTA} />
       )}
-      <OurProcessSection />
+
+      {data?.data?.attributes?.OurProcess?.IsShow && (
+        <OurProcessSection
+          data={data?.data?.attributes?.OurProcess}
+          cta={data?.data?.attributes?.GetInTouchCTA}
+        />
+      )}
       <LaunchingMediaSection />
       <TogetherToday />
       <FooterContent />
