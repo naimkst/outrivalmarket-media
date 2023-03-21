@@ -27,19 +27,32 @@ export default function Services() {
       {data?.data?.attributes?.HeroSection?.IsShow && (
         <HeroSection data={data?.data?.attributes?.HeroSection} />
       )}
-      <AboutSection />
-      <img
-        src="/assets/images/services/service-section-shape.svg"
-        alt=""
-        className="m-auto"
-      />
-      <ZtimeSection />
-      <img
-        src="/assets/images/services/shape-section.svg"
-        alt=""
-        className="m-auto"
-      />
-      <HowItsWorkSection />
+      {data?.data?.attributes?.LocalBrand?.IsShow && (
+        <>
+          <AboutSection data={data?.data?.attributes?.LocalBrand} />
+          <img
+            src="/assets/images/services/service-section-shape.svg"
+            alt=""
+            className="m-auto"
+          />
+        </>
+      )}
+      {data?.data?.attributes?.CTA?.IsShow && (
+        <>
+          <ZtimeSection
+            data={data?.data?.attributes?.CTA}
+            ugc={data?.data?.attributes?.UGCSection}
+          />
+          <img
+            src="/assets/images/services/shape-section.svg"
+            alt=""
+            className="m-auto"
+          />
+        </>
+      )}
+      {data?.data?.attributes?.HowWorks?.IsShow && (
+        <HowItsWorkSection data={data?.data?.attributes?.HowWorks} />
+      )}
       <ThereTwoOptionSection />
       <CTASection />
       <OurProcessSection />
