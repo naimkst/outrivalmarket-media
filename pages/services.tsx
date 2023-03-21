@@ -67,9 +67,15 @@ export default function Services() {
           cta={data?.data?.attributes?.GetInTouchCTA}
         />
       )}
-      <LaunchingMediaSection />
-      <TogetherToday />
-      <FooterContent />
+      {data?.data?.attributes?.CampaignTab?.IsShow && (
+        <LaunchingMediaSection data={data?.data?.attributes?.CampaignTab} />
+      )}
+      {data?.data?.attributes?.ContactUsCTA?.IsShow && (
+        <TogetherToday data={data?.data?.attributes?.ContactUsCTA} />
+      )}
+      {data?.data?.attributes?.FooterAbout?.IsShow && (
+        <FooterContent data={data?.data?.attributes?.FooterAbout} />
+      )}
     </div>
   );
 }
