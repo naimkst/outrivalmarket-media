@@ -23,7 +23,6 @@ export default function About() {
     data: team,
   } = useFetch(`${process.env.NEXT_PUBLIC_API_URL}/our-teams?populate=deep`);
   const teamData: any = team;
-  console.log(home?.data);
   return (
     <div className="overflow-hidden">
       <Seo />
