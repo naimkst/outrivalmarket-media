@@ -53,7 +53,9 @@ export default function Services() {
       {data?.data?.attributes?.HowWorks?.IsShow && (
         <HowItsWorkSection data={data?.data?.attributes?.HowWorks} />
       )}
-      <ThereTwoOptionSection />
+      {data?.data?.attributes?.TwoOption?.IsShow && (
+        <ThereTwoOptionSection data={data?.data?.attributes?.TwoOption} />
+      )}
       <CTASection />
       <OurProcessSection />
       <LaunchingMediaSection />
