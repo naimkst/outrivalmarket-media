@@ -56,7 +56,10 @@ export default function Services() {
       {data?.data?.attributes?.TwoOption?.IsShow && (
         <ThereTwoOptionSection data={data?.data?.attributes?.TwoOption} />
       )}
-      <CTASection />
+
+      {data?.data?.attributes?.ThrowCTA?.IsShow && (
+        <CTASection data={data?.data?.attributes?.ThrowCTA} />
+      )}
       <OurProcessSection />
       <LaunchingMediaSection />
       <TogetherToday />
