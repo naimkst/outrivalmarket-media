@@ -3,6 +3,34 @@ import Image from "next/image";
 import React from "react";
 
 export default function Contact() {
+  const [loading, setLoading] = React.useState(false);
+  const [submitMessage, setSubmitMessage] = React.useState(false);
+  const [submitErrMsg, setSubmitErrMsg] = React.useState(false);
+
+  async function formSubmit(e: any) {
+    setLoading(true);
+    e.preventDefault();
+    const formData: any = {};
+    Array.from(e.target.elements).forEach((field: any) => {
+      if (!field.name) return;
+      formData[field.name] = field.value;
+    });
+    const sendMail = fetch("/api/email", {
+      method: "POST",
+      body: JSON.stringify(formData),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        setLoading(false);
+        if (data.success === true) {
+          setSubmitMessage(true);
+        } else {
+          setSubmitErrMsg(true);
+        }
+        console.log(data);
+      });
+  }
+
   return (
     <div>
       <Seo />
@@ -12,7 +40,10 @@ export default function Contact() {
         </h2>
         <div className="">
           <div className="w-full max-w-xl mx-auto">
-            <form className="tabActiveBg shadow-md rounded px-10 pt-10 pb-10 mb-8 phone:px-[15px]">
+            <form
+              className="tabActiveBg shadow-md rounded px-10 pt-10 pb-10 mb-8 phone:px-[15px]"
+              onSubmit={formSubmit}
+            >
               <div className="mb-4">
                 <label
                   className="block text-white font-bold mb-2"
@@ -25,6 +56,7 @@ export default function Contact() {
                   id="name"
                   type="text"
                   placeholder="Enter your name"
+                  name="name"
                 />
               </div>
               <div className="mb-4">
@@ -39,6 +71,7 @@ export default function Contact() {
                   id="email"
                   type="email"
                   placeholder="Enter your email"
+                  name="email"
                 />
               </div>
               <div className="mb-4">
@@ -52,10 +85,11 @@ export default function Contact() {
                   <select
                     className="appearance-none border rounded w-full py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                     id="subject"
+                    name="subject"
                   >
-                    <option>General Inquiry</option>
-                    <option>Technical Support</option>
-                    <option>Sales</option>
+                    <option value="General Inquiry">General Inquiry</option>
+                    <option value="Technical Support">Technical Support</option>
+                    <option value="Sales">Sales</option>
                   </select>
                   <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-white">
                     <svg
@@ -79,6 +113,7 @@ export default function Contact() {
                   className="shadow appearance-none border rounded w-full py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   id="message"
                   placeholder="Enter your message"
+                  name="message"
                   rows={5}
                 ></textarea>
               </div>
@@ -87,9 +122,20 @@ export default function Contact() {
                   className="contactButton text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                   type="submit"
                 >
-                  Submit
+                  {loading ? "Loading..." : "Submit"}
                 </button>
               </div>
+
+              {submitMessage && (
+                <p className="text-center text-white">
+                  Thanks for contact us! We will get back to you soon.
+                </p>
+              )}
+              {submitErrMsg && (
+                <p className="text-center text-danger">
+                  Thanks for contact us! We will get back to you soon.
+                </p>
+              )}
             </form>
           </div>
         </div>
