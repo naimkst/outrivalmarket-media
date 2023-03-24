@@ -1,18 +1,6 @@
 import React from "react";
 
 export const ChainDockSection = ({ data }: any) => {
-  const [faqId1, setFaqId1] = React.useState(false);
-  const [faqId2, setFaqId2] = React.useState(false);
-  const [faqId3, setFaqId3] = React.useState(false);
-  const [faqId4, setFaqId4] = React.useState(false);
-  const [faqId5, setFaqId5] = React.useState(false);
-  const [faqId6, setFaqId6] = React.useState(false);
-  const [faqId7, setFaqId7] = React.useState(false);
-  const [faqId8, setFaqId8] = React.useState(false);
-  const [faqId9, setFaqId9] = React.useState(false);
-  const [faqId10, setFaqId10] = React.useState(false);
-  const [faqId11, setFaqId11] = React.useState(false);
-  const [faqId12, setFaqId12] = React.useState(false);
   const [faq, setFaq] = React.useState<any>(null);
 
   return (
@@ -28,7 +16,10 @@ export const ChainDockSection = ({ data }: any) => {
 
           <div className="grid grid-cols-2 justify-between tablet:grid-cols-1 gap-5">
             {data?.FAQ?.map((item: any, index: number) => (
-              <div className="max-w-[724px] tablet:max-w-full flex">
+              <div
+                key={`faq-${index}`}
+                className="max-w-[724px] tablet:max-w-full flex"
+              >
                 <div className="mb-[60px] w-full">
                   <div className="text25 !font-bold text-white mb-[25px] flex justify-between items-center">
                     <h3 className="max-w-[90%]">{item?.Title}</h3>

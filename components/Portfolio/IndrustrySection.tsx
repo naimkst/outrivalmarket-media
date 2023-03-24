@@ -173,7 +173,10 @@ export const IndrustrySection = ({ data }: any) => {
               (item: any, index: number) =>
                 item?.attributes.industry_category?.data?.attributes.Title ==
                   tabActive && (
-                  <Link href={String(item.attributes.Link)}>
+                  <Link
+                    key={`industry-${index}`}
+                    href={String(item.attributes.Link)}
+                  >
                     <div
                       key={`tabContent${index}`}
                       className="relative h-[494px] laptop:h-auto object-cover"

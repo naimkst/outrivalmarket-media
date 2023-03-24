@@ -7,7 +7,7 @@ export const FooterContent = ({ data }: any) => {
     <div className="container m-auto text-center py-[50px]  overflow-x-hidden">
       <div>
         <Image
-          src={showImage(data?.Image)}
+          src={showImage(data?.Image) || ""}
           alt="footer logo"
           width={330.57}
           height={218}

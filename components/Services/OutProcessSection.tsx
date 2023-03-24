@@ -39,7 +39,10 @@ export const OurProcessSection = ({ data, cta }: any) => {
 
           {data?.ProcessItem?.map((item: any, index: number) =>
             index == 0 ? (
-              <div className="flex justify-end laptop:flex-none laptop:text-center laptop:mb-[50px] laptop:flex-col">
+              <div
+                key={`process-${index}`}
+                className="flex justify-end laptop:flex-none laptop:text-center laptop:mb-[50px] laptop:flex-col"
+              >
                 <div className="flex-1"></div>
                 <div className="max-w-[456px] pl-[60px] laptop:max-w-full laptop:pl-0">
                   <img
@@ -56,7 +59,10 @@ export const OurProcessSection = ({ data, cta }: any) => {
                 </div>
               </div>
             ) : index == 1 ? (
-              <div className="flex justify-start laptop:flex-none laptop:text-center laptop:mb-[50px]">
+              <div
+                key={`process-${index}`}
+                className="flex justify-start laptop:flex-none laptop:text-center laptop:mb-[50px]"
+              >
                 <div className="max-w-[456px] pl-[68px] laptop:max-w-full laptop:pl-0">
                   <img
                     src="/assets/images/process/02.png"
@@ -73,7 +79,10 @@ export const OurProcessSection = ({ data, cta }: any) => {
                 <div className="flex-1"></div>
               </div>
             ) : index == 2 ? (
-              <div className="flex justify-end -mt-[50px] laptop:mt-0 laptop:flex-none laptop:mb-[50px] laptop:text-center laptop:flex-col">
+              <div
+                key={`process-${index}`}
+                className="flex justify-end -mt-[50px] laptop:mt-0 laptop:flex-none laptop:mb-[50px] laptop:text-center laptop:flex-col"
+              >
                 <div className="flex-1"></div>
                 <div className="max-w-[456px] pl-[60px] laptop:max-w-full laptop:pl-0">
                   <img
@@ -90,7 +99,10 @@ export const OurProcessSection = ({ data, cta }: any) => {
                 </div>
               </div>
             ) : (
-              <div className="flex justify-start  pl-[68px] laptop:flex-col laptop:pl-0 laptop:text-center">
+              <div
+                key={`process-${index}`}
+                className="flex justify-start  pl-[68px] laptop:flex-col laptop:pl-0 laptop:text-center"
+              >
                 <div className="max-w-[456px] laptop:max-w-full">
                   <img
                     src="/assets/images/process/04.png"

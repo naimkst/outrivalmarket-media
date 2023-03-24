@@ -56,7 +56,7 @@ export const MotionSection = ({ data }: any) => {
                   className="relative h-[494px] laptop:h-auto object-cover"
                 >
                   <Image
-                    src={showImage(item?.attributes?.Image)}
+                    src={showImage(item?.attributes?.Image) || ""}
                     alt="video image"
                     width={500}
                     height={500}

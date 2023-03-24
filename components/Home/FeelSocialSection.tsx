@@ -21,7 +21,7 @@ export const FeelSocialSection = ({ data }: any) => {
           </p>
           <div className="mt-[50px] flex gap-[18px] tablet:flex-col desktop:px-[15px]">
             {data?.FeelSocialVideo?.map((item: any, index: number) => (
-              <Link href={String(item?.Link)}>
+              <Link key={`fell-${index}`} href={String(item?.Link)}>
                 <div className="relative">
                   <img
                     className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 "

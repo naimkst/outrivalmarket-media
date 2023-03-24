@@ -13,7 +13,7 @@ export const OurTeam = ({ data, teamData }: any) => {
 
         <div className="grid grid-cols-3 tablet:grid-cols-2 tablet:gap-5 gap-5">
           {teamData?.map((item: any, index: number) => (
-            <div className="mb-[50px]">
+            <div key={`ourteam-${index}`} className="mb-[50px]">
               <Image
                 src={showImage(item?.attributes?.Image) || ""}
                 alt="portfolio image"

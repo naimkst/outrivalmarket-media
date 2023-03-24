@@ -36,7 +36,10 @@ export const OurProcessSection = ({ data }: any) => {
           />
           {data?.ProcessItem?.slice(0, 6).map((item: any, index: number) =>
             index == 0 ? (
-              <div className="flex justify-end laptop:flex-col laptop:text-center">
+              <div
+                key={`procitem-${index}`}
+                className="flex justify-end laptop:flex-col laptop:text-center"
+              >
                 <div className="flex-1"></div>
                 <div className="max-w-[456px] pl-[60px] laptop:max-w-full laptop:pl-0">
                   <img

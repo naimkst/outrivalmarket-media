@@ -27,7 +27,10 @@ export const WeDontRip = ({ data }: any) => {
             </div>
             <div className="relative tablet:text-left">
               {data?.PromiseList?.map((item: any, index: number) => (
-                <div className="flex items-start gap-[22px] mb-[25px]">
+                <div
+                  key={`promises-${index}`}
+                  className="flex items-start gap-[22px] mb-[25px]"
+                >
                   <img src="/assets/images/dot.svg" alt="" />
                   <p className="text-[25px] font-normal text-white">
                     {item?.Title}

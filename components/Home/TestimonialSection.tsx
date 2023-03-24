@@ -94,6 +94,7 @@ export const TestimonialSection = () => {
                   {[...Array(item?.attributes?.Rating)].map(
                     (item: any, index: number) => (
                       <Image
+                        key={`testiImg-${index}`}
                         src={"/assets/images/start.svg"}
                         width={23.21}
                         height={22}
