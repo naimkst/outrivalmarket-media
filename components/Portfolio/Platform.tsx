@@ -24,7 +24,6 @@ export const Platform = ({ data }: any) => {
 
   const tiktokVideo: any = tiktokPortfolio;
 
-  console.log(insTagramportfolio, "insTagramportfolio");
   return (
     <div className="container m-auto mb-[150px] tablet:mb-[80px]" id="platform">
       <div className="max-w-[978px] m-auto text-center mb-[100px] tablet:mb-[50px]">

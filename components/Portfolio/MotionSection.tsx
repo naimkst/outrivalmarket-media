@@ -37,7 +37,6 @@ export const MotionSection = ({ data }: any) => {
   const loadMore = () => {
     setItemLimit(itemLimit + 6);
   };
-  console.log(portfolioList, "portfolioList");
   return (
     <div className="relative">
       <div className="containerSmall m-auto tablet:p-0">

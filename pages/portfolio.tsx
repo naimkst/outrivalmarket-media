@@ -22,8 +22,6 @@ export default function Portfolio() {
   );
   const data: any = portfolioPage;
 
-  console.log(data?.data?.attributes);
-
   return (
     <div className="overflow-hidden">
       <Seo />
