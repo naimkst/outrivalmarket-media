@@ -1,55 +1,47 @@
+import { showImage } from "@/helper/helper";
+import useFetch from "@/hooks/useFetch";
 import Image from "next/image";
 import React from "react";
 import { FiPhone } from "react-icons/fi";
 import { RxEnvelopeClosed } from "react-icons/rx";
 
 export const Footer = () => {
+  const { loading, error, data } = useFetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/global-setting?populate=deep`
+  );
+  const settings: any = data;
+
   return (
     <>
       <div className="container m-auto py-[50px] mt-[30px] overflow-x-hidden">
         <div className="grid grid-cols-6">
           <div className="col-span-2 tablet:order-last tablet:text-center tablet:col-span-6 tablet:mt-5">
             <Image
-              src={"/assets/images/footer-logo.svg"}
+              src={
+                showImage(settings?.data?.attributes?.Settings?.FooterLogo) ||
+                ""
+              }
               width={200}
               height={131.89}
               alt="footer logo"
               className="tablet:m-auto"
             />
             <ul className="flex gap-3 mt-[25px] tablet:justify-center">
-              <li className="">
-                <a href="">
+              <li>
+                <a href={settings?.data?.attributes?.Settings?.InstagramLink}>
                   <img
-                    src="/assets/images/behance.svg"
+                    src="/assets/images/instagram.svg"
                     alt=""
-                    className="w-[32px] h-[32px] bg-white rounded-full p-[7px]"
+                    className="w-[32px] h-[32px] bg-white  hover:bg-[#FF8B2D] rounded-full p-[7px]"
                   />
                 </a>
               </li>
               <li>
-                <a href="">
+                <a href={settings?.data?.attributes?.Settings?.LinkedinLink}>
                   <img
-                    src="/assets/images/dribbble.svg"
+                    src="/assets/images/linkedin.svg"
                     alt=""
-                    className="w-[32px] h-[32px] bg-white rounded-full p-[7px]"
-                  />
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  <img
-                    src="/assets/images/twitter.svg"
-                    alt=""
-                    className="w-[32px] h-[32px] bg-white rounded-full p-[7px]"
-                  />
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  <img
-                    src="/assets/images/google-plus.svg"
-                    alt=""
-                    className="w-[32px] h-[32px] bg-[#FF8B2D] rounded-full p-[7px]"
+                    className="w-[32px] h-[32px] bg-[#fff] hover:bg-[#FF8B2D] rounded-full p-[2px]"
                   />
                 </a>
               </li>
@@ -59,52 +51,46 @@ export const Footer = () => {
             <div className="grid grid-cols-3 tablet:grid-cols-1 tablet:text-center">
               <div>
                 <h2 className="text-[30px] text-[#FF8B2D] font-bold  mb-[25px]">
-                  Our Company
+                  {settings?.data?.attributes?.Settings?.OurCompanyText}
                 </h2>
                 <ul>
-                  <li className="text-[20px] font-normal text-white mb-[20px]">
-                    <a href="">About Us</a>
-                  </li>
-                  <li className="text-[20px] font-normal text-white mb-[20px]">
-                    <a href="">Services</a>
-                  </li>
-                  <li className="text-[20px] font-normal text-white mb-[20px]">
-                    <a href="">Portfolio</a>
-                  </li>
-                  <li className="text-[20px] font-normal text-white mb-[20px]">
-                    <a href="">Blog</a>
-                  </li>
+                  {settings?.data?.attributes?.CompanyLink.map(
+                    (item: any, index: number) => (
+                      <li
+                        key={`company-${index}`}
+                        className="text-[20px] font-normal text-white mb-[20px]"
+                      >
+                        <a href={String(item?.Link)}>{item?.Title}</a>
+                      </li>
+                    )
+                  )}
                 </ul>
               </div>
               <div>
                 <h2 className="text-[30px] text-[#FF8B2D] font-bold  mb-[25px]">
-                  Service
+                  {settings?.data?.attributes?.Settings?.FooterServiceText}
                 </h2>
                 <ul>
-                  <li className="text-[20px] font-normal text-white mb-[20px]">
-                    <a href="">
-                      Amazon account <br /> management
-                    </a>
-                  </li>
-                  <li className="text-[20px] font-normal text-white mb-[20px]">
-                    <a href="">A+/ EBC content</a>
-                  </li>
-                  <li className="text-[20px] font-normal text-white mb-[20px]">
-                    <a href="">Product content writing</a>
-                  </li>
-                  <li className="text-[20px] font-normal text-white mb-[20px]">
-                    <a href="">Product photography</a>
-                  </li>
+                  {settings?.data?.attributes?.ServiceLink.map(
+                    (item: any, index: number) => (
+                      <li
+                        key={`company-${index}`}
+                        className="text-[20px] font-normal text-white mb-[20px]"
+                      >
+                        <a href={String(item?.Link)}>{item?.Title}</a>
+                      </li>
+                    )
+                  )}
                 </ul>
               </div>
               <div>
                 <h2 className="text-[30px] text-[#FF8B2D] font-bold mb-[25px]">
-                  Our Address
+                  {settings?.data?.attributes?.Settings?.FooterOurAddressText}
                 </h2>
                 <ul>
                   <li className="text-[20px] font-normal text-white mb-[22px]">
-                    <a href="">
-                      5055 North 03th Avenue,Penscola, FL 32503, New York
+                    <a href="#">
+                      {settings?.data?.attributes?.Settings?.Address}
                     </a>
                   </li>
                   <li className="text-[20px] font-normal text-white mb-[22px]">
@@ -112,7 +98,7 @@ export const Footer = () => {
                       <span>
                         <FiPhone size={20} />
                       </span>
-                      +1 965 047 658 23
+                      {settings?.data?.attributes?.Settings?.Phone}
                     </p>
                   </li>
                   <li className="text-[20px] font-normal text-white mb-[22px]">
@@ -120,7 +106,7 @@ export const Footer = () => {
                       <span>
                         <RxEnvelopeClosed size={20} />
                       </span>
-                      +1 965 047 658 23
+                      {settings?.data?.attributes?.Settings?.Email}
                     </p>
                   </li>
                 </ul>
@@ -131,7 +117,7 @@ export const Footer = () => {
       </div>
       <div className="">
         <p className="text-[14px] text-white text-center footerBg py-[20px]">
-          2022 | All Right Reserved By Outrival.
+          {settings?.data?.attributes?.Settings?.CopyRightText}
         </p>
       </div>
     </>

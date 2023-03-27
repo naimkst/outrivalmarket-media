@@ -1,3 +1,5 @@
+import { showImage } from "@/helper/helper";
+import useFetch from "@/hooks/useFetch";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -5,6 +7,11 @@ import { RxCross2 } from "react-icons/rx";
 
 export const Navigation = () => {
   const [isMobile, setIsMobile] = React.useState(false);
+  const { loading, error, data } = useFetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/global-setting?populate=deep`
+  );
+  const settings: any = data;
+
   return (
     <div>
       <div className="container m-auto mt-[50px] tablet:mt-[20px]">
@@ -12,7 +19,9 @@ export const Navigation = () => {
           <div>
             <Link href={"/"}>
               <Image
-                src={"/assets/images/logo.svg"}
+                src={
+                  showImage(settings?.data?.attributes?.Settings?.Logo) || ""
+                }
                 alt="logo"
                 width={301}
                 height={66}
@@ -94,7 +103,13 @@ export const Navigation = () => {
                 <a href="">Contact</a>
               </li>
               <li className="hoverGradient text-[20px] font-bold hover:hoverGradient border-[1px] py-[20px] px-[40px] rounded-[10px] text-center">
-                <a href="">Get Started</a>
+                <Link
+                  href={String(
+                    settings?.data?.attributes?.Settings?.GetStartButtonLink
+                  )}
+                >
+                  {settings?.data?.attributes?.Settings?.GetStartButtonText}
+                </Link>
               </li>
             </ul>
           </div>
