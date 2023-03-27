@@ -4,8 +4,9 @@ export default async function handler(req, res) {
   const body = JSON.parse(req.body);
   const message = `
   Name: ${body.name}\r\n
+  Phone: ${body.phone}\r\n
   Email: ${body.email}\r\n
-  Subject: ${body.subject}\r\n
+  Service: ${body.service}\r\n
   message: ${body.message}
   `;
   const data = {
