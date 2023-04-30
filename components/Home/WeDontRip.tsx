@@ -3,13 +3,15 @@ import React from "react";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 import { BoxImage } from "../GlobalComponent/BoxImage";
 import { ImageHeightBox } from "../GlobalComponent/ImageHeightBox";
+import { showImage } from "@/helper/helper";
 
 export const WeDontRip = ({ data }: any) => {
+  console.log(data, "data");
   return (
     <div className="py-[30px]">
       <div className="flex gap-4 container m-auto justify-between items-center tablet:flex-col">
         <div className="flex-1">
-          <ImageHeightBox src="/assets/images/RipImage.jpg" />
+          <ImageHeightBox src={showImage(data?.Image)} />
         </div>
         <div className="flex-1">
           <h2 className="heading text-white mb-[50px] tablet:text-center">
