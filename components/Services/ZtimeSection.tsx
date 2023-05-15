@@ -15,7 +15,7 @@ export const ZtimeSection = ({ data, ugc }: any) => {
           index % 2 === 0 ? (
             <div
               key={`ucs${index}`}
-              className="flex justify-between items-center mb-[120px] tablet:flex-col tablet:text-center"
+              className="flex justify-between items-center mb-[120px] tablet:flex-col tablet:text-center gap-[50px]"
             >
               <div className="flex-1">
                 <h2 className="heading text-white">
@@ -25,18 +25,18 @@ export const ZtimeSection = ({ data, ugc }: any) => {
               </div>
               <div className="flex-1">
                 <ReactMarkdown className="text25 text-white">
-                  {data?.Description}
+                  {item?.Description}
                 </ReactMarkdown>
               </div>
             </div>
           ) : (
             <div
               key={`ucs${index}`}
-              className="flex justify-between items-center mb-[120px] tablet:flex-col tablet:text-center"
+              className="flex justify-between items-center mb-[120px] tablet:flex-col tablet:text-center gap-[50px]"
             >
               <div className="flex-1 tablet:order-last">
                 <ReactMarkdown className="text25 text-white">
-                  {data?.Description}
+                  {item?.Description}
                 </ReactMarkdown>
               </div>
               <div className="flex-1">

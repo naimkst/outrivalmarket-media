@@ -33,7 +33,7 @@ export const FeelSocialSection = ({ data }: any) => {
                     alt="social image"
                     width={636}
                     height={352}
-                    className="rounded-[20px] tablet:m-auto"
+                    className="rounded-[20px] tablet:m-auto h-[450px] object-cover"
                   />
                 </div>
               </Link>

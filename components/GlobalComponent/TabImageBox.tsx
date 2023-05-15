@@ -8,7 +8,7 @@ export const TabImageBox = ({ imgUrl }: any) => {
         <img
           src="/assets/images/services/tab-image-shape.svg"
           alt="about image"
-          className="absolute"
+          className="absolute hidden"
         />
       </div>
 

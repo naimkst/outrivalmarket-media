@@ -203,7 +203,7 @@ span.swiper-pagination-bullet {
     #1dc6e8 101.05%
   );
   border-radius: 20px;
-  height: 900px;
+  /* height: 900px; */
 }
 .aboutBackground::after {
   content: "";
