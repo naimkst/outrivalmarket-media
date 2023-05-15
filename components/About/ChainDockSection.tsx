@@ -34,7 +34,7 @@ export const ChainDockSection = ({ data }: any) => {
                   </div>
                   {faq == index && (
                     <p className="text25 text-white font-normal">
-                      {data?.Description}
+                      {item?.Description}
                     </p>
                   )}
                 </div>

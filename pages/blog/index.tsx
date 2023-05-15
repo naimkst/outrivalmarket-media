@@ -44,7 +44,11 @@ export default function Blog() {
       <BlogCardSection data={blog?.data} blogs={blogs?.data} />
       {/* <PopularArticle /> */}
       <div>
-        <img src="/assets/images/about/full-shape.svg" alt="" />
+        <img
+          src="/assets/images/about/full-shape.svg"
+          alt=""
+          className="m-auto"
+        />
       </div>
       <NewArticleSection
         data={allBlogs?.data}

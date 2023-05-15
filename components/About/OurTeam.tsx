@@ -6,12 +6,13 @@ export const OurTeam = ({ data, teamData }: any) => {
   return (
     <div className="relative py-[100px] mb-[450px] tablet:mb-[0px] tablet:pb-5">
       <div className="container m-auto relative z-30">
-        <h2 className="text37 font-['MonumentBold'] text-white  text-center mb-[70px]">
+        <h2 className="text37 font-['MonumentBold'] text-white  text-center">
           {data?.FirstText}{" "}
           <span className="CTAtextGradean"> {data?.ColorText}</span>
         </h2>
+        <p className="text25 text-white text-center">{data?.TitleSlug}</p>
 
-        <div className="grid grid-cols-3 tablet:grid-cols-2 tablet:gap-5 gap-5">
+        <div className="grid grid-cols-3 tablet:grid-cols-2 tablet:gap-5 gap-5  mt-[70px]">
           {teamData?.map((item: any, index: number) => (
             <div key={`ourteam-${index}`} className="mb-[50px]">
               <Image

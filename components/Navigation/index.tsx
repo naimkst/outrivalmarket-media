@@ -39,11 +39,11 @@ export const Navigation = () => {
                   <a href="">Services</a>
                 </li>
               </Link>
-              <Link href={"/portfolio"}>
+              {/* <Link href={"/portfolio"}>
                 <li className="text-white text-[20px] hover:hoverGradient">
                   <a href="">Portfolio</a>
                 </li>
-              </Link>
+              </Link> */}
               <Link href={"/blog"}>
                 <li className="text-white text-[20px] hover:hoverGradient">
                   <a href="">Blog</a>
@@ -89,11 +89,11 @@ export const Navigation = () => {
                   <a href="">Services</a>
                 </li>
               </Link>
-              <Link href={"/portfolio"}>
+              {/* <Link href={"/portfolio"}>
                 <li className="text-white text-[20px] hover:hoverGradient">
                   <a href="">Portfolio</a>
                 </li>
-              </Link>
+              </Link> */}
               <Link href={"/blog"}>
                 <li className="text-white text-[20px] hover:hoverGradient">
                   <a href="">Blog</a>

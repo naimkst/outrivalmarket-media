@@ -30,7 +30,10 @@ export default function SingleBlog({ id }: any) {
     setUrl(router.query.id);
   }, [data, router.query.id]);
 
-  console.log(singlePageData?.data, "blog");
+  console.log(
+    blog?.data?.attributes?.BlogLeftImage?.data?.attributes?.height,
+    "blog"
+  );
   return (
     <div>
       <Seo />
@@ -71,7 +74,9 @@ export default function SingleBlog({ id }: any) {
                   height={29}
                   width={16}
                 />
-                <p className="text-[16] text-white">Book Mark</p>
+                <p className="text-[16] text-white">
+                  Author: {blog?.data?.attributes?.Author}
+                </p>
               </div>
             </div>
           </div>
@@ -103,14 +108,17 @@ export default function SingleBlog({ id }: any) {
                 <img
                   src={"/assets/images/blog/image-shape.png"}
                   alt="blog title"
-                  className="absolute"
+                  className="absolute hidden"
                 />
                 <div className="p-[115px] tablet:p-[130px] phone:p-[70px]">
                   <Image
                     src={showImage(blog?.data?.attributes?.BlogLeftImage) || ""}
                     alt="blog title"
                     width={537}
-                    height={780}
+                    height={
+                      blog?.data?.attributes?.BlogLeftImage?.data?.attributes
+                        ?.height
+                    }
                     className="rounded-[20px] relative"
                   />
                 </div>
