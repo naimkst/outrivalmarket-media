@@ -15,7 +15,7 @@ export const TestimonialSection = () => {
   } = useFetch(`${process.env.NEXT_PUBLIC_API_URL}/testimonials?populate=deep`);
   const data: any = home;
   return (
-    <div className="py-[50px] container m-auto">
+    <div className="py-[50px] container m-auto mt-[70px] phone:mt-0">
       <Swiper
         pagination={{
           clickable: true,

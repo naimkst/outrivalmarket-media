@@ -6,7 +6,7 @@ import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 
 export const FeelSocialSection = ({ data }: any) => {
   return (
-    <div className="relative container m-auto rounded-[20px] text-center z-50 tablet:max-w-full tablet:m-0 tablet:p-0">
+    <div className="relative container m-auto rounded-[20px] text-center z-50 tablet:max-w-full tablet:m-0 tablet:p-0 mt-[250px]">
       <div className="aboutBackground tablet:px-[15px] laptop:px-[10px]">
         <div className="py-[70px] max-w-[1214px] m-auto">
           <h2 className=" text-white text-[37px] font-extrabold font-['MonumentBold']">

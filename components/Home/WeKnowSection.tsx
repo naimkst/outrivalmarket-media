@@ -2,11 +2,12 @@ import { showImage } from "@/helper/helper";
 import Image from "next/image";
 import React from "react";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
+import { ImageHeightBox } from "../GlobalComponent/ImageHeightBox";
 
 export const WeKnowSection = ({ data }: any) => {
   return (
-    <div className="py-[30px] overflow-x-hidden">
-      <div className="flex gap-4 container m-auto justify-between items-center tablet:grid tablet:grid-cols-1">
+    <div className="py-[30px] ">
+      <div className="flex gap-4 container m-auto justify-between  tablet:grid tablet:grid-cols-1">
         <div className="flex-1 tablet:order-last">
           <h2 className="heading text-white mb-[50px] tablet:text-center">
             {data?.FirstTitle}{" "}
@@ -37,17 +38,11 @@ export const WeKnowSection = ({ data }: any) => {
             <img
               src="/assets/images/responsive/image-box-shape.png"
               alt=""
-              className="hidden phone:block"
+              className="hidden phone:hidden"
             />
           </div>
           <div className="relative z-20 tablet:pb-[50px] rounded-[20px]">
-            <Image
-              src={showImage(data?.Image) || ""}
-              width={537}
-              height={780}
-              alt="We Know Image"
-              className="rounded-[20px] w-[100%] p-[150px] desktop1440:p-[120px] desktop:p-[110px] miniLaptop:p-[85px] tablet:p-[135px] phone:p-[50px] phone:mt-[90px] "
-            />
+            <ImageHeightBox src={showImage(data?.Image)} />
           </div>
           <div className="w-[220px] h-[125px] bg-white rounded-[8px] px-[26px] py-[17px] absolute top-[200px] tablet:hidden z-30">
             <div className="flex gap-3 mb-2">

@@ -11,7 +11,7 @@ export const MarketingDirectorSection = ({ data }: any) => {
         <img src="/assets/images/marketing-shadow.svg" alt="" />
       </div>
       <div className="flex gap-4 container m-auto justify-between items-center tablet:flex-col">
-        <div className="flex-1 order-last">
+        <div className="flex-1 order-last phone:mt-0">
           <h2 className="heading text-white mb-[50px] tablet:text-center">
             {data?.Title?.FirstText}{" "}
             <span className="weKnowGradent">

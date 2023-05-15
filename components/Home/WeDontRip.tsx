@@ -13,7 +13,7 @@ export const WeDontRip = ({ data }: any) => {
         <div className="flex-1">
           <ImageHeightBox src={showImage(data?.Image)} />
         </div>
-        <div className="flex-1">
+        <div className="flex-1 phone:mt-[30px]">
           <h2 className="heading text-white mb-[50px] tablet:text-center">
             {data?.SectionTitle?.FirstText}{" "}
             <span className="weKnowGradent">
