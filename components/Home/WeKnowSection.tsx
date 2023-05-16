@@ -29,18 +29,6 @@ export const WeKnowSection = ({ data }: any) => {
           </div>
         </div>
         <div className="relative flex-1">
-          <div className="absolute z-10">
-            <img
-              src="/assets/images/know-box-shadow.png"
-              alt=""
-              className="phone:hidden"
-            />
-            <img
-              src="/assets/images/responsive/image-box-shape.png"
-              alt=""
-              className="hidden phone:hidden"
-            />
-          </div>
           <div className="relative z-20 tablet:pb-[50px] rounded-[20px]">
             <ImageHeightBox src={showImage(data?.Image)} />
           </div>

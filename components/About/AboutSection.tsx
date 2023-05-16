@@ -17,6 +17,13 @@ export const AboutSection = ({ data }: any) => {
               </div>
               <div className="flex justify-end tablet:text-center">
                 <div className="max-w-[743px]">
+                  <h2 className="heading text-white mb-[50px] tablet:text-center">
+                    {item?.Title?.FirstText}{" "}
+                    <span className="weKnowGradent">
+                      {item?.Title?.ColorText}
+                    </span>{" "}
+                    {item?.Title?.SecondText}
+                  </h2>
                   <ReactMarkdown className="text-white text25 mb-[50px]">
                     {item?.Content}
                   </ReactMarkdown>
@@ -31,6 +38,13 @@ export const AboutSection = ({ data }: any) => {
           ) : (
             <div className="grid grid-cols-2 items-center justify-between tablet:grid-cols-1">
               <div className="max-w-[743px] relative tablet:text-center">
+                <h2 className="heading text-white mb-[50px] tablet:text-center">
+                  {item?.Title?.FirstText}{" "}
+                  <span className="weKnowGradent">
+                    {item?.Title?.ColorText}
+                  </span>{" "}
+                  {item?.Title?.SecondText}
+                </h2>
                 <ReactMarkdown className="text-white text25 mb-[50px]">
                   {item?.Content}
                 </ReactMarkdown>

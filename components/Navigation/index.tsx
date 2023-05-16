@@ -31,14 +31,14 @@ export const Navigation = () => {
           </div>
           <div className="tablet:hidden">
             <ul className="flex gap-[60px] items-center laptop:gap-[20px]">
-              <li className="text-white text-[20px] hover:hoverGradient">
-                <Link href={"/about"}>About</Link>
-              </li>
               <Link href={"/services"}>
                 <li className="text-white text-[20px] hover:hoverGradient">
                   <a href="">Services</a>
                 </li>
               </Link>
+              <li className="text-white text-[20px] hover:hoverGradient">
+                <Link href={"/about"}>About</Link>
+              </li>
               {/* <Link href={"/portfolio"}>
                 <li className="text-white text-[20px] hover:hoverGradient">
                   <a href="">Portfolio</a>

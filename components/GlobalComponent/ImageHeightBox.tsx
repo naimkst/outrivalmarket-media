@@ -9,12 +9,12 @@ export const ImageHeightBox = ({ src }: any) => {
           <img
             src="/assets/images/know-box-shadow.png"
             alt=""
-            className="phone:hidden"
+            className="phone:hidden w-[85%] m-auto"
           />
           <img
             src="/assets/images/responsive/image-box-shape.png"
             alt=""
-            className="hidden phone:hidden w-[82%] m-auto "
+            className="hidden phone:hidden w-[82%] m-auto"
           />
         </div>
         <div className="relative z-20 tablet:pb-[150px] rounded-[20px] p-0 desktop1440:p-0 desktop:p-[105px] laptop:p-0 tablet:p-0 phone:p-0">
