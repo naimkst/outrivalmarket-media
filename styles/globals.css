@@ -350,6 +350,11 @@ span.swiper-pagination-bullet {
   @apply max-w-[1204px] mx-auto px-5 desktop1680:px-[50px] tablet:px-[15px];
 }
 
+.borderBottomGredient {
+  border-bottom-width: 2px;
+  border-style: solid;
+  border-image: linear-gradient(to right, #f55f29, #fdc221) 1;
+}
 @screen desktop1440 {
   .aboutBackground::after {
     content: none;
